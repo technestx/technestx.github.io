@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+                 <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
+        -->
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/w3.css">
+    <title>Hello World</title>
+</head>
+
+<body>
+<div class="w3-bar">
+
+    <h1>Kotlin Output</h1>
+
+</div>
+<p>&nbsp;</p>
+<div class="w3-container">
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Printing to the console</strong></span></span></span></p>
+
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">There are two main ways to print output to the console in Kotlin:</span></span></span></p>
+        
+        <ul style="list-style-type:disc">
+            <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Using the print() function:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> The print() function prints its arguments to the console without adding a newline character. For example, the following code will print &quot;Hello&quot; to the console:</span></span></span></li>
+        </ul>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">print(</span><span style="color:#188038">&quot;Hello&quot;</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <ul style="list-style-type:disc">
+            <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Using the println() function:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> The println() function prints its arguments to the console and then adds a newline character. This means that the next output will appear on a new line. For example, the following code will print &quot;Hello&quot; to the console and then move the cursor to the next line:</span></span></span></li>
+        </ul>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">println(</span><span style="color:#188038">&quot;Hello&quot;</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Formatting output</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">You can format output in Kotlin using string templates. String templates are enclosed in backticks (`) and allow you to embed expressions directly into the string. For example, the following code will print &quot;Hello, John Doe!&quot; to the console:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> name = </span><span style="color:#188038">&quot;John Doe&quot;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">println(</span><span style="color:#188038">&quot;Hello, </span><span style="color:#d93025">$name</span><span style="color:#188038">!&quot;</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">You can also use string interpolation to format numeric values. For example, the following code will print &quot;The square of 5 is 25&quot; to the console:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> number = </span><span style="color:#b55908">5</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">println(</span><span style="color:#188038">&quot;The square of </span><span style="color:#d93025">$number</span><span style="color:#188038"> is </span><span style="color:#1f1f1f">${number * number}</span><span style="color:#188038">&quot;</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Reading input from the console</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">You can read input from the console in Kotlin using the readLine() function. The readLine() function takes no arguments and returns the next line of text entered by the user. For example, the following code will read a name from the console and then print a greeting message:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> name = readLine()</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">println(</span><span style="color:#188038">&quot;Hello, </span><span style="color:#d93025">$name</span><span style="color:#188038">!&quot;</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Working with files</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">You can work with files in Kotlin using the File class. The File class provides methods for reading and writing files. For example, the following code will read the contents of a file named &quot;myfile.txt&quot; and print it to the console:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> file = File(</span><span style="color:#188038">&quot;myfile.txt&quot;</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> contents = file.readText()</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">println(contents)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Error handling</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Kotlin has a built-in exception handling mechanism. Exceptions are errors that occur during program execution. You can handle exceptions using the try-catch block. The try block contains the code that you want to execute, and the catch block contains the code that you want to execute if an exception occurs. For example, the following code will attempt to read a file named &quot;myfile.txt&quot;. If the file does not exist, an exception will be thrown and the catch block will be executed:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">try</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">val</span><span style="color:#1f1f1f"> file = File(</span><span style="color:#188038">&quot;myfile.txt&quot;</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">val</span><span style="color:#1f1f1f"> contents = file.readText()</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; println(contents)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">} </span><span style="color:#8430ce">catch</span><span style="color:#1f1f1f"> (e: Exception) {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; println(</span><span style="color:#188038">&quot;Error reading file: </span><span style="color:#1f1f1f">${e.message}</span><span style="color:#188038">&quot;</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+    </div>
+
+    <script src="../cordova.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

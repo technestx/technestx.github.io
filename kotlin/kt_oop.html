@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+                 <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
+        -->
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/w3.css">
+    <title>Hello World</title>
+</head>
+
+<body>
+<div class="w3-bar">
+
+    <h1>Kotlin OOP</h1>
+
+</div>
+<p>&nbsp;</p>
+<div class="w3-container">
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Object-Oriented Programming (OOP) in Kotlin</strong></span></span></span></p>
+
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Object-oriented programming (OOP) is a programming paradigm that organizes code around objects, which encapsulate data (properties) and behavior (methods). OOP principles encourage modularity, reusability, and maintainability of code, making it an effective approach for developing complex software applications.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Key Concepts of OOP in Kotlin</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Classes:</strong> Classes serve as blueprints for creating objects. They define the structure of objects, including the properties and methods they possess.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Objects:</strong> Objects are instances of classes. They represent real-world entities with their own unique state and behavior.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Inheritance:</strong> Inheritance allows classes to inherit properties and methods from other classes, promoting code reusability.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Polymorphism:</strong> Polymorphism enables objects of different classes to respond to the same message in different ways, providing flexibility in program behavior.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Encapsulation:</strong> Encapsulation hides the internal implementation details of an object, exposing only its essential functionality through its methods.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Examples of OOP Concepts in Kotlin</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Creating a Class and Object:</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">class </span><span style="color:#996900">Person</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#8430ce">var</span><span style="color:#1f1f1f"> name: String = </span><span style="color:#188038">&quot;&quot;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#8430ce">var</span><span style="color:#1f1f1f"> age: </span><span style="color:#1967d2">Int</span><span style="color:#1f1f1f"> = </span><span style="color:#b55908">0</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#8430ce">fun </span><span style="color:#996900">introduce</span><span style="color:#444746">()</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; &nbsp; &nbsp; println(</span><span style="color:#188038">&quot;Hello, my name is </span><span style="color:#d93025">$name</span><span style="color:#188038"> and I am </span><span style="color:#d93025">$age</span><span style="color:#188038"> years old.&quot;</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; }</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> person1 = Person()</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">person1.name = </span><span style="color:#188038">&quot;Alice&quot;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">person1.age = </span><span style="color:#b55908">25</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">person1.introduce() </span><span style="color:#5f6368">// Prints &quot;Hello, my name is Alice and I am 25 years old.&quot;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Inheritance:</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">class</span><span style="color:#996900"> Student : </span><span style="color:#8430ce">Person</span><span style="color:#1f1f1f">() {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#8430ce">var</span><span style="color:#1f1f1f"> major: String = </span><span style="color:#188038">&quot;&quot;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#8430ce">override fun </span><span style="color:#996900">introduce</span><span style="color:#444746">()</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; &nbsp; &nbsp; <span style="color:#8430ce">super</span><span style="color:#1f1f1f">.introduce() </span><span style="color:#5f6368">// Calls the parent class&#39;s introduce() method</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; &nbsp; &nbsp; println(</span><span style="color:#188038">&quot;I am a student majoring in </span><span style="color:#d93025">$major</span><span style="color:#188038">.&quot;</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; }</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> student1 = Student()</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">student1.name = </span><span style="color:#188038">&quot;Bob&quot;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">student1.age = </span><span style="color:#b55908">20</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">student1.major = </span><span style="color:#188038">&quot;Computer Science&quot;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">student1.introduce() </span><span style="color:#5f6368">// Prints &quot;Hello, my name is Bob and I am 20 years old. I am a student majoring in Computer Science.&quot;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Polymorphism:</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">interface </span><span style="color:#996900">Shape</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#8430ce">fun </span><span style="color:#996900">getArea</span><span style="color:#444746">()</span><span style="color:#1f1f1f">: </span><span style="color:#1967d2">Double</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">class </span><span style="color:#996900">Circle</span><span style="color:#1f1f1f">(</span><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> radius: </span><span style="color:#1967d2">Double</span><span style="color:#1f1f1f">) : Shape {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#8430ce">override fun </span><span style="color:#996900">getArea</span><span style="color:#444746">()</span><span style="color:#1f1f1f">: </span><span style="color:#1967d2">Double</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; &nbsp; &nbsp; <span style="color:#8430ce">return</span><span style="color:#1f1f1f"> Math.PI * radius * radius</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; }</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">class </span><span style="color:#996900">Square</span><span style="color:#1f1f1f">(</span><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> side: </span><span style="color:#1967d2">Double</span><span style="color:#1f1f1f">) : Shape {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#8430ce">override fun </span><span style="color:#996900">getArea</span><span style="color:#444746">()</span><span style="color:#1f1f1f">: </span><span style="color:#1967d2">Double</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; &nbsp; &nbsp; <span style="color:#8430ce">return</span><span style="color:#1f1f1f"> side * side</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; }</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">fun </span><span style="color:#996900">calculateShapeArea</span><span style="color:#444746">(shape: </span><span style="color:#8430ce">Shape</span><span style="color:#444746">)</span><span style="color:#1f1f1f">: </span><span style="color:#1967d2">Double</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#8430ce">return</span><span style="color:#1f1f1f"> shape.getArea()</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> circle = Circle(</span><span style="color:#b55908">5.0</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> square = Square(</span><span style="color:#b55908">3.0</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">println(</span><span style="color:#188038">&quot;Circle area: </span><span style="color:#1f1f1f">${calculateShapeArea(circle)}</span><span style="color:#188038">&quot;</span><span style="color:#1f1f1f">) </span><span style="color:#5f6368">// Prints &quot;Circle area: 78.53981633974483&quot;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">println(</span><span style="color:#188038">&quot;Square area: </span><span style="color:#1f1f1f">${calculateShapeArea(square)}</span><span style="color:#188038">&quot;</span><span style="color:#1f1f1f">) </span><span style="color:#5f6368">// Prints &quot;Square area: 9.0&quot;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Benefits of OOP in Kotlin</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">OOP provides several advantages for developing Kotlin applications:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Code Reusability:</strong> OOP promotes code reuse through inheritance and polymorphism, reducing the need for repetitive coding.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Maintainability:</strong> OOP encourages modular and well-structured code, making it easier to understand, modify, and maintain complex programs.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Abstraction:</strong> OOP enables abstraction by hiding implementation details and exposing only essential functionality, enhancing code readability and reducing complexity.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Extensibility:</strong> OOP facilitates code extensibility by allowing new classes to inherit and extend existing functionality, promoting adaptability to changing requirements.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Conclusion</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Object-oriented programming (OOP) plays a crucial role in Kotlin programming, providing a powerful and structured approach to developing complex software applications. By effectively utilizing OOP principles, programmers can create modular, reusable, and maintainable code that is well-organized, adaptable, and extensible.</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+    </div>
+
+    <script src="../cordova.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

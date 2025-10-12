@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+                 <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
+        -->
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/w3.css">
+    <title>Hello World</title>
+</head>
+
+<body>
+<div class="w3-bar">
+
+    <h1>Kotlin Break/Continue</h1>
+
+</div>
+<p>&nbsp;</p>
+<div class="w3-container">
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Kotlin Break and Continue: Controlling Loop Execution</strong></span></span></span></p>
+
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">The break and continue statements are essential control flow tools in Kotlin, providing mechanisms to terminate or skip iterations in loops. They allow for more granular control over the execution of loop bodies, enabling programmers to modify loop behavior based on specific conditions.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Break Statement: Terminating Loop Execution</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">The break statement immediately terminates the current loop, causing the loop body to stop executing and the program to exit the loop. It is typically used when a specific condition or termination criteria is met within the loop.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Syntax of the Break Statement:</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">break</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Example of a Break Statement:</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Consider a scenario where you want to stop searching for a specific element in a list once it is found:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> numbers = listOf(</span><span style="color:#b55908">1</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">2</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">3</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">4</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">5</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">6</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> target = </span><span style="color:#b55908">4</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">for</span><span style="color:#1f1f1f"> (number </span><span style="color:#8430ce">in</span><span style="color:#1f1f1f"> numbers) {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">if</span><span style="color:#1f1f1f"> (number == target) {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#8430ce">break</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; }</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; println(</span><span style="color:#188038">&quot;Checking number: </span><span style="color:#d93025">$number</span><span style="color:#188038">&quot;</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">println(</span><span style="color:#188038">&quot;Target element found.&quot;</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">In this example, the break statement is used to terminate the for loop as soon as the target element 4 is found. Once the break statement is encountered, the loop body is skipped, and the program exits the loop.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Continue Statement: Skipping Loop Iteration</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">The continue statement skips the current iteration of the loop and immediately proceeds to the next iteration. It is used to conditionally bypass a specific iteration without terminating the entire loop.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Syntax of the Continue Statement:</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">continue</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Example of a Continue Statement:</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Consider a scenario where you want to skip processing even numbers in a list while iterating through the entire list:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> numbers = listOf(</span><span style="color:#b55908">1</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">2</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">3</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">4</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">5</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">6</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">for</span><span style="color:#1f1f1f"> (number </span><span style="color:#8430ce">in</span><span style="color:#1f1f1f"> numbers) {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">if</span><span style="color:#1f1f1f"> (number % </span><span style="color:#b55908">2</span><span style="color:#1f1f1f"> == </span><span style="color:#b55908">0</span><span style="color:#1f1f1f">) {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#8430ce">continue</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; }</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; println(</span><span style="color:#188038">&quot;Processing odd number: </span><span style="color:#d93025">$number</span><span style="color:#188038">&quot;</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">In this example, the continue statement is used to skip the current iteration of the for loop whenever the current number is even. The loop proceeds to the next iteration, effectively skipping the processing of even numbers.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Conclusion</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">The break and continue statements are valuable tools for modifying loop behavior and controlling the execution of loops in Kotlin. They allow programmers to terminate loops early, skip specific iterations, and fine-tune the processing of data within loops. By effectively utilizing these control flow constructs, you can enhance the efficiency and flexibility of your Kotlin code.</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+    </div>
+
+    <script src="../cordova.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+                 <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
+        -->
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/w3.css">
+    <title>Hello World</title>
+</head>
+
+<body>
+<div class="w3-bar">
+
+    <h1>Kotlin Boolean</h1>
+
+</div>
+<p>&nbsp;</p>
+<div class="w3-container">
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Kotlin Booleans: Representing True or False Values</strong></span></span></span></p>
+
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Booleans, also known as logical values, are fundamental data types in programming, representing true or false values. In Kotlin, Booleans are treated as objects of the Boolean class, providing a concise and expressive way to represent binary conditions and control program flow. Booleans are widely used in decision-making statements, logical operations, and conditional expressions.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Declaring and Initializing Booleans</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Booleans are declared and initialized using the var or val keywords followed by a variable name and the Boolean type:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">var</span><span style="color:#1f1f1f"> isApproved: </span><span style="color:#1967d2">Boolean</span><span style="color:#1f1f1f"> = </span><span style="color:#b55908">true</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> isValidInput: </span><span style="color:#1967d2">Boolean</span><span style="color:#1f1f1f"> = </span><span style="color:#b55908">false</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Boolean Operations</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Kotlin provides various operators for performing logical operations on Boolean values:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Negation:</strong> The ! operator negates a Boolean value, reversing its true/false status. For example:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> isEligible = </span><span style="color:#b55908">true</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> isNotEligible = !isEligible</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">println(</span><span style="color:#188038">&quot;Is the user not eligible? </span><span style="color:#d93025">$isNotEligible</span><span style="color:#188038">&quot;</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>AND:</strong> The &amp;&amp; operator combines two Boolean values using logical AND. It returns true only if both operands are true. For example:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> isAdult = age &gt;= </span><span style="color:#b55908">18</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> hasValidID = idNumber != </span><span style="color:#b55908">null</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> canRegister = isAdult &amp;&amp; hasValidID</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">println(</span><span style="color:#188038">&quot;Can the user register? </span><span style="color:#d93025">$canRegister</span><span style="color:#188038">&quot;</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>OR:</strong> The || operator combines two Boolean values using logical OR. It returns true if either operand is true. For example:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> isMember = hasSubscription</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> hasFreeTrial = trialPeriod &gt; </span><span style="color:#b55908">0</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> canAccessContent = isMember || hasFreeTrial</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">println(</span><span style="color:#188038">&quot;Can the user access content? </span><span style="color:#d93025">$canAccessContent</span><span style="color:#188038">&quot;</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Exclusive OR (XOR):</strong> The ^ operator combines two Boolean values using exclusive OR. It returns true if exactly one operand is true. For example:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> isLightOn = </span><span style="color:#b55908">true</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> isDoorOpen = </span><span style="color:#b55908">true</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> hasAlarmTriggered = isLightOn ^ isDoorOpen</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">println(</span><span style="color:#188038">&quot;Has the alarm triggered? </span><span style="color:#d93025">$hasAlarmTriggered</span><span style="color:#188038">&quot;</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Boolean Expressions and Conditional Statements</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Booleans are often used in conditional statements to control program flow based on certain conditions. The if-else statement and the when expression are common examples of conditional constructs that utilize Boolean values:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> age = </span><span style="color:#b55908">15</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">if</span><span style="color:#1f1f1f"> (age &gt;= </span><span style="color:#b55908">18</span><span style="color:#1f1f1f">) {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; println(</span><span style="color:#188038">&quot;You are eligible to vote.&quot;</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">} </span><span style="color:#8430ce">else</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; println(</span><span style="color:#188038">&quot;You will be eligible to vote in 3 years.&quot;</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> grade = </span><span style="color:#188038">&#39;C&#39;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">when</span><span style="color:#1f1f1f"> (grade) {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#188038">&#39;A&#39;</span><span style="color:#1f1f1f"> -&gt; println(</span><span style="color:#188038">&quot;Excellent!&quot;</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#188038">&#39;B&#39;</span><span style="color:#1f1f1f"> -&gt; println(</span><span style="color:#188038">&quot;Good job!&quot;</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#188038">&#39;C&#39;</span><span style="color:#1f1f1f"> -&gt; println(</span><span style="color:#188038">&quot;Keep practicing!&quot;</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#188038">&#39;D&#39;</span><span style="color:#1f1f1f"> -&gt; println(</span><span style="color:#188038">&quot;Work harder next time.&quot;</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#188038">&#39;F&#39;</span><span style="color:#1f1f1f"> -&gt; println(</span><span style="color:#188038">&quot;You need to improve significantly.&quot;</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">else</span><span style="color:#1f1f1f"> -&gt; println(</span><span style="color:#188038">&quot;Invalid grade.&quot;</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Booleans are essential for representing binary conditions and controlling program behavior. By effectively utilizing Kotlin Booleans, you can make your code more logical, structured, and decision-driven.</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+    </div>
+
+    <script src="../cordova.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+                 <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
+        -->
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/w3.css">
+    <title>Hello World</title>
+</head>
+
+<body>
+<div class="w3-bar">
+
+    <h1>Kotlin For Loop</h1>
+
+</div>
+<p>&nbsp;</p>
+<div class="w3-container">
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Kotlin For Loops: Iterating Through Data</strong></span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">The for loop is a fundamental control flow structure in Kotlin, enabling programmers to iterate through collections of data, such as arrays, ranges, and lists, in a concise and expressive manner. It allows for repetitive execution of code blocks, facilitating data processing, manipulation, and control over program flow.</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Syntax of the For Loop:</strong></span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">for</span><span style="color:#1f1f1f"> (item </span><span style="color:#8430ce">in</span><span style="color:#1f1f1f"> collection) {</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#5f6368">// Code to execute for each item in the collection</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Where:</span></span></span></p>
+
+<ul style="list-style-type:disc">
+	<li><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">item represents the variable that holds each item from the collection during iteration.</span></span></span></li>
+	<li><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">collection represents the data collection to be iterated through.</span></span></span></li>
+</ul>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Example of a For Loop:</strong></span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Consider iterating through an array of numbers and printing each element:</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> numbers = arrayOf(</span><span style="color:#b55908">1</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">2</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">3</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">4</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">5</span><span style="color:#1f1f1f">)</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">for</span><span style="color:#1f1f1f"> (number </span><span style="color:#8430ce">in</span><span style="color:#1f1f1f"> numbers) {</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; println(number)</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">In this example, the for loop iterates through the numbers array, assigning each element to the number variable. For each iteration, the println() statement prints the current value of number. The loop continues until all elements of the array have been processed.</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Iterating Through Ranges</strong></span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">The for loop can also be used to iterate through ranges of numbers, generating a sequence of values within a specified interval. For instance, to print numbers from 1 to 10:</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">for</span><span style="color:#1f1f1f"> (i </span><span style="color:#8430ce">in </span><span style="color:#b55908">1..10</span><span style="color:#1f1f1f">) {</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; println(i)</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">In this example, the for loop iterates through the range of integers from 1 to 10, assigning each value to the i variable. For each iteration, the println() statement prints the current value of i. The loop continues until all values in the range have been processed.</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Customizing For Loop Behavior</strong></span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">The for loop provides flexibility in controlling its behavior through additional parameters:</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Step:</strong> The step parameter specifies the increment or decrement value for iterating through a range. For example, to print even numbers from 2 to 10:</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp;</span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">for</span><span style="color:#1f1f1f"> (i </span><span style="color:#8430ce">in </span><span style="color:#b55908">2..10</span><span style="color:#1f1f1f"> step </span><span style="color:#b55908">2</span><span style="color:#1f1f1f">) {</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; println(i)</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>DownTo:</strong> The downTo keyword allows for iterating through a range in descending order. For instance, to print numbers from 10 to 1:</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp;</span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">for</span><span style="color:#1f1f1f"> (i </span><span style="color:#8430ce">in </span><span style="color:#b55908">10</span><span style="color:#1f1f1f"> downTo </span><span style="color:#b55908">1</span><span style="color:#1f1f1f">) {</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; println(i)</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Conclusion</strong></span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">The for loop is an indispensable tool for iterating through collections of data and ranges of numbers in Kotlin. It provides a concise and expressive way to process, manipulate, and control the flow of data within loops. By effectively utilizing the for loop, programmers can enhance the efficiency and readability of their Kotlin code, making it more structured and maintainable.</span></span></span></p>
+
+<p>&nbsp;</p>
+
+    </div>
+
+    <script src="../cordova.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

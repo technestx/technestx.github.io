@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+                 <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
+        -->
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/w3.css">
+    <title>Hello World</title>
+</head>
+
+<body>
+<div class="w3-bar">
+
+    <h1>Kotlin Get Started</h1>
+
+</div>
+<p>&nbsp;</p>
+<div class="w3-container">
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Getting started with Kotlin is a relatively straightforward process, especially if you have prior programming experience. Here&#39;s a step-by-step guide to get you started:</span></span></span></p>
+
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>1. Install IntelliJ IDEA</strong>: IntelliJ IDEA is a powerful integrated development environment (IDE) that provides a comprehensive set of tools for developing Kotlin applications. It&#39;s the recommended IDE for Kotlin development and offers advanced features like code completion, syntax highlighting, and error checking. You can download IntelliJ IDEA for free from the JetBrains website: <a href="https://www.jetbrains.com/idea/download/">https://www.jetbrains.com/idea/download/</a></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>2. Set up the Kotlin plugin</strong>: Once you&#39;ve installed IntelliJ IDEA, you&#39;ll need to install the Kotlin plugin to enable Kotlin support within the IDE. Follow these steps to install the Kotlin plugin:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Open IntelliJ IDEA and go to <strong>File &gt; Settings</strong>.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">In the Settings window, navigate to <strong>Plugins &gt; Marketplace</strong>.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Search for &quot;Kotlin&quot; in the search bar.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Select the &quot;Kotlin&quot; plugin from the list and click the &quot;Install&quot; button.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Once the installation is complete, restart IntelliJ IDEA to apply the changes.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>3. Create a new Kotlin project</strong>: With the Kotlin plugin installed, you can now create a new Kotlin project. Follow these steps to create a new project:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Open IntelliJ IDEA and click on the &quot;Create New Project&quot; button.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Select &quot;Kotlin&quot; as the project type and choose the appropriate project template based on your needs (e.g., Android application, web application, or JVM application).</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Provide a name for your project and specify the desired project location.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Click the &quot;Finish&quot; button to create the project.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>4. Write your first Kotlin program</strong>: Once your project is created, you can start writing Kotlin code. Open the main Kotlin file in your project (usually named &quot;MainActivity.kt&quot; for Android projects or &quot;Main.kt&quot; for other project types). Replace the existing code with the following simple Kotlin program:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">fun </span><span style="color:#996900">main</span><span style="color:#444746">()</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; println(</span><span style="color:#188038">&quot;Hello, World!&quot;</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>5. Run your Kotlin program</strong>: To run your Kotlin program, click the &quot;Run&quot; button in the IntelliJ IDEA toolbar. This will compile and execute your code, and the output &quot;Hello, World!&quot; will be displayed in the console.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">This is just a basic introduction to getting started with Kotlin. As you progress, you&#39;ll learn more about the language&#39;s syntax, features, and libraries to develop more complex and sophisticated applications.</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+    </div>
+
+    <script src="../cordova.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

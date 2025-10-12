@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+                 <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
+        -->
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/w3.css">
+    <title>Hello World</title>
+</head>
+
+<body>
+<div class="w3-bar">
+
+    <h1>Kotlin Inheritance</h1>
+
+</div>
+<p>&nbsp;</p>
+<div class="w3-container">
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Inheritance in Kotlin: Extending Functionality and Code Reusability</strong></span></span></span></p>
+
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Inheritance is a fundamental concept in object-oriented programming (OOP), enabling a class to inherit properties and methods from another class. This powerful mechanism allows for code reuse, extensibility, and the creation of hierarchical class structures that reflect real-world relationships.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>The Inheritance Relationship</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">In inheritance, one class, known as the subclass or derived class, inherits the properties and methods of another class, called the superclass or parent class. The subclass inherits the functionality of the superclass, allowing it to extend or modify the inherited behavior while still retaining the original functionality.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Creating an Inheritance Hierarchy</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">To create an inheritance hierarchy in Kotlin, the : operator is used after the class name in the subclass declaration. This indicates that the subclass inherits from the specified superclass.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">class </span><span style="color:#996900">Person</span><span style="color:#1f1f1f">(</span><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> name: String, </span><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> age: </span><span style="color:#1967d2">Int</span><span style="color:#1f1f1f">) {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#8430ce">fun </span><span style="color:#996900">introduce</span><span style="color:#444746">()</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; &nbsp; &nbsp; println(</span><span style="color:#188038">&quot;Hello, my name is </span><span style="color:#d93025">$name</span><span style="color:#188038"> and I am </span><span style="color:#d93025">$age</span><span style="color:#188038"> years old.&quot;</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; }</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">class </span><span style="color:#996900">Student</span><span style="color:#1f1f1f">(name: String, age: </span><span style="color:#1967d2">Int</span><span style="color:#1f1f1f">, </span><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> major: String) : Person(name, age) {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#8430ce">fun </span><span style="color:#996900">declareMajor</span><span style="color:#444746">()</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; &nbsp; &nbsp; println(</span><span style="color:#188038">&quot;I am majoring in </span><span style="color:#d93025">$major</span><span style="color:#188038">.&quot;</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; }</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Overriding Methods:</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Inheritance allows for overriding inherited methods, enabling subclasses to modify the behavior of methods defined in the superclass. This is achieved by using the override keyword before the method declaration in the subclass.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">class </span><span style="color:#996900">Employee</span><span style="color:#1f1f1f">(name: String, age: </span><span style="color:#1967d2">Int</span><span style="color:#1f1f1f">, </span><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> department: String) : Person(name, age) {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#8430ce">override fun </span><span style="color:#996900">introduce</span><span style="color:#444746">()</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; &nbsp; &nbsp; println(</span><span style="color:#188038">&quot;I am an employee in the </span><span style="color:#d93025">$department</span><span style="color:#188038"> department.&quot;</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; }</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Access to Superclass Members:</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">A subclass can access the properties and methods of its superclass using the super keyword. This allows for calling superclass methods or accessing superclass properties when needed.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">class </span><span style="color:#996900">Teacher</span><span style="color:#1f1f1f">(name: String, age: </span><span style="color:#1967d2">Int</span><span style="color:#1f1f1f">, </span><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> subject: String) : Person(name, age) {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#8430ce">override fun </span><span style="color:#996900">introduce</span><span style="color:#444746">()</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; &nbsp; &nbsp; <span style="color:#8430ce">super</span><span style="color:#1f1f1f">.introduce() </span><span style="color:#5f6368">// Calls the superclass&#39;s introduce() method</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; &nbsp; &nbsp; println(</span><span style="color:#188038">&quot;I teach </span><span style="color:#d93025">$subject</span><span style="color:#188038">.&quot;</span><span style="color:#1f1f1f">)</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; }</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Benefits of Inheritance:</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Code Reusability:</strong> Inheritance promotes code reuse by allowing subclasses to inherit functionality from superclasses, reducing code duplication and enhancing maintainability.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Extensibility:</strong> Inheritance facilitates extensibility by enabling the creation of new classes that extend existing functionalities, promoting flexibility and adaptability.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Hierarchical Class Structures:</strong> Inheritance enables the creation of hierarchical class structures that reflect real-world relationships between entities, making code more organized and understandable.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Code Specialization:</strong> Inheritance allows for specialization of classes, enabling subclasses to refine and adapt the inherited behavior to specific use cases.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Conclusion:</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Inheritance is a fundamental building block of object-oriented programming in Kotlin, providing a powerful mechanism for code reuse, extensibility, and the creation of well-structured, maintainable code. By effectively utilizing inheritance, programmers can model complex relationships between entities and create scalable and adaptable software applications.</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+    </div>
+
+    <script src="../cordova.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

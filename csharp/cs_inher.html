@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+                 <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
+        -->
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/w3.css">
+    <title>Hello World</title>
+</head>
+
+<body>
+<div class="w3-bar">
+    <h1>C# Inheritance</h1>
+
+</div>
+
+<div class="w3-container"><p>&nbsp;</p>
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Inheritance</strong></span></span></span></p>
+
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Inheritance is a fundamental concept in object-oriented programming (OOP) that allows a class to inherit the properties and methods of another class. This enables the creation of new classes that are specialized versions of existing classes, promoting code reusability and extensibility.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Inheritance Terminology</strong></span></span></span></p>
+        
+        <ul style="list-style-type:disc">
+            <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Base Class:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> The class from which another class inherits.</span></span></span></li>
+            <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Derived Class:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> The class that inherits from the base class.</span></span></span></li>
+            <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Inheritance Hierarchy:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> A hierarchical relationship between classes, where a derived class inherits from a base class, and the derived class can serve as a base class for further derived classes.</span></span></span></li>
+        </ul>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Types of Inheritance</strong></span></span></span></p>
+        
+        <ul style="list-style-type:disc">
+            <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Single Inheritance:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> A derived class inherits from a single base class.</span></span></span></li>
+            <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Multilevel Inheritance:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> A derived class inherits from another derived class, creating a chain of inheritance.</span></span></span></li>
+            <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Multipath Inheritance:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> A derived class inherits from multiple base classes, creating a more complex inheritance hierarchy.</span></span></span></li>
+        </ul>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Example: Animal Class Hierarchy</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Consider an Animal class representing common animal characteristics:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">class </span><span style="color:#996900">Animal</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Fields</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">private </span><span style="color:#1967d2">string</span><span style="color:#1f1f1f"> name;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">private </span><span style="color:#1967d2">int</span><span style="color:#1f1f1f"> age;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">private </span><span style="color:#1967d2">string</span><span style="color:#1f1f1f"> species;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Methods</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">public void </span><span style="color:#996900">Eat</span><span style="color:#444746">()</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; Console.WriteLine(</span><span style="color:#188038">&quot;Animal is eating.&quot;</span><span style="color:#1f1f1f">);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; }</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">public void </span><span style="color:#996900">Sleep</span><span style="color:#444746">()</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; Console.WriteLine(</span><span style="color:#188038">&quot;Animal is sleeping.&quot;</span><span style="color:#1f1f1f">);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; }</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Derived Classes: Dog and Cat</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Create a Dog class that inherits from the Animal class:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">class </span><span style="color:#996900">Dog</span><span style="color:#1f1f1f"> : </span><span style="color:#996900">Animal</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Methods</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">public void </span><span style="color:#996900">Bark</span><span style="color:#444746">()</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; Console.WriteLine(</span><span style="color:#188038">&quot;Dog is barking.&quot;</span><span style="color:#1f1f1f">);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; }</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Create a Cat class that also inherits from the Animal class:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">class </span><span style="color:#996900">Cat</span><span style="color:#1f1f1f"> : </span><span style="color:#996900">Animal</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Methods</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">public void </span><span style="color:#996900">Purr</span><span style="color:#444746">()</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; Console.WriteLine(</span><span style="color:#188038">&quot;Cat is purring.&quot;</span><span style="color:#1f1f1f">);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; }</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Inheritance Benefits</strong></span></span></span></p>
+        
+        <ul style="list-style-type:disc">
+            <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Code Reusability:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Inheritance allows programmers to reuse existing code by creating new classes that inherit from existing classes, reducing code duplication and improving development efficiency.</span></span></span></li>
+            <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Extensibility:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Inheritance enables the creation of specialized classes that extend the functionality of existing classes, promoting code flexibility and adaptability.</span></span></span></li>
+            <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Code Organization:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Inheritance promotes code organization by creating a hierarchical structure of classes, making it easier to understand and maintain complex codebases.</span></span></span></li>
+        </ul>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Conclusion</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Inheritance is a powerful and versatile tool in C# programming that allows programmers to create specialized classes that inherit properties and methods from existing classes. It plays a crucial role in OOP principles, enabling code reusability, extensibility, and code organization. Understanding inheritance is essential for developing effective and maintainable C# applications.</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+    </div>
+
+    <script src="../cordova.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

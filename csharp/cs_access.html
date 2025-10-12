@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+                 <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
+        -->
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/w3.css">
+    <title>Hello World</title>
+</head>
+
+<body>
+<div class="w3-bar">
+    <h1>C# Access Modifier</h1>
+
+</div>
+
+<div class="w3-container"><p>&nbsp;</p>
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Access Modifiers</strong></span></span></span></p>
+
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Access modifiers are keywords in C# that control the visibility and accessibility of class members, such as fields, properties, methods, and nested classes. They determine which parts of a program can access or modify a particular member, ensuring data integrity and promoting code organization.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Types of Access Modifiers</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">C# provides four access modifiers:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Public:</strong> The most accessible modifier, allowing access to the member from any part of the program, including other classes and assemblies.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Private:</strong> The least accessible modifier, restricting access to the member within the class where it is declared. Only methods and nested classes within the same class can access private members.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Protected:</strong> Similar to private, but also allows access to members declared in derived classes that inherit from the class where the protected member is defined.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Internal:</strong> Restricts access to the member within the assembly where the class is defined. Only members within the same assembly can access internal members.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Example: Access Modifier Usage</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Consider a class named Employee:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">class </span><span style="color:#996900">Employee</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Private field</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">private </span><span style="color:#1967d2">string</span><span style="color:#1f1f1f"> name;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Public property</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">public </span><span style="color:#1967d2">string</span><span style="color:#1f1f1f"> Name {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#8430ce">get</span><span style="color:#1f1f1f"> { </span><span style="color:#8430ce">return</span><span style="color:#1f1f1f"> name; }</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#8430ce">set</span><span style="color:#1f1f1f"> { name = </span><span style="color:#8430ce">value</span><span style="color:#1f1f1f">; }</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; }</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Protected method</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">protected void </span><span style="color:#996900">PromoteEmployee</span><span style="color:#444746">()</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#5f6368">// Promotion logic</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; }</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Internal method</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">internal void </span><span style="color:#996900">CalculateBonus</span><span style="color:#444746">()</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#5f6368">// Bonus calculation logic</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; }</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">In this example, the name field is declared as private, making it only accessible within the Employee class. The Name property provides controlled access to the name field, allowing it to be read and modified from other parts of the program. The PromoteEmployee() method is declared as protected, allowing access from within the Employee class and any derived classes that inherit from Employee. The CalculateBonus() method is declared as internal, restricting access to members within the same assembly where the Employee class is defined.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Access Modifier Benefits</strong></span></span></span></p>
+        
+        <ul style="list-style-type:disc">
+            <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Data Encapsulation:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Access modifiers protect sensitive data from unauthorized access, ensuring data integrity and preventing unintentional modifications.</span></span></span></li>
+            <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Code Organization:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Access modifiers promote modularity and code organization by clearly defining which parts of the program can access or modify specific members.</span></span></span></li>
+            <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Code Reusability:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Access modifiers enable the creation of reusable classes and components with well-defined access restrictions, promoting code reusability and maintainability.</span></span></span></li>
+        </ul>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Conclusion</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Access modifiers are fundamental concepts in C# programming, playing a crucial role in data encapsulation, code organization, and code reusability. Understanding and applying access modifiers effectively is essential for developing secure, structured, and maintainable C# applications.</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+    </div>
+
+    <script src="../cordova.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+                 <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
+        -->
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/w3.css">
+    <title>Hello World</title>
+</head>
+
+<body>
+<div class="w3-bar">
+    <h1>C# Booleans</h1>
+
+</div>
+
+<div class="w3-container"><p>&nbsp;</p>
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Booleans</strong></span></span></span></p>
+
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Booleans are a primitive data type in C# that represents a logical value, either true or false. They are used to express conditions and make decisions in the program&#39;s execution.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Declaring and Initializing Boolean Variables</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Boolean variables are declared using the bool keyword. They can be initialized with either true or false values. For example:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">bool</span><span style="color:#1f1f1f"> isStudent = </span><span style="color:#b55908">true</span><span style="color:#1f1f1f">;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">bool</span><span style="color:#1f1f1f"> isAdult = </span><span style="color:#b55908">false</span><span style="color:#1f1f1f">;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Boolean Expressions</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Boolean expressions involve comparisons or logical operations that result in a boolean value. Comparison operators like ==, !=, &lt;, &lt;=, &gt;, and &gt;= compare two values and return true or false based on the comparison result. Logical operators like &amp;&amp; (logical AND), || (logical OR), and ! (logical NOT) combine boolean values and produce a new boolean value.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Example:</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">int</span><span style="color:#1f1f1f"> age = </span><span style="color:#b55908">25</span><span style="color:#1f1f1f">;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">bool</span><span style="color:#1f1f1f"> isMajorOfAge = (age &gt;= </span><span style="color:#b55908">18</span><span style="color:#1f1f1f">); </span><span style="color:#5f6368">// isMajorOfAge = true</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Conditional Statements</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Conditional statements, such as if, else, and switch, use boolean expressions to control the flow of program execution. They execute specific code blocks based on the truth value of the condition.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Example:</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">int</span><span style="color:#1f1f1f"> score = </span><span style="color:#b55908">85</span><span style="color:#1f1f1f">;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">if</span><span style="color:#1f1f1f"> (score &gt;= </span><span style="color:#b55908">90</span><span style="color:#1f1f1f">) {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; Console.WriteLine(</span><span style="color:#188038">&quot;Excellent!&quot;</span><span style="color:#1f1f1f">);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">} </span><span style="color:#8430ce">else if</span><span style="color:#1f1f1f"> (score &gt;= </span><span style="color:#b55908">80</span><span style="color:#1f1f1f">) {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; Console.WriteLine(</span><span style="color:#188038">&quot;Great!&quot;</span><span style="color:#1f1f1f">);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">} </span><span style="color:#8430ce">else if</span><span style="color:#1f1f1f"> (score &gt;= </span><span style="color:#b55908">70</span><span style="color:#1f1f1f">) {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; Console.WriteLine(</span><span style="color:#188038">&quot;Good!&quot;</span><span style="color:#1f1f1f">);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">} </span><span style="color:#8430ce">else</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; Console.WriteLine(</span><span style="color:#188038">&quot;Try harder next time.&quot;</span><span style="color:#1f1f1f">);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Boolean Variables in Methods</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Boolean values can be returned from methods and passed as arguments to methods. This allows for modular code that encapsulates logic and promotes code reuse.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Example:</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">bool </span><span style="color:#996900">isEven</span><span style="color:#444746">(</span><span style="color:#1967d2">int</span><span style="color:#444746"> number)</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">return</span><span style="color:#1f1f1f"> (number % </span><span style="color:#b55908">2</span><span style="color:#1f1f1f"> == </span><span style="color:#b55908">0</span><span style="color:#1f1f1f">);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">int</span><span style="color:#1f1f1f"> inputNumber = </span><span style="color:#b55908">10</span><span style="color:#1f1f1f">;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">if</span><span style="color:#1f1f1f"> (isEven(inputNumber)) {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; Console.WriteLine(</span><span style="color:#188038">$&quot;</span><span style="color:#1f1f1f">{inputNumber}</span><span style="color:#188038"> is even.&quot;</span><span style="color:#1f1f1f">);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">} </span><span style="color:#8430ce">else</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; Console.WriteLine(</span><span style="color:#188038">$&quot;</span><span style="color:#1f1f1f">{inputNumber}</span><span style="color:#188038"> is odd.&quot;</span><span style="color:#1f1f1f">);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Conclusion</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Booleans are fundamental building blocks of C# programming, enabling conditional statements, logical operations, and decision-making logic. They provide a concise and powerful way to express conditions and control the program&#39;s flow of execution.</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+    </div>
+
+    <script src="../cordova.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+                 <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
+        -->
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/w3.css">
+    <title>Hello World</title>
+</head>
+
+<body>
+<div class="w3-bar">
+    <h1>C# Switch</h1>
+
+</div>
+
+<div class="w3-container"><p>&nbsp;</p>
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Switch Statements</strong></span></span></span></p>
+
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">The switch statement is a control flow structure in C# used to execute different code blocks based on the value of an expression. It is an alternative to using multiple nested if-else statements when dealing with multiple possible values.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Syntax</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">The syntax of a switch statement is as follows:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">switch</span><span style="color:#1f1f1f"> (expression) {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">case</span><span style="color:#1f1f1f"> value1:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#5f6368">// Code block to execute if expression equals value1</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#8430ce">break</span><span style="color:#1f1f1f">;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">case</span><span style="color:#1f1f1f"> value2:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#5f6368">// Code block to execute if expression equals value2</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#8430ce">break</span><span style="color:#1f1f1f">;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// ... more cases</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#b55908">default</span><span style="color:#1f1f1f">:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#5f6368">// Code block to execute if no case matches</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#8430ce">break</span><span style="color:#1f1f1f">;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Example</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Consider the following code that checks the day of the week:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">int</span><span style="color:#1f1f1f"> day = </span><span style="color:#b55908">3</span><span style="color:#1f1f1f">;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">switch</span><span style="color:#444746"> (day) {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">case</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp;<span style="color:#b55908">1</span><span style="color:#444746">:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#444746">&nbsp; &nbsp; Console.WriteLine(</span><span style="color:#188038">&quot;Monday&quot;</span><span style="color:#444746">);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#8430ce">break</span><span style="color:#444746">;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">case</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp;<span style="color:#b55908">2</span><span style="color:#444746">:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#444746">&nbsp; &nbsp; Console.WriteLine(</span><span style="color:#188038">&quot;Tuesday&quot;</span><span style="color:#444746">);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#8430ce">break</span><span style="color:#444746">;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">case</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp;<span style="color:#b55908">3</span><span style="color:#444746">:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#444746">&nbsp; &nbsp; Console.WriteLine(</span><span style="color:#188038">&quot;Wednesday&quot;</span><span style="color:#444746">);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#8430ce">break</span><span style="color:#444746">;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// ... more cases</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#b55908">default</span><span style="color:#1f1f1f">:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; Console.WriteLine(</span><span style="color:#188038">&quot;Invalid day&quot;</span><span style="color:#1f1f1f">);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#8430ce">break</span><span style="color:#1f1f1f">;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">In this example, the switch statement evaluates the day variable and executes the corresponding case block based on its value. The break keyword ensures that only the code block for the matching case is executed. The default case is used if none of the case values match.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Benefits of Using Switch Statements</strong></span></span></span></p>
+        
+        <ul style="list-style-type:disc">
+            <li><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Improved code readability and maintainability compared to nested if-else statements.</span></span></span></li>
+            <li><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Clearer representation of multiple possible values and their corresponding actions.</span></span></span></li>
+            <li><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Reduced code duplication and nesting.</span></span></span></li>
+        </ul>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Conclusion</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">The switch statement is a powerful control flow tool in C# that allows for efficient and structured decision-making based on multiple possible values. It promotes code readability and organization when dealing with multiple cases, making it a valuable tool for C# programmers.</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+    </div>
+
+    <script src="../cordova.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+                 <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
+        -->
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/w3.css">
+    <title>Hello World</title>
+</head>
+
+<body>
+<div class="w3-bar">
+    <h1>C# Exceptions</h1>
+
+</div>
+
+<div class="w3-container"><p>&nbsp;</p>
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>C# Exceptions: Handling Unforeseen Events</strong></span></span></span></p>
+
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Exceptions are a fundamental concept in programming that represent unexpected events or errors that occur during program execution. In C#, exceptions provide a structured way to handle these errors, preventing program crashes and ensuring graceful error recovery. Understanding exceptions is crucial for developing robust and reliable C# applications.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Exception Types and Hierarchies</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">The System.Exception class serves as the base class for all exceptions in C#. Exceptions are organized into a hierarchical structure, allowing for specific and general exception handling.</span></span></span></p>
+        
+        <ul style="list-style-type:disc">
+            <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Specific Exceptions:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Subclasses of System.Exception represent specific error conditions, such as FileNotFoundException, ArgumentNullException, or ArithmeticException.</span></span></span></li>
+            <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">General Exceptions:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> The Exception class itself represents any type of exception, allowing you to catch all exceptions without specifying their exact type.</span></span></span></li>
+        </ul>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Throwing Exceptions</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">To signal an exception, use the throw keyword followed by the exception object:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">try</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#1967d2">int</span><span style="color:#1f1f1f"> numerator = </span><span style="color:#b55908">10</span><span style="color:#1f1f1f">;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#1967d2">int</span><span style="color:#1f1f1f"> denominator = </span><span style="color:#b55908">0</span><span style="color:#1f1f1f">;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#1967d2">int</span><span style="color:#1f1f1f"> result = numerator / denominator;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; Console.WriteLine(</span><span style="color:#188038">&quot;Result: &quot;</span><span style="color:#1f1f1f"> + result);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">} catch (DivideByZeroException e) {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; Console.WriteLine(</span><span style="color:#188038">&quot;Error: Cannot divide by zero.&quot;</span><span style="color:#1f1f1f">);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">This code attempts to divide numerator by denominator. However, if denominator is zero, it throws a DivideByZeroException, which is caught by the catch block.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Exception Handling Blocks</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Exception handling involves try-catch blocks, which identify code that may throw exceptions and specify how to handle those exceptions.</span></span></span></p>
+        
+        <ul style="list-style-type:disc">
+            <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">try Block:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Encloses the code that may throw an exception.</span></span></span></li>
+            <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">catch Block:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Indicates what to do when an exception of a specific type is thrown.</span></span></span></li>
+            <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">finally Block:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Contains code that always executes, regardless of whether an exception is thrown or not.</span></span></span></li>
+        </ul>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Example: Handling Multiple Exceptions</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">try</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#1967d2">int </span><span style="color:#8430ce">value</span><span style="color:#1f1f1f"> = Convert.ToInt32(userInput);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; Console.WriteLine(</span><span style="color:#188038">&quot;Converted value: &quot;</span><span style="color:#1f1f1f"> + </span><span style="color:#8430ce">value</span><span style="color:#1f1f1f">);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">} catch (FormatException e) {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; Console.WriteLine(</span><span style="color:#188038">&quot;Error: Invalid input format.&quot;</span><span style="color:#1f1f1f">);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">} catch (OverflowException e) {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; Console.WriteLine(</span><span style="color:#188038">&quot;Error: Input value too large or too small.&quot;</span><span style="color:#1f1f1f">);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">This code attempts to convert the user input to an integer. If the input is not a valid integer, it throws either a FormatException or an OverflowException, which are caught by the respective catch blocks.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Benefits of Exception Handling</strong></span></span></span></p>
+        
+        <ul style="list-style-type:disc">
+            <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Graceful Error Recovery:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Exceptions allow programs to recover from errors without crashing, providing meaningful error messages and maintaining program stability.</span></span></span></li>
+            <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Code Organization:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Exception handling promotes code organization by separating error handling logic from the main program flow.</span></span></span></li>
+            <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Code Maintainability:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Exception handling makes code more maintainable by isolating error handling code and making it easier to debug and modify.</span></span></span></li>
+        </ul>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Conclusion</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Exception handling is an essential aspect of C# programming, enabling developers to write robust and reliable applications that can gracefully handle unexpected events and errors. Understanding exception types, exception handling blocks, and the benefits of exception handling is crucial for building high-quality C# applications.</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+    </div>
+
+    <script src="../cordova.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

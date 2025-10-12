@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+                 <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
+        -->
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/w3.css">
+    <title>Hello World</title>
+</head>
+
+<body>
+<div class="w3-bar">
+    <h1>C# Method Parameter</h1>
+
+</div>
+
+<div class="w3-container"><p>&nbsp;</p>
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>What are Method Parameters?</strong></span></span></span></p>
+
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Method parameters are variables that are passed as arguments to a method when it is invoked. They act as placeholders for data that will be used within the method&#39;s code. Parameters allow methods to receive input from the caller and perform operations based on that input.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Declaring Method Parameters</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Method parameters are declared within the parentheses after the method name. They specify the data type and name of each parameter. For instance:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">public void </span><span style="color:#996900">PrintGreeting</span><span style="color:#444746">(</span><span style="color:#1967d2">string</span><span style="color:#444746"> name)</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; Console.WriteLine(</span><span style="color:#188038">&quot;Hello, &quot;</span><span style="color:#1f1f1f"> + name + </span><span style="color:#188038">&quot;!&quot;</span><span style="color:#1f1f1f">);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">In this example, the PrintGreeting method has one parameter named name, which is of the string data type.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Passing Arguments to Methods</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">When a method is invoked, arguments are passed to the corresponding parameters. The arguments should match the data type of the parameters. For example:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">PrintGreeting(</span><span style="color:#188038">&quot;Alice&quot;</span><span style="color:#1f1f1f">);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">This statement calls the PrintGreeting method and passes the argument &quot;Alice&quot; to the name parameter. The method will print the greeting &quot;Hello, Alice!&quot;.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Types of Method Parameters</strong></span></span></span></p>
+        
+        <ul style="list-style-type:disc">
+            <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Value Parameters:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> The default parameter passing mode, where the value of the argument is copied into the method&#39;s parameter.</span></span></span></li>
+            <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Reference Parameters:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> The parameter is a reference to the original variable, allowing the method to modify the value of the variable itself.</span></span></span></li>
+            <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Out Parameters:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Similar to reference parameters, but the parameter must be initialized before calling the method.</span></span></span></li>
+            <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Params Parameters:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Allow a variable number of arguments to be passed to the method.</span></span></span></li>
+        </ul>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Examples of Method Parameters</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#5f6368">// Value parameter</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">int </span><span style="color:#996900">CalculateSum</span><span style="color:#444746">(</span><span style="color:#1967d2">int</span><span style="color:#444746"> number1, </span><span style="color:#1967d2">int</span><span style="color:#444746"> number2)</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#1967d2">int</span><span style="color:#1f1f1f"> sum = number1 + number2;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">return</span><span style="color:#1f1f1f"> sum;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">int</span><span style="color:#1f1f1f"> result = CalculateSum(</span><span style="color:#b55908">10</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">20</span><span style="color:#1f1f1f">); </span><span style="color:#5f6368">// result = 30</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#5f6368">// Reference parameter</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">void </span><span style="color:#996900">SwapValues</span><span style="color:#444746">(</span><span style="color:#8430ce">ref </span><span style="color:#1967d2">int</span><span style="color:#444746"> value1, </span><span style="color:#8430ce">ref </span><span style="color:#1967d2">int</span><span style="color:#444746"> value2)</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#1967d2">int</span><span style="color:#1f1f1f"> temp = value1;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; value1 = value2;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; value2 = temp;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">int</span><span style="color:#1f1f1f"> firstValue = </span><span style="color:#b55908">5</span><span style="color:#1f1f1f">;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">int</span><span style="color:#1f1f1f"> secondValue = </span><span style="color:#b55908">3</span><span style="color:#1f1f1f">;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">SwapValues(</span><span style="color:#8430ce">ref</span><span style="color:#1f1f1f"> firstValue, </span><span style="color:#8430ce">ref</span><span style="color:#1f1f1f"> secondValue); </span><span style="color:#5f6368">// firstValue = 3, secondValue = 5</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#5f6368">// Out parameter</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">void </span><span style="color:#996900">GetMaximumAndMinimum</span><span style="color:#444746">(</span><span style="color:#1967d2">int</span><span style="color:#444746">[] numbers, </span><span style="color:#8430ce">out </span><span style="color:#1967d2">int</span><span style="color:#444746"> maximum, </span><span style="color:#8430ce">out </span><span style="color:#1967d2">int</span><span style="color:#444746"> minimum)</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#444746">maximum = numbers[</span><span style="color:#b55908">0</span><span style="color:#444746">];</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#444746">&nbsp; minimum = numbers[</span><span style="color:#b55908">0</span><span style="color:#444746">];</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">for</span><span style="color:#444746"> (</span><span style="color:#1967d2">int</span><span style="color:#444746"> i = </span><span style="color:#b55908">1</span><span style="color:#444746">; i &lt; numbers.Length; i++) {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#8430ce">if</span><span style="color:#444746"> (numbers[i] &gt; maximum) {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#444746">&nbsp; &nbsp; &nbsp; maximum = numbers[i];</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#444746">&nbsp; &nbsp; }</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#8430ce">if</span><span style="color:#444746"> (numbers[i] &lt; minimum) {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#444746">&nbsp; &nbsp; &nbsp; minimum = numbers[i];</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; }</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; }</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">int</span><span style="color:#1f1f1f">[] values = { </span><span style="color:#b55908">10</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">5</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">2</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">15</span><span style="color:#1f1f1f"> };</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">GetMaximumAndMinimum(values, </span><span style="color:#8430ce">out </span><span style="color:#1967d2">int</span><span style="color:#1f1f1f"> maxValue, </span><span style="color:#8430ce">out </span><span style="color:#1967d2">int</span><span style="color:#1f1f1f"> minValue); </span><span style="color:#5f6368">// maxValue = 15, minValue = 2</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#5f6368">// Params parameter</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">void </span><span style="color:#996900">PrintMultipleNumbers</span><span style="color:#444746">(</span><span style="color:#8430ce">params </span><span style="color:#1967d2">int</span><span style="color:#444746">[] numbers)</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">for</span><span style="color:#1f1f1f"> (</span><span style="color:#1967d2">int</span><span style="color:#1f1f1f"> number : numbers) {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; Console.WriteLine(number);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; }</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">PrintMultipleNumbers(</span><span style="color:#b55908">1</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">3</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">5</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">7</span><span style="color:#1f1f1f">); </span><span style="color:#5f6368">// Prints 1, 3, 5, 7</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Conclusion</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Method parameters are fundamental aspects of C# programming, enabling the exchange of data between methods and promoting code reusability. They allow methods to receive input, perform operations, and modify data effectively, making them essential building blocks for creating complex and well-structured C# programs.</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+    </div>
+
+    <script src="../cordova.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

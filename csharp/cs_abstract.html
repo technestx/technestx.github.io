@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+                 <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
+        -->
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/w3.css">
+    <title>Hello World</title>
+</head>
+
+<body>
+<div class="w3-bar">
+    <h1>C# Abstract</h1>
+
+</div>
+
+<div class="w3-container"><p>&nbsp;</p>
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Abstraction is a fundamental principle of object-oriented programming (OOP) that focuses on the essential features of an object, hiding the underlying implementation details. It allows users to interact with objects without understanding their internal workings, promoting code simplicity and maintainability.</span></span></span></p>
+
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Abstraction in C#</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">In C# programming, abstraction is achieved primarily through the use of abstract classes and interfaces. Abstract classes are classes that cannot be instantiated directly; they serve as blueprints for derived classes that inherit their abstract methods and can provide concrete implementations for those methods. Interfaces are collections of abstract methods that define the essential behavior of a class, allowing any class to implement the interface and provide its own implementations for the interface&#39;s methods.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Benefits of Abstraction</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Abstraction offers several benefits in C# programming:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Code Simplicity:</strong> Abstraction simplifies code by hiding the complex implementation details of an object and exposing only the essential features that users need to interact with.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Maintainability:</strong> Abstraction promotes code maintainability by making it easier to modify the implementation of an object without affecting the code that uses it. This is particularly useful in large codebases where the implementation details of objects may change over time.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Reusability:</strong> Abstraction allows for the creation of reusable components by focusing on the essential behavior of an object rather than its specific implementation. This enables programmers to create generic components that can be used in different contexts.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Flexibility:</strong> Abstraction enhances the flexibility of code by allowing programmers to create different implementations of the same abstract behavior. This enables the adaptation of code to different requirements or platforms.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Example: Shape Class Hierarchy</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Consider a simplified example of how abstraction can be implemented using abstract classes and interfaces in C#:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#5f6368">// Abstract class describing a generic shape</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">public abstract class </span><span style="color:#996900">Shape</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Abstract method to calculate the area of the shape</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">public abstract </span><span style="color:#1967d2">double </span><span style="color:#996900">GetArea</span><span style="color:#444746">()</span><span style="color:#1f1f1f">;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#5f6368">// Interface defining the behavior of a shape that can be drawn</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">public interface </span><span style="color:#996900">Drawable</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Method to draw the shape</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">void </span><span style="color:#996900">Draw</span><span style="color:#444746">()</span><span style="color:#1f1f1f">;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">In this example, the Shape abstract class defines an abstract method GetArea() that all derived classes must implement. This ensures that all shapes can provide a consistent way to calculate their area. The Drawable interface defines a method Draw() that allows any class that implements the interface to be drawn. This promotes the separation of concerns by allowing the drawing behavior to be independent of the shape&#39;s implementation.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Derived classes can inherit from the Shape abstract class and implement the GetArea() method for their specific shape type. Additionally, classes can implement the Drawable interface to provide their own Draw() method for drawing the shape.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">By using abstraction through abstract classes and interfaces, C# programmers can create well-structured, reusable, and maintainable code that adheres to OOP principles.</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+    </div>
+
+    <script src="../cordova.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+                 <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
+        -->
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/w3.css">
+    <title>Hello World</title>
+</head>
+
+<body>
+<div class="w3-bar">
+    <h1>C# Files</h1>
+
+</div>
+
+<div class="w3-container"><p>&nbsp;</p>
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>C# File Handling: A Comprehensive Guide</strong></span></span></span></p>
+
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">File handling is an integral part of programming, allowing applications to interact with data stored in external files. C# offers a robust set of file handling capabilities through the System.IO namespace, enabling developers to read, write, and manipulate files effectively. This guide delves into the fundamental concepts of C# file handling, exploring essential file operations, file methods and properties, error handling techniques, and real-world examples.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Fundamental File Operations</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">C# file handling encompasses three primary operations:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Creating Files:</strong> The File.Create() method enables the creation of new files, allowing you to specify the file path and access permissions.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Reading Files:</strong> To access the contents of a text file, you can utilize either the File.ReadAllText() method, which returns the entire file content as a string, or the StreamReader class, which provides line-by-line reading capabilities.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Writing Files:</strong> Writing text content to a file can be accomplished using the File.WriteAllText() method, which replaces the existing file content, or the StreamWriter class, which allows for appending or overwriting specific portions of the file.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>File Methods and Properties</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">The System.IO namespace provides a rich set of methods and properties for interacting with files:</span></span></span></p>
+        
+        <ul style="list-style-type:disc">
+            <li><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">File.Exists(): Determines whether a file exists at a specified path.</span></span></span></li>
+            <li><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">File.Delete(): Removes a file from the file system.</span></span></span></li>
+            <li><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">File.Move(): Renames or moves a file to a different location.</span></span></span></li>
+            <li><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">File.Copy(): Creates a replica of an existing file.</span></span></span></li>
+            <li><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">File.Open(): Opens an existing file for reading, writing, or both.</span></span></span></li>
+            <li><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">File.AppendAllText(): Appends text to the end of an existing file.</span></span></span></li>
+            <li><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Directory.CreateDirectory(): Creates a new directory.</span></span></span></li>
+            <li><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Directory.EnumerateFiles(): Iterates over all files within a directory.</span></span></span></li>
+        </ul>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Example: Reading and Writing Text Files</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Consider a practical example of reading and writing text files:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">string</span><span style="color:#1f1f1f"> filePath = </span><span style="color:#188038">@&quot;C:\Users\Public\Documents\myfile.txt&quot;</span><span style="color:#1f1f1f">;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#5f6368">// Read the file contents</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">string</span><span style="color:#1f1f1f"> fileContent = File.ReadAllText(filePath);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">Console.WriteLine(</span><span style="color:#188038">&quot;File content: &quot;</span><span style="color:#1f1f1f"> + fileContent);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#5f6368">// Write new content to the file</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">string</span><span style="color:#1f1f1f"> newContent = </span><span style="color:#188038">&quot;This is new content for the file.&quot;</span><span style="color:#1f1f1f">;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">File.WriteAllText(filePath, newContent);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">This code snippet demonstrates how to read the contents of the file myfile.txt and display them on the console. It then proceeds to write a new string to the same file.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Error Handling in File Handling</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">File handling operations can potentially encounter errors, such as file not found, access denied, or disk full. To handle these errors gracefully and provide informative feedback, employ try-catch blocks:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">try</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// File handling operation</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">} catch (IOException e) {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; Console.WriteLine(</span><span style="color:#188038">&quot;Error: &quot;</span><span style="color:#1f1f1f"> + e.Message);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">This code encloses the file handling operation within a try block and catches any IOException that may occur. The e.Message property provides details about the specific error encountered.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Advanced File Handling Techniques</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">C# file handling offers advanced techniques for more complex file manipulations:</span></span></span></p>
+        
+        <ul style="list-style-type:disc">
+            <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Serialization:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Converting objects into a format that can be stored in a file and later reconstructed.</span></span></span></li>
+            <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Binary File Handling:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Reading and writing binary data, such as images or audio files.</span></span></span></li>
+            <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">FileStream Class:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Provides low-level control over file access, enabling developers to optimize performance and handle large files efficiently.</span></span></span></li>
+        </ul>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Conclusion</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">C# file handling provides a powerful set of tools for interacting with external files, enabling developers to read, write, and manipulate data effectively. Understanding file handling concepts, mastering the available methods and properties, employing error handling techniques, and exploring advanced file handling techniques are essential skills for creating robust applications that can manage data stored in files.</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+    </div>
+
+    <script src="../cordova.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

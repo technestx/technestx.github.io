@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+                        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="../css/w3.css">
+        <title>Hello World</title>
+    </head>
+    <div class="w3-bar w3-black">
+       <h1>Try Except</h1>
+      </div>
+    <body>
+        <div class="w3-container w3-animate-right" style="background-color: white;">
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>What is Python try and except?</strong></span></span></span></p>
+
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">The try and except statements are used to handle errors in Python. The try statement is used to enclose code that may raise an exception. If an exception is raised, the except statement is used to handle the exception.</span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Basic usage of try and except</strong></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">The basic syntax of the try and except statements is as follows:</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+        <p style="margin-left:16px; margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#444746"><span style="background-color:#e3e3e3">Python</span></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">try</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">:</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">&nbsp; </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Code that may raise an exception</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">except</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f"> Exception </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">as</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f"> e:</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">&nbsp; </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Handle the exception</span></span></span><br />
+        &nbsp;</p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">The try block is where you place the code that may raise an exception. The except block is where you handle the exception.</span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Handling specific exceptions</strong></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">You can also handle specific exceptions by specifying the exception type in the except statement. For example, the following code handles the ValueError exception:</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+        <p style="margin-left:16px; margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#444746"><span style="background-color:#e3e3e3">Python</span></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">try</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">:</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">&nbsp; </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Code that may raise a ValueError exception</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">except</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f"> ValueError </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">as</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f"> e:</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">&nbsp; </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Handle the ValueError exception</span></span></span><br />
+        &nbsp;</p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Multiple except blocks</strong></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">You can also have multiple except blocks to handle different types of exceptions. For example, the following code handles the ValueError and IndexError exceptions:</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+        <p style="margin-left:16px; margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#444746"><span style="background-color:#e3e3e3">Python</span></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">try</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">:</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">&nbsp; </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Code that may raise a ValueError or IndexError exception</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">except</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f"> ValueError </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">as</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f"> e:</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">&nbsp; </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Handle the ValueError exception</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">except</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f"> IndexError </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">as</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f"> e:</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">&nbsp; </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Handle the IndexError exception</span></span></span><br />
+        &nbsp;</p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Handling all exceptions</strong></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">You can also use the general Exception type to handle all exceptions. For example, the following code handles all exceptions:</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+        <p style="margin-left:16px; margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#444746"><span style="background-color:#e3e3e3">Python</span></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">try</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">:</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">&nbsp; </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Code that may raise any exception</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">except</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f"> Exception </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">as</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f"> e:</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">&nbsp; </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Handle any exception</span></span></span><br />
+        &nbsp;</p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Using finally</strong></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">The finally clause is used to execute code after the try and except blocks have been executed. The finally clause is always executed, regardless of whether or not an exception is raised.</span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Example:</strong></span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+        <p style="margin-left:16px; margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#444746"><span style="background-color:#e3e3e3">Python</span></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">try</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">:</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">&nbsp; </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Code that may raise an exception</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">except</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f"> Exception </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">as</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f"> e:</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">&nbsp; </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Handle the exception</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">finally</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">:</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">&nbsp; </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Code that is always executed</span></span></span><br />
+        &nbsp;</p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Conclusion</strong></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">The try and except statements are a powerful tool for handling errors in Python. By understanding how to use try and except, you can write more robust code that can handle unexpected errors.</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+       </div>
+
+        <script src="../cordova.js"></script>
+        <script src="../js/index.js"></script>
+    </body>
+</html>

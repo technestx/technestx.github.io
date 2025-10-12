@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+                        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="../css/w3.css">
+        <title>Hello World</title>
+    </head>
+    <div class="w3-bar w3-black">
+       <h1>Lambda</h1>
+      </div>
+    <body>
+        <div class="w3-container w3-animate-right" style="background-color: white;">
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>What are Python lambda functions?</strong></span></span></span></p>
+
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Python lambda functions are anonymous functions that can be defined and used in a single expression. Lambda functions are typically used for simple, one-off tasks, such as sorting a list or converting a string to uppercase.</span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>How to define a Python lambda function</strong></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">The syntax for defining a Python lambda function is as follows:</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+        <p style="margin-left:16px; margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#444746"><span style="background-color:#e3e3e3">Python</span></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">lambda</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f"> arguments: expression</span></span></span><br />
+        &nbsp;</p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">The arguments are the input parameters that the lambda function takes. The expression is the code that the lambda function executes.</span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Example:</strong></span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+        <p style="margin-left:16px; margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#444746"><span style="background-color:#e3e3e3">Python</span></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Define a lambda function that adds two numbers</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">add_two_numbers = </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">lambda</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f"> a, b: a + b</span></span></span><br />
+        <br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Call the lambda function</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">result = add_two_numbers(</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#b55908">1</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">, </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#b55908">2</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">)</span></span></span><br />
+        <br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Print the result</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">print(result)</span></span></span><br />
+        &nbsp;</p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Output:</strong></span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">3</span></span></span><br />
+        &nbsp;</p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>How to use Python lambda functions</strong></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Lambda functions can be used anywhere in your code where a regular function can be used. Lambda functions are often used in conjunction with built-in functions, such as map(), filter(), and reduce().</span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Example:</strong></span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+        <p style="margin-left:16px; margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#444746"><span style="background-color:#e3e3e3">Python</span></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Use a lambda function to sort a list of numbers</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">my_list = [</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#b55908">5</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">, </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#b55908">3</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">, </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#b55908">2</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">, </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#b55908">1</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">, </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#b55908">4</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">]</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">sorted_list = </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1967d2">sorted</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">(my_list, key=</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">lambda</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f"> x: x)</span></span></span><br />
+        <br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Print the sorted list</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">print(sorted_list)</span></span></span><br />
+        &nbsp;</p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Output:</strong></span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">[1, 2, 3, 4, 5]</span></span></span><br />
+        &nbsp;</p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Benefits of using Python lambda functions</strong></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">There are several benefits to using Python lambda functions:</span></span></span></p>
+        
+        <ul>
+            <li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Conciseness:</strong></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"> Lambda functions can be very concise, which can make your code more readable and maintainable.</span></span></span></li>
+            <li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Flexibility:</strong></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"> Lambda functions can be used in a variety of ways, including in conjunction with built-in functions and with other lambda functions.</span></span></span></li>
+            <li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Power:</strong></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"> Lambda functions can be used to perform complex tasks, such as sorting and filtering data.</span></span></span></li>
+        </ul>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Conclusion</strong></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Python lambda functions are a powerful tool that can help you to write more concise, flexible, and powerful code. By understanding how to use Python lambda functions, you can become a better Python programmer.</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+       </div>
+
+        <script src="../cordova.js"></script>
+        <script src="../js/index.js"></script>
+    </body>
+</html>

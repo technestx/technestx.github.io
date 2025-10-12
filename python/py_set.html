@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+                        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="../css/w3.css">
+        <title>Hello World</title>
+    </head>
+    <div class="w3-bar w3-black">
+       <h1>Set</h1>
+      </div>
+    <body>
+        <div class="w3-container w3-animate-right" style="background-color: white;">
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>What are Python sets?</strong></span></span></span></p>
+
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Python sets are unordered collections of unique elements. This means that the elements in a set are not in any particular order, and each element can only appear in the set once. Sets are created using curly braces ({}) and can contain any type of data, including integers, floats, strings, lists, and dictionaries.</span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>How to create a Python set</strong></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">To create a Python set, you simply enclose the elements of the set in curly braces. For example:</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+        <p style="margin-left:16px; margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#444746"><span style="background-color:#e3e3e3">Python</span></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">my_set = {</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#b55908">1</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">, </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#b55908">2</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">, </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#b55908">3</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">, </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#b55908">4</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">, </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#b55908">5</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">}</span></span></span><br />
+        &nbsp;</p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">This code creates a set containing the numbers 1 through 5.</span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>How to access items in a Python set</strong></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Since sets are unordered, there is no way to access specific items in a set by index. However, you can use the in operator to check if an item is contained in a set. For example:</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+        <p style="margin-left:16px; margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#444746"><span style="background-color:#e3e3e3">Python</span></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">print(</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#b55908">1</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f"> </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">in</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f"> my_set)&nbsp; </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Outputs True</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">print(</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#b55908">6</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f"> </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">in</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f"> my_set)&nbsp; </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Outputs False</span></span></span><br />
+        &nbsp;</p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">You can also use the &amp;, |, and - operators to perform set operations on two sets, such as union, intersection, and difference. For example:</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+        <p style="margin-left:16px; margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#444746"><span style="background-color:#e3e3e3">Python</span></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">my_set2 = {</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#b55908">6</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">, </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#b55908">7</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">, </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#b55908">8</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">, </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#b55908">9</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">, </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#b55908">10</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">}</span></span></span><br />
+        <br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Union of two sets</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">my_set_union = my_set | my_set2</span></span></span><br />
+        <br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Intersection of two sets</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">my_set_intersection = my_set &amp; my_set2</span></span></span><br />
+        <br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Difference of two sets</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">my_set_difference = my_set - my_set2</span></span></span><br />
+        &nbsp;</p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>How to iterate over a Python set</strong></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">To iterate over a Python set, you can use the for loop. The for loop iterates over each item in the set and executes a block of code for each item. For example:</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+        <p style="margin-left:16px; margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#444746"><span style="background-color:#e3e3e3">Python</span></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">for</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f"> item </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">in</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f"> my_set:</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">&nbsp; print(item)</span></span></span><br />
+        &nbsp;</p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">This code will print each item in the set to the console in an arbitrary order.</span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Python set methods</strong></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">There are a few Python set methods that can be used to perform various tasks on sets, such as adding and removing items from a set, checking if a set is empty, and finding the union, intersection, and difference of two sets.</span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Here are some examples of Python set methods:</span></span></span></p>
+        
+        <ul>
+            <li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">add(item): Adds the specified item to the set.</span></span></span></li>
+            <li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">remove(item): Removes the specified item from the set.</span></span></span></li>
+            <li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">clear(): Removes all items from the set.</span></span></span></li>
+            <li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">isdisjoint(other_set): Returns True if the set is disjoint from the other set, False otherwise.</span></span></span></li>
+            <li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">union(other_set): Returns a new set containing the union of the two sets.</span></span></span></li>
+            <li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">intersection(other_set): Returns a new set containing the intersection of the two sets.</span></span></span></li>
+            <li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">difference(other_set): Returns a new set containing the difference of the two sets.</span></span></span></li>
+        </ul>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Here are some additional tips for using Python sets:</strong></span></span></span></p>
+        
+        <ul>
+            <li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Use descriptive variable names for your sets. This will make your code more readable and easier to maintain.</span></span></span></li>
+            <li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Add comments to your code to explain what your sets are used for. This will help other developers understand your code and make it easier to debug.</span></span></span></li>
+            <li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Sets are a good choice for storing data that needs to be unique and unordered.</span></span></span></li>
+            <li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Use the isinstance() function to check the data type of a variable before using it as a set. This can help you to avoid errors.</span></span></span></li>
+        </ul>
+        
+       </div>
+
+        <script src="../cordova.js"></script>
+        <script src="../js/index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+                        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="../css/w3.css">
+        <title>Hello World</title>
+    </head>
+    <div class="w3-bar w3-black">
+       <h1>Function</h1>
+      </div>
+    <body>
+        <div class="w3-container w3-animate-right" style="background-color: white;">
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>What are Python functions?</strong></span></span></span></p>
+
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Python functions are reusable blocks of code that can be called from anywhere in your program. Functions can take arguments and return values.</span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>How to define a Python function</strong></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">To define a Python function, you use the def keyword. The syntax for defining a function is as follows:</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+        <p style="margin-left:16px; margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#444746"><span style="background-color:#e3e3e3">Python</span></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">def</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#444746"> </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#996900">function_name</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#444746">(arguments):</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">&nbsp; </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">&quot;&quot;&quot;Docstring&quot;&quot;&quot;</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">&nbsp; code block</span></span></span><br />
+        &nbsp;</p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">The function_name is the name of the function. The arguments are the input parameters that the function takes. The docstring is a string that describes what the function does. The code block is the code that the function executes.</span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Example:</strong></span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+        <p style="margin-left:16px; margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#444746"><span style="background-color:#e3e3e3">Python</span></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">def</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#444746"> </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#996900">greet</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#444746">(name):</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">&nbsp; </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">&quot;&quot;&quot;Greets the user by name.&quot;&quot;&quot;</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">&nbsp; print(</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">f&quot;Hello, </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">{name}</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">!&quot;</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">)</span></span></span><br />
+        <br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Call the greet function</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">greet(</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">&quot;John Doe&quot;</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">)</span></span></span><br />
+        &nbsp;</p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Output:</strong></span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">Hello, John Doe!</span></span></span><br />
+        &nbsp;</p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>How to call a Python function</strong></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">To call a Python function, you simply use its name followed by parentheses. You can pass arguments to the function by enclosing them in the parentheses.</span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Example:</strong></span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+        <p style="margin-left:16px; margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#444746"><span style="background-color:#e3e3e3">Python</span></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">def</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#444746"> </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#996900">add_two_numbers</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#444746">(a, b):</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">&nbsp; </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">&quot;&quot;&quot;Adds two numbers together.&quot;&quot;&quot;</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">&nbsp; </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">return</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f"> a + b</span></span></span><br />
+        <br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Call the add_two_numbers function</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">result = add_two_numbers(</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#b55908">1</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">, </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#b55908">2</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">)</span></span></span><br />
+        <br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Print the result</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">print(result)</span></span></span><br />
+        &nbsp;</p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Output:</strong></span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">3</span></span></span><br />
+        &nbsp;</p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>How to return values from Python functions</strong></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">To return a value from a Python function, you use the return keyword. The return keyword can be used to return any type of data, including integers, floats, strings, lists, and dictionaries.</span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Example:</strong></span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+        <p style="margin-left:16px; margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#444746"><span style="background-color:#e3e3e3">Python</span></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">def</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#444746"> </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#996900">get_user_input</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#444746">():</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">&nbsp; </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">&quot;&quot;&quot;Prompts the user for input and returns the input.&quot;&quot;&quot;</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">&nbsp; user_input = </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1967d2">input</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">(</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">&quot;Enter your name: &quot;</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">)</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">&nbsp; </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">return</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f"> user_input</span></span></span><br />
+        <br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Get the user&#39;s name</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">user_name = get_user_input()</span></span></span><br />
+        <br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Print the user&#39;s name</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">print(user_name)</span></span></span><br />
+        &nbsp;</p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Output:</strong></span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">Enter your name: John Doe</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">John Doe</span></span></span><br />
+        &nbsp;</p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Benefits of using Python functions</strong></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">There are several benefits to using Python functions:</span></span></span></p>
+        
+        <ul>
+            <li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Reusability:</strong></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"> Functions can be reused throughout your code, which can save you time and effort.</span></span></span></li>
+            <li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Modularity:</strong></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"> Functions break your code down into smaller, more manageable pieces, which can make your code easier to read and maintain.</span></span></span></li>
+            <li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Testing:</strong></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"> Functions can be tested independently of the rest of your code, which can help you to catch errors early.</span></span></span></li>
+        </ul>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Conclusion</strong></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Python functions are a powerful tool that can help you to write more efficient, reusable, and maintainable code. By understanding how to use Python functions, you can become a better Python programmer.</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+        <p>&nbsp;</p>
+        
+       </div>
+
+        <script src="../cordova.js"></script>
+        <script src="../js/index.js"></script>
+    </body>
+</html>

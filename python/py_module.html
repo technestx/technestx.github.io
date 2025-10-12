@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+                        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="../css/w3.css">
+        <title>Hello World</title>
+    </head>
+    <div class="w3-bar w3-black">
+       <h1>Module</h1>
+      </div>
+    <body>
+        <div class="w3-container w3-animate-right" style="background-color: white;">
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>What are Python modules?</strong></span></span></span></p>
+
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Python modules are reusable blocks of code that can be imported into other Python programs. Modules can contain functions, classes, variables, and other types of code.</span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Modules are created by saving Python code in a file with the .py extension. For example, a module called my_module.py would contain the following code:</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+        <p style="margin-left:16px; margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#444746"><span style="background-color:#e3e3e3">Python</span></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">def</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#444746"> </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#996900">greet</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#444746">(name):</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">&nbsp; </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">&quot;&quot;&quot;Greets the user by name.&quot;&quot;&quot;</span></span></span><br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">&nbsp; print(</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">f&quot;Hello, </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">{name}</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">!&quot;</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">)</span></span></span><br />
+        <br />
+        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Define other functions, classes, variables, etc.</span></span></span><br />
+        &nbsp;</p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Importing modules</strong></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">To import a module into your Python program, you use the import statement. For example, to import the my_module module, you would use the following code:</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+        <p style="margin-left:16px; margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#444746"><span style="background-color:#e3e3e3">Python</span></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">import</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f"> my_module</span></span></span><br />
+        &nbsp;</p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Once you have imported a module, you can access its functions, classes, and other variables using the dot notation. For example, to call the greet() function from the my_module module, you would use the following code:</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+        <p style="margin-left:16px; margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#444746"><span style="background-color:#e3e3e3">Python</span></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">my_module.greet(</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">&quot;John Doe&quot;</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">)</span></span></span><br />
+        &nbsp;</p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Benefits of using Python modules</strong></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">There are several benefits to using Python modules, including:</span></span></span></p>
+        
+        <ul>
+            <li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Code reuse:</strong></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"> Modules allow you to reuse code by importing it into other Python programs. This can save you time and effort.</span></span></span></li>
+            <li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Modularity:</strong></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"> Modules break down your code into smaller, more manageable pieces. This can make your code more readable and easier to maintain.</span></span></span></li>
+            <li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Organization:</strong></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"> Modules help you to organize your code by grouping related code together.</span></span></span></li>
+        </ul>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Examples:</strong></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Here are some examples of Python modules:</span></span></span></p>
+        
+        <ul>
+            <li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">The math module contains mathematical functions such as sin(), cos(), and tan().</span></span></span></li>
+            <li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">The random module contains functions for generating random numbers and sequences.</span></span></span></li>
+            <li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">The string module contains functions for manipulating strings, such as split(), join(), and find().</span></span></span></li>
+            <li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">The time module contains functions for working with time and dates, such as sleep(), localtime(), and strftime().</span></span></span></li>
+        </ul>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Creating custom modules</strong></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">You can create your own custom modules by saving Python code in a file with the .py extension. For example, you could create a module called my_utils.py that contains some utility functions that you use frequently in your code.</span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Once you have created a custom module, you can import it into your Python programs using the import statement.</span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Conclusion</strong></span></span></span></p>
+        
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Python modules are a powerful tool that can help you to write more efficient, reusable, and maintainable code. By understanding how to use Python modules, you can become a better Python programmer.</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+       </div>
+
+        <script src="../cordova.js"></script>
+        <script src="../js/index.js"></script>
+    </body>
+</html>

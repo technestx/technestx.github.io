@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+                        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="../css/w3.css">
+        <title>Hello World</title>
+    </head>
+    <div class="w3-bar w3-black">
+       <h1>Dictionary</h1>
+      </div>
+    <body>
+        <div class="w3-container w3-animate-right" style="background-color: white;">
+        <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>What are Python dictionaries?</strong></span></span></span></p>
+
+<p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Python dictionaries are unordered collections of key-value pairs. This means that each item in a dictionary has a key and a value, and the keys must be unique. Dictionaries are created using curly braces ({}) and can contain any type of data, including integers, floats, strings, lists, and dictionaries.</span></span></span></p>
+
+<p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>How to create a Python dictionary</strong></span></span></span></p>
+
+<p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">To create a Python dictionary, you simply enclose the key-value pairs in curly braces. For example:</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p style="margin-left:16px; margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#444746"><span style="background-color:#e3e3e3">Python</span></span></span></span></p>
+
+<p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">my_dictionary = {</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">&quot;name&quot;</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">: </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">&quot;John Doe&quot;</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">, </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">&quot;age&quot;</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">: </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#b55908">30</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">}</span></span></span><br />
+&nbsp;</p>
+
+<p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">This code creates a dictionary with two key-value pairs: name and age. The key name is associated with the value John Doe, and the key age is associated with the value 30.</span></span></span></p>
+
+<p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>How to access items in a Python dictionary</strong></span></span></span></p>
+
+<p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">To access items in a Python dictionary, you use the square bracket operator ([]) and the key of the item. For example:</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p style="margin-left:16px; margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#444746"><span style="background-color:#e3e3e3">Python</span></span></span></span></p>
+
+<p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">print(my_dictionary[</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">&quot;name&quot;</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">])&nbsp; </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Outputs &quot;John Doe&quot;</span></span></span><br />
+<span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">print(my_dictionary[</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">&quot;age&quot;</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">])&nbsp; </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Outputs 30</span></span></span><br />
+&nbsp;</p>
+
+<p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">You can also use the get() method to access items in a dictionary. The get() method takes the key of the item as its argument and returns the value of the item, or None if the key is not in the dictionary. For example:</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p style="margin-left:16px; margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#444746"><span style="background-color:#e3e3e3">Python</span></span></span></span></p>
+
+<p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">my_dictionary[</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">&quot;occupation&quot;</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">] = </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">&quot;Software Engineer&quot;</span></span></span><br />
+<br />
+<span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">print(my_dictionary.get(</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">&quot;occupation&quot;</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">))&nbsp; </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Outputs &quot;Software Engineer&quot;</span></span></span><br />
+<span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">print(my_dictionary.get(</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">&quot;hobbies&quot;</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">))&nbsp; </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Outputs None</span></span></span><br />
+&nbsp;</p>
+
+<p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>How to iterate over a Python dictionary</strong></span></span></span></p>
+
+<p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">To iterate over a Python dictionary, you can use the for loop. The for loop iterates over each key in the dictionary and executes a block of code for each key. For example:</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p style="margin-left:16px; margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#444746"><span style="background-color:#e3e3e3">Python</span></span></span></span></p>
+
+<p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">for</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f"> key </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">in</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f"> my_dictionary:</span></span></span><br />
+<span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">&nbsp; print(my_dictionary[key])</span></span></span><br />
+&nbsp;</p>
+
+<p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">This code will print the value of each key in the dictionary to the console.</span></span></span></p>
+
+<p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Python dictionary methods</strong></span></span></span></p>
+
+<p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">There are a few Python dictionary methods that can be used to perform various tasks on dictionaries, such as adding and removing items from a dictionary, checking if a key is in a dictionary, and getting the keys and values of a dictionary.</span></span></span></p>
+
+<p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Here are some examples of Python dictionary methods:</span></span></span></p>
+
+<ul>
+	<li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">update(other_dictionary): Updates the dictionary with the key-value pairs from the other dictionary.</span></span></span></li>
+	<li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">pop(key): Removes the specified key-value pair from the dictionary and returns the value.</span></span></span></li>
+	<li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">clear(): Removes all items from the dictionary.</span></span></span></li>
+	<li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">keys(): Returns a list of all the keys in the dictionary.</span></span></span></li>
+	<li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">values(): Returns a list of all the values in the dictionary.</span></span></span></li>
+</ul>
+
+<p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Here are some additional tips for using Python dictionaries:</strong></span></span></span></p>
+
+<ul>
+	<li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Use descriptive variable names for your dictionaries. This will make your code more readable and easier to maintain.</span></span></span></li>
+	<li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Add comments to your code to explain what your dictionaries are used for. This will help other developers understand your code and make it easier to debug.</span></span></span></li>
+	<li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Dictionaries are a good choice for storing data that needs to be associated with keys.</span></span></span></li>
+	<li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Use the isinstance() function to check the data type of a variable before using it as a dictionary. This can help you to avoid errors.</span></span></span></li>
+</ul>
+
+       </div>
+
+        <script src="../cordova.js"></script>
+        <script src="../js/index.js"></script>
+    </body>
+</html>

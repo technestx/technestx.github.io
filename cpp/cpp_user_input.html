@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+                 <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
+        -->
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/w3.css">
+    <title>Hello World</title>
+</head>
+
+<body>
+<div class="w3-bar">
+    <h1>User Input</h1>
+    <p>&nbsp;</p>
+</div>
+
+<div class="w3-container">
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">To get user input in C++, you can use the std::cin object. The std::cin object is a stream object that represents the standard input stream.</span></span></span></p>
+
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">To read user input from the std::cin object, you can use the extraction operator (&gt;&gt;). The extraction operator extracts data from a stream and stores it in a variable.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">For example, the following code reads an integer value from the user and stores it in the variable age:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">int</span><span style="color:#1f1f1f"> age;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">std</span><span style="color:#1f1f1f">::</span><span style="color:#1967d2">cin</span><span style="color:#1f1f1f"> &gt;&gt; age;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">The user can then enter an integer value and press Enter. The std::cin object will read the user input and store it in the variable age.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">You can also use the std::getline() function to read a line of text from the user. The std::getline() function extracts data from a stream up to a delimiter character (such as a newline character) and stores it in a string variable.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">For example, the following code reads a line of text from the user and stores it in the variable name:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">std</span><span style="color:#1f1f1f">::</span><span style="color:#1967d2">string</span><span style="color:#1f1f1f"> name;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">std</span><span style="color:#1f1f1f">::getline(</span><span style="color:#1967d2">std</span><span style="color:#1f1f1f">::</span><span style="color:#1967d2">cin</span><span style="color:#1f1f1f">, name);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">The user can then enter their name and press Enter. The std::getline() function will read the user input up to the newline character and store it in the variable name.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Once you have read the user input, you can use it in your code. For example, you could use it to calculate a value, print a message to the console, or store it in a database.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Example</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">The following example shows how to get user input in C++:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">#include &lt;iostream&gt;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">int </span><span style="color:#996900">main</span><span style="color:#444746">()</span><span style="color:#1f1f1f"> {</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Declare two variables.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">int</span><span style="color:#1f1f1f"> age;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#1967d2">std</span><span style="color:#1f1f1f">::</span><span style="color:#1967d2">string</span><span style="color:#1f1f1f"> name;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Get the user&#39;s age.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#1967d2">std</span><span style="color:#1f1f1f">::</span><span style="color:#1967d2">cout</span><span style="color:#1f1f1f"> &lt;&lt; </span><span style="color:#188038">&quot;Enter your age: &quot;</span><span style="color:#1f1f1f">;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#1967d2">std</span><span style="color:#1f1f1f">::</span><span style="color:#1967d2">cin</span><span style="color:#1f1f1f"> &gt;&gt; age;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Get the user&#39;s name.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#1967d2">std</span><span style="color:#1f1f1f">::</span><span style="color:#1967d2">cout</span><span style="color:#1f1f1f"> &lt;&lt; </span><span style="color:#188038">&quot;Enter your name: &quot;</span><span style="color:#1f1f1f">;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#1967d2">std</span><span style="color:#1f1f1f">::getline(</span><span style="color:#1967d2">std</span><span style="color:#1f1f1f">::</span><span style="color:#1967d2">cin</span><span style="color:#1f1f1f">, name);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Print a message to the console.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#1967d2">std</span><span style="color:#1f1f1f">::</span><span style="color:#1967d2">cout</span><span style="color:#1f1f1f"> &lt;&lt; </span><span style="color:#188038">&quot;Hello, &quot;</span><span style="color:#1f1f1f"> &lt;&lt; name &lt;&lt; </span><span style="color:#188038">&quot;! You are &quot;</span><span style="color:#1f1f1f"> &lt;&lt; age &lt;&lt; </span><span style="color:#188038">&quot; years old.&quot;</span><span style="color:#1f1f1f"> &lt;&lt; </span><span style="color:#1967d2">std</span><span style="color:#1f1f1f">::</span><span style="color:#1967d2">endl</span><span style="color:#1f1f1f">;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">return </span><span style="color:#b55908">0</span><span style="color:#1f1f1f">;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Output:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">Enter your age: 25</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">Enter your name: John Doe</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">Hello, John Doe! You are 25 years old.</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+    </div>
+
+    <script src="../cordova.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

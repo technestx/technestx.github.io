@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+                 <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
+        -->
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/w3.css">
+    <title>Hello World</title>
+</head>
+
+<body>
+<div class="w3-bar">
+    <h1>String</h1>
+    <p>&nbsp;</p>
+</div>
+
+<div class="w3-container">
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">A string in C++ is a sequence of characters. Strings are used to store text, such as names, addresses, and messages.</span></span></span></p>
+
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">To create a string in C++, you can use the std::string class. The std::string class is a header file called &lt;string&gt;.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">For example, the following code creates a string named my_string and initializes it to the value &quot;Hello, world!&quot;.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">std</span><span style="color:#1f1f1f">::</span><span style="color:#1967d2">string</span><span style="color:#1f1f1f"> my_string = </span><span style="color:#188038">&quot;Hello, world!&quot;</span><span style="color:#1f1f1f">;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">You can also use the &quot;&quot; and &#39;&#39; characters to create strings. However, it is generally considered best practice to use the std::string class when creating strings in C++.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>String functions</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">The std::string class provides a variety of functions for working with strings. Some of the most common string functions include:</span></span></span></p>
+        
+        <ul style="list-style-type:disc">
+            <li><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">length(): Returns the length of the string.</span></span></span></li>
+            <li><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">empty(): Returns true if the string is empty, and false otherwise.</span></span></span></li>
+            <li><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">compare(): Compares two strings and returns a value indicating which string is greater than, less than, or equal to the other string.</span></span></span></li>
+            <li><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">find(): Finds the first occurrence of a substring in a string and returns the index of the substring.</span></span></span></li>
+            <li><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">substr(): Extracts a substring from a string.</span></span></span></li>
+            <li><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">append(): Appends one string to the end of another string.</span></span></span></li>
+        </ul>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>String examples</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">The following examples show how to use some of the most common string functions in C++:</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#5f6368">// Create a string.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">std</span><span style="color:#1f1f1f">::</span><span style="color:#1967d2">string</span><span style="color:#1f1f1f"> my_string = </span><span style="color:#188038">&quot;Hello, world!&quot;</span><span style="color:#1f1f1f">;</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#5f6368">// Get the length of the string.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">int</span><span style="color:#1f1f1f"> length = my_string.length();</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#5f6368">// Check if the string is empty.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">bool</span><span style="color:#1f1f1f"> empty = my_string.empty();</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#5f6368">// Compare the string to another string.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">int</span><span style="color:#1f1f1f"> comparison = my_string.compare(</span><span style="color:#188038">&quot;Goodbye, world!&quot;</span><span style="color:#1f1f1f">);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#5f6368">// Find the first occurrence of a substring in the string.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">int</span><span style="color:#1f1f1f"> index = my_string.find(</span><span style="color:#188038">&quot;world&quot;</span><span style="color:#1f1f1f">);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#5f6368">// Extract a substring from the string.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">std</span><span style="color:#1f1f1f">::</span><span style="color:#1967d2">string</span><span style="color:#1f1f1f"> substring = my_string.substr(</span><span style="color:#b55908">0</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">5</span><span style="color:#1f1f1f">);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#5f6368">// Append one string to the end of another string.</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">my_string.append(</span><span style="color:#188038">&quot;!&quot;</span><span style="color:#1f1f1f">);</span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Conclusion</strong></span></span></span></p>
+        
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Strings are a powerful tool in C++. They can be used to store text, manipulate text, and perform other tasks. The std::string class provides a variety of functions for working with strings.</span></span></span></p>
+        
+        <p>&nbsp;</p>
+        
+    </div>
+
+    <script src="../cordova.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

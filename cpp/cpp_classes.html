@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+                 <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
+        -->
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/w3.css">
+    <title>Hello World</title>
+</head>
+
+<body>
+<div class="w3-bar">
+    <h1>Classes and Objects</h1>
+    <p>&nbsp;</p>
+</div>
+
+<div class="w3-container">
+        <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">A <strong>class</strong> in C++ is a blueprint for creating objects. A class defines the structure of an object, including the data that it contains and the methods that it can perform.</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">An <strong>object</strong> is an instance of a class. It is a self-contained entity that contains both data and code.</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Example</strong></span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">The following code shows a simple class named Person:</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">class</span><span style="color:#996900"> Person {</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">public</span><span style="color:#1f1f1f">:</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; Person(</span><span style="color:#1967d2">std</span><span style="color:#1f1f1f">::</span><span style="color:#1967d2">string</span><span style="color:#1f1f1f"> name, </span><span style="color:#8430ce">int</span><span style="color:#1f1f1f"> age) {</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#8430ce">this</span><span style="color:#1f1f1f">-&gt;name = name;</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#8430ce">this</span><span style="color:#1f1f1f">-&gt;age = age;</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; }</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#1967d2">std</span><span style="color:#444746">::</span><span style="color:#1967d2">string </span><span style="color:#996900">GetName</span><span style="color:#444746">() </span><span style="color:#1f1f1f">{</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#8430ce">return</span><span style="color:#1f1f1f"> name;</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; }</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">int </span><span style="color:#996900">GetAge</span><span style="color:#444746">()</span><span style="color:#1f1f1f"> {</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#8430ce">return</span><span style="color:#1f1f1f"> age;</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; }</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">private</span><span style="color:#1f1f1f">:</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#1967d2">std</span><span style="color:#1f1f1f">::</span><span style="color:#1967d2">string</span><span style="color:#1f1f1f"> name;</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">int</span><span style="color:#1f1f1f"> age;</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">};</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">This class has two data members, name and age, and two methods, GetName() and GetAge().</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">To create an object of the Person class, you use the following syntax:</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#444746">Person </span><span style="color:#996900">person</span><span style="color:#444746">(</span><span style="color:#188038">&quot;John Doe&quot;</span><span style="color:#444746">, </span><span style="color:#b55908">30</span><span style="color:#444746">)</span><span style="color:#1f1f1f">;</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">This creates a new Person object and initializes the name and age data members to the specified values.</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">You can then access the data members and methods of the object using the dot operator (.). For example:</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">std</span><span style="color:#1f1f1f">::</span><span style="color:#1967d2">string</span><span style="color:#1f1f1f"> name = person.GetName();</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">int</span><span style="color:#1f1f1f"> age = person.GetAge();</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">This code gets the name and age of the person and stores them in the variables name and age, respectively.</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Benefits of using classes and objects</strong></span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">There are several benefits to using classes and objects in C++, including:</span></span></span></p>
+
+<ul style="list-style-type:disc">
+	<li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Modularity:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Classes allow you to encapsulate data and code within objects, which makes your code more modular and reusable.</span></span></span></li>
+	<li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Abstraction:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Classes allow you to abstract away the implementation details of objects, which makes your code easier to understand and maintain.</span></span></span></li>
+	<li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Code reuse:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Classes allow you to reuse code by creating new classes that inherit from existing classes.</span></span></span></li>
+	<li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Flexibility:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Classes make your code more flexible by allowing you to write code that can be used with different types of objects.</span></span></span></li>
+</ul>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Conclusion</strong></span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Classes and objects are a fundamental part of C++. By understanding how to use classes and objects, you can write more modular, reusable, flexible, and maintainable code.</span></span></span></p>
+
+<p>&nbsp;</p>
+
+    </div>
+
+    <script src="../cordova.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

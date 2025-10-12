@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+<span id="navbarContainer">
+
+</span>
+<div class="container">
+    <main class="content">
+        <h2>About CodeStudyZone</h2>
+        <p>
+            Welcome to <strong>CodeStudyZone</strong> — your one-stop destination to learn coding and cybersecurity in a structured, simple, and practical way.
+        </p>
+
+        <p>
+            Our tutorials are written for both beginners and experienced learners, covering topics like
+            <strong>Java</strong>, <strong>Python</strong>, <strong>JavaScript</strong>, <strong>HTML</strong>, and <strong>Cybersecurity</strong>.
+        </p>
+
+        <h3>Our Mission</h3>
+        <p>
+            To make coding education accessible, interactive, and enjoyable for everyone across the globe.
+        </p>
+
+        <h3>What You’ll Find Here</h3>
+        <ul>
+            <li>Step-by-step tutorials with clear examples</li>
+            <li>Interactive coding exercises (coming soon!)</li>
+            <li>Practical projects to enhance your skills</li>
+            <li>Cybersecurity awareness and ethical hacking basics</li>
+        </ul>
+
+        <p>
+            Whether you're a student, professional, or just curious about technology — CodeStudyZone helps you
+            grow your skills and confidence.
+        </p>
+
+        <h3>Get In Touch</h3>
+        <p>
+            Have feedback, suggestions, or collaboration ideas? Visit our
+            <a href="contact.html">Contact Page</a> — we’d love to hear from you!
+        </p>
+    </main>
+</div>
+<!--SCRIPT-->
+<script>
+    //*** Navbar
+    let navbarContainer = document.getElementById("navbarContainer");
+    function loadNavbar(){
+        fetch("navbar-home.html")
+            .then(res => res.text())
+            .then(data => navbarContainer.innerHTML = data);
+    }
+
+    loadNavbar()
+    //*********
+
+
+</script>
+</body>
+</html>

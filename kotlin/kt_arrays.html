@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7CHHV9Y3P4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag()
+        {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-7CHHV9Y3P4');
+    </script>
+    <!-- --------End google tag script -------->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!------------------------- Title and meta tags------------------------>
+    <title>Kotlin Arrays: Storing, Accessing & Manipulating Data Collections</title>
+    <meta name="description" content="Master Kotlin arrays, essential data structures for storing and managing data collections. Learn to create, access, manipulate, iterate, sort, and utilize multidimensional arrays with practical examples like arrayOf() and Array constructor.">
+    <meta name="keywords" content="Kotlin arrays, data structures, collections, arrayOf, Array constructor, array elements, access arrays, manipulate arrays, iterate arrays, copy arrays, sort arrays, multidimensional arrays, Kotlin programming, data handling, programming tutorial">
+
+    <!--------------------------------------------------------------------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="kt-home.js"></script>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <script src="../utils.js"></script>
+
+    <!-- Adsense's auto ad script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7562795281583843"
+            crossorigin="anonymous">
+    </script>
+    <!-- Adsense's auto ad script -->
+</head>
+<body>
+<span id="navbarContainer"></span>
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-sm-3 p-3">
+            <h3>Learn Kotlin</h3>
+            <div class="list-group list-group-flush" id="sidebarList">
+                <a href="kt_intro.html" class="list-group-item list-group-item-action" >Introduction</a>
+                <a href="kt_get_startd.html" class="list-group-item list-group-item-action" >Getting Started</a>
+                <a href="kt_basic.html" class="list-group-item list-group-item-action" >Basic Example</a>
+                <a href="kt_syntax.html" class="list-group-item list-group-item-action" >Syntax</a>
+                <a href="kt_output.html" class="list-group-item list-group-item-action" >Output</a>
+                <a href="kt_comments.html" class="list-group-item list-group-item-action" >Comments</a>
+                <a href="kt_var.html" class="list-group-item list-group-item-action" >Variables</a>
+                <a href="kt_datatypes.html" class="list-group-item list-group-item-action" >Data Types</a>
+                <a href="kt_operators.html" class="list-group-item list-group-item-action" >Operators</a>
+                <a href="kt_string.html" class="list-group-item list-group-item-action" >String</a>
+                <a href="kt_boolean.html" class="list-group-item list-group-item-action" >Boolean</a>
+                <a href="kt_if.html" class="list-group-item list-group-item-action" >If...Else</a>
+                <a href="kt_when.html" class="list-group-item list-group-item-action" >When</a>
+                <a href="kt_while.html" class="list-group-item list-group-item-action" >While Loop</a>
+                <a href="kt_break.html" class="list-group-item list-group-item-action" >Break/Continue</a>
+                <a href="kt_arrays.html" class="list-group-item list-group-item-action" >Arrays</a>
+                <a href="kt_for.html" class="list-group-item list-group-item-action" >For Loop</a>
+                <a href="kt_ranges.html" class="list-group-item list-group-item-action" >Ranges</a>
+                <a href="kt_functions.html" class="list-group-item list-group-item-action" >Functions</a>
+                <a href="kt_loop.html" class="list-group-item list-group-item-action" >OOP</a>
+                <a href="kt_classes.html" class="list-group-item list-group-item-action" >Classes/Objects</a>
+                <a href="kt_const.html" class="list-group-item list-group-item-action" >Constructor</a>
+                <a href="kt_class_fun.html" class="list-group-item list-group-item-action" >Class Function</a>
+                <a href="kt_inher.html" class="list-group-item list-group-item-action" >Inheritance</a>
+
+            </div>
+            <div class="dropdown" id="sidebarDropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                    Topics
+                </button>
+                <ul class="dropdown-menu" id="menuItems">
+                    <li><a class="dropdown-item" href="kt_intro.html">Introduction</a></li>
+                    <li><a class="dropdown-item" href="kt_get_started.html">Getting started</a></li>
+                    <li><a class="dropdown-item" href="kt_basic.html">Basic Example</a></li>
+                    <li><a class="dropdown-item" href="kt_syntax.html">Syntax</a></li>
+                    <li><a class="dropdown-item" href="kt_output.html">Output</a></li>
+                    <li><a class="dropdown-item" href="kt_output.html">Comments</a></li>
+                    <li><a class="dropdown-item" href="kt_var.html">Variables</a></li>
+                    <li><a class="dropdown-item" href="kt_datatypes.html">Data Types</a></li>
+                    <li><a class="dropdown-item" href="kt_operators.html">Operators</a></li>
+                    <li><a class="dropdown-item" href="kt_string.html">String</a></li>
+                    <li><a class="dropdown-item" href="kt_boolean.html">Boolean</a></li>
+                    <li><a class="dropdown-item" href="kt_if.html">If...Else</a></li>
+                    <li><a class="dropdown-item" href="kt_when.html">When</a></li>
+                    <li><a class="dropdown-item" href="kt_while.html">while Loop</a></li>
+                    <li><a class="dropdown-item" href="kt_break.html">Break/Continue</a></li>
+                    <li><a class="dropdown-item" href="kt_arrays.html">Arrays</a></li>
+                    <li><a class="dropdown-item" href="kt_for.html">For Loop</a></li>
+                    <li><a class="dropdown-item" href="kt_ranges.html">Ranges</a></li>
+                    <li><a class="dropdown-item" href="kt_functions.html">Functions</a></li>
+                    <li><a class="dropdown-item" href="kt_oop.html">OOP</a></li>
+                    <li><a class="dropdown-item" href="kt_classes.html">Classes/Objects</a></li>
+                    <li><a class="dropdown-item" href="kt_const.html">Constructor</a></li>
+                    <li><a class="dropdown-item" href="kt_class_fun.html">Class Function</a></li>
+                    <li><a class="dropdown-item" href="kt_inher.html">Inheritance</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="col p-6">
+            <div id="textContainer">
+                <div style="overflow-block: auto">
+                    <img style="float: left" src="img/kt-logo.png" alt="Python Logo" width="80">
+                    <h1 style="padding: 10px">Kotlin Array</h1>
+                </div>
+                <hr>
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Kotlin Arrays: Storing Collections of Data</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Arrays are fundamental data structures in programming, used to store collections of similar data items under a single name. They provide an organized and efficient way to manage groups of related values, facilitating data manipulation and retrieval. Kotlin provides built-in support for arrays, enabling programmers to define, manipulate, and utilize arrays to enhance their code&#39;s expressiveness and data handling capabilities.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Creating Arrays</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">There are two primary methods for creating arrays in Kotlin:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Using the arrayOf() function:</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">The arrayOf() function is a convenient way to create arrays directly from a list of values. For instance, to create an array of integers:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> numbers = arrayOf(</span><span style="color:#b55908">1</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">2</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">3</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">4</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">5</span><span style="color:#1f1f1f">)</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Using the Array constructor:</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">The Array class provides a constructor for creating arrays with a specified size and an initializer function that generates the array elements. For example, to create an array of five strings, initializing each element with an empty string:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> names = Array(</span><span style="color:#b55908">5</span><span style="color:#1f1f1f">) { </span><span style="color:#188038">&quot;&quot;</span><span style="color:#1f1f1f"> }</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Accessing Array Elements</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Array elements are accessed using their index, which is a non-negative integer position within the array. The index starts from zero and ranges up to the array&#39;s length minus one. To access an element, use the index notation:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> firstElement = numbers[</span><span style="color:#b55908">0</span><span style="color:#1f1f1f">] </span><span style="color:#5f6368">// First element of the &#39;numbers&#39; array</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> lastElement = names[names.size - </span><span style="color:#b55908">1</span><span style="color:#1f1f1f">] </span><span style="color:#5f6368">// Last element of the &#39;names&#39; array</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Manipulating Arrays</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Kotlin provides various methods for manipulating arrays:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Changing array elements:</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Array elements can be modified directly using their index:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">numbers[</span><span style="color:#b55908">2</span><span style="color:#1f1f1f">] = </span><span style="color:#b55908">10 </span><span style="color:#5f6368">// Changing the third element of the &#39;numbers&#39; array</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Iterating through arrays:</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Loops are commonly used to iterate through array elements:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">for</span><span style="color:#1f1f1f"> (number </span><span style="color:#8430ce">in</span><span style="color:#1f1f1f"> numbers) {</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; println(number) </span><span style="color:#5f6368">// Printing each element of the &#39;numbers&#39; array</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Copying arrays:</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">The copyOf() function creates a copy of an existing array:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> copiedArray = numbers.copyOf()</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Sorting arrays:</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">The sort() method arranges array elements in ascending or descending order:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">numbers.sort() </span><span style="color:#5f6368">// Sorting the &#39;numbers&#39; array in ascending order</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">names.sortDescending() </span><span style="color:#5f6368">// Sorting the &#39;names&#39; array in descending order</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Multidimensional Arrays</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Kotlin also supports multidimensional arrays, which represent arrays of arrays, enabling the storage of data in a structured and nested manner. For instance, a two-dimensional array can represent a grid of values:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> matrix = arrayOf(</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; arrayOf(</span><span style="color:#b55908">1</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">2</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">3</span><span style="color:#1f1f1f">),</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; arrayOf(</span><span style="color:#b55908">4</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">5</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">6</span><span style="color:#1f1f1f">),</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; arrayOf(</span><span style="color:#b55908">7</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">8</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">9</span><span style="color:#1f1f1f">)</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">)</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Conclusion</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Arrays are essential data structures for organizing and managing collections of similar data in Kotlin. They provide an efficient and expressive way to store, access, and manipulate groups of related values, enhancing the functionality and flexibility of Kotlin code. By effectively utilizing arrays, programmers can develop robust and data-driven applications.</span></span></span></p>
+
+                <p>&nbsp;</p>
+
+            </div><!-- End Text Container--->
+        </div>
+        <div class="col-sm-3 p-3">
+            <!--  <img src="../images/py.png"  class="img-fluid" alt="Cinque Terre">-->
+            <span id="postLinks">
+
+            </span>
+            <script>
+                document.getElementById("postLinks").innerHTML = bloglinks
+            </script>
+        </div>
+    </div>
+</div>
+<!--SCRIPT-->
+
+<script>
+    let navbarContainer = document.getElementById("navbarContainer");
+    let textContainer = document.getElementById("textContainer");
+    let dropdown = document.getElementById("sidebarDropdown");
+    let sidebar = document.getElementById("sidebarList");
+    let menuItems = document.getElementById("menuItems");
+    //*** Navbar
+
+    function loadNavbar(){
+        fetch("../navbar.html")
+            .then(res => res.text())
+            .then(data => navbarContainer.innerHTML = data);
+    }
+
+    loadNavbar()
+    //*********
+
+    //****** Handling responsive view
+    function isMobile(){
+        if (window.innerWidth <= 576) {
+            console.log("Mobile device detected");
+            return true;
+        } else {
+            console.log("Desktop device detected");
+            return false;
+        }
+
+    }
+    function setMobileView(){
+        dropdown.style.display = "block";
+        sidebar.style.display = "none";
+    }
+    function setDesktopView(){
+        dropdown.style.display = "none";
+        sidebar.style.display = "block";
+    }
+    if(isMobile()){
+        setMobileView();
+    }else{
+        setDesktopView();
+    }
+    window.addEventListener('resize',function(){
+        if(isMobile()){
+            setMobileView();
+        }else{
+            setDesktopView();
+        }
+    })
+    //******** fill list & dropdown ********
+
+
+</script>
+<!----        CEO optimization script          -->
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7CHHV9Y3P4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag()
+        {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-7CHHV9Y3P4');
+    </script>
+    <!-- --------End google tag script -------->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!------------------------- Title and meta tags------------------------>
+    <title>Getting Started with Kotlin: A Step-by-Step Beginner's Guide using IntelliJ IDEA</title>
+    <meta name="description" content="Learn how to get started with Kotlin programming with this step-by-step guide. Covers installing IntelliJ IDEA, setting up the Kotlin plugin, creating your first project, and running a 'Hello, World!' program for beginners.">
+    <meta name="keywords" content="Kotlin, programming, guide, tutorial, beginner, IntelliJ IDEA, IDE, development, install Kotlin, Kotlin plugin, create Kotlin project, Hello World Kotlin, learning Kotlin">
+
+    <!--------------------------------------------------------------------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="kt-home.js"></script>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <script src="../utils.js"></script>
+
+    <!-- Adsense's auto ad script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7562795281583843"
+            crossorigin="anonymous">
+    </script>
+    <!-- Adsense's auto ad script -->
+</head>
+<body>
+<span id="navbarContainer"></span>
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-sm-3 p-3">
+            <h3>Learn Kotlin</h3>
+            <div class="list-group list-group-flush" id="sidebarList">
+                <a href="kt_intro.html" class="list-group-item list-group-item-action" >Introduction</a>
+                <a href="kt_get_startd.html" class="list-group-item list-group-item-action" >Getting Started</a>
+                <a href="kt_basic.html" class="list-group-item list-group-item-action" >Basic Example</a>
+                <a href="kt_syntax.html" class="list-group-item list-group-item-action" >Syntax</a>
+                <a href="kt_output.html" class="list-group-item list-group-item-action" >Output</a>
+                <a href="kt_comments.html" class="list-group-item list-group-item-action" >Comments</a>
+                <a href="kt_var.html" class="list-group-item list-group-item-action" >Variables</a>
+                <a href="kt_datatypes.html" class="list-group-item list-group-item-action" >Data Types</a>
+                <a href="kt_operators.html" class="list-group-item list-group-item-action" >Operators</a>
+                <a href="kt_string.html" class="list-group-item list-group-item-action" >String</a>
+                <a href="kt_boolean.html" class="list-group-item list-group-item-action" >Boolean</a>
+                <a href="kt_if.html" class="list-group-item list-group-item-action" >If...Else</a>
+                <a href="kt_when.html" class="list-group-item list-group-item-action" >When</a>
+                <a href="kt_while.html" class="list-group-item list-group-item-action" >While Loop</a>
+                <a href="kt_break.html" class="list-group-item list-group-item-action" >Break/Continue</a>
+                <a href="kt_arrays.html" class="list-group-item list-group-item-action" >Arrays</a>
+                <a href="kt_for.html" class="list-group-item list-group-item-action" >For Loop</a>
+                <a href="kt_ranges.html" class="list-group-item list-group-item-action" >Ranges</a>
+                <a href="kt_functions.html" class="list-group-item list-group-item-action" >Functions</a>
+                <a href="kt_loop.html" class="list-group-item list-group-item-action" >OOP</a>
+                <a href="kt_classes.html" class="list-group-item list-group-item-action" >Classes/Objects</a>
+                <a href="kt_const.html" class="list-group-item list-group-item-action" >Constructor</a>
+                <a href="kt_class_fun.html" class="list-group-item list-group-item-action" >Class Function</a>
+                <a href="kt_inher.html" class="list-group-item list-group-item-action" >Inheritance</a>
+
+            </div>
+            <div class="dropdown" id="sidebarDropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                    Topics
+                </button>
+                <ul class="dropdown-menu" id="menuItems">
+                    <li><a class="dropdown-item" href="kt_intro.html">Introduction</a></li>
+                    <li><a class="dropdown-item" href="kt_get_started.html">Getting started</a></li>
+                    <li><a class="dropdown-item" href="kt_basic.html">Basic Example</a></li>
+                    <li><a class="dropdown-item" href="kt_syntax.html">Syntax</a></li>
+                    <li><a class="dropdown-item" href="kt_output.html">Output</a></li>
+                    <li><a class="dropdown-item" href="kt_output.html">Comments</a></li>
+                    <li><a class="dropdown-item" href="kt_var.html">Variables</a></li>
+                    <li><a class="dropdown-item" href="kt_datatypes.html">Data Types</a></li>
+                    <li><a class="dropdown-item" href="kt_operators.html">Operators</a></li>
+                    <li><a class="dropdown-item" href="kt_string.html">String</a></li>
+                    <li><a class="dropdown-item" href="kt_boolean.html">Boolean</a></li>
+                    <li><a class="dropdown-item" href="kt_if.html">If...Else</a></li>
+                    <li><a class="dropdown-item" href="kt_when.html">When</a></li>
+                    <li><a class="dropdown-item" href="kt_while.html">while Loop</a></li>
+                    <li><a class="dropdown-item" href="kt_break.html">Break/Continue</a></li>
+                    <li><a class="dropdown-item" href="kt_arrays.html">Arrays</a></li>
+                    <li><a class="dropdown-item" href="kt_for.html">For Loop</a></li>
+                    <li><a class="dropdown-item" href="kt_ranges.html">Ranges</a></li>
+                    <li><a class="dropdown-item" href="kt_functions.html">Functions</a></li>
+                    <li><a class="dropdown-item" href="kt_oop.html">OOP</a></li>
+                    <li><a class="dropdown-item" href="kt_classes.html">Classes/Objects</a></li>
+                    <li><a class="dropdown-item" href="kt_const.html">Constructor</a></li>
+                    <li><a class="dropdown-item" href="kt_class_fun.html">Class Function</a></li>
+                    <li><a class="dropdown-item" href="kt_inher.html">Inheritance</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="col p-6">
+            <div id="textContainer">
+                <div style="overflow-block: auto">
+                    <img style="float: left" src="img/kt-logo.png" alt="Python Logo" width="80">
+                    <h1 style="padding: 10px">Kotlin Get Started</h1>
+                </div>
+                <hr>
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Getting started with Kotlin is a relatively straightforward process, especially if you have prior programming experience. Here&#39;s a step-by-step guide to get you started:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>1. Install IntelliJ IDEA</strong>: IntelliJ IDEA is a powerful integrated development environment (IDE) that provides a comprehensive set of tools for developing Kotlin applications. It&#39;s the recommended IDE for Kotlin development and offers advanced features like code completion, syntax highlighting, and error checking. You can download IntelliJ IDEA for free from the JetBrains website: <a href="https://www.jetbrains.com/idea/download/">https://www.jetbrains.com/idea/download/</a></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>2. Set up the Kotlin plugin</strong>: Once you&#39;ve installed IntelliJ IDEA, you&#39;ll need to install the Kotlin plugin to enable Kotlin support within the IDE. Follow these steps to install the Kotlin plugin:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Open IntelliJ IDEA and go to <strong>File &gt; Settings</strong>.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">In the Settings window, navigate to <strong>Plugins &gt; Marketplace</strong>.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Search for &quot;Kotlin&quot; in the search bar.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Select the &quot;Kotlin&quot; plugin from the list and click the &quot;Install&quot; button.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Once the installation is complete, restart IntelliJ IDEA to apply the changes.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>3. Create a new Kotlin project</strong>: With the Kotlin plugin installed, you can now create a new Kotlin project. Follow these steps to create a new project:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Open IntelliJ IDEA and click on the &quot;Create New Project&quot; button.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Select &quot;Kotlin&quot; as the project type and choose the appropriate project template based on your needs (e.g., Android application, web application, or JVM application).</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Provide a name for your project and specify the desired project location.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Click the &quot;Finish&quot; button to create the project.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>4. Write your first Kotlin program</strong>: Once your project is created, you can start writing Kotlin code. Open the main Kotlin file in your project (usually named &quot;MainActivity.kt&quot; for Android projects or &quot;Main.kt&quot; for other project types). Replace the existing code with the following simple Kotlin program:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">fun </span><span style="color:#996900">main</span><span style="color:#444746">()</span><span style="color:#1f1f1f"> {</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; println(</span><span style="color:#188038">&quot;Hello, World!&quot;</span><span style="color:#1f1f1f">)</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>5. Run your Kotlin program</strong>: To run your Kotlin program, click the &quot;Run&quot; button in the IntelliJ IDEA toolbar. This will compile and execute your code, and the output &quot;Hello, World!&quot; will be displayed in the console.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">This is just a basic introduction to getting started with Kotlin. As you progress, you&#39;ll learn more about the language&#39;s syntax, features, and libraries to develop more complex and sophisticated applications.</span></span></span></p>
+
+                <p>&nbsp;</p>
+
+            </div><!-- End Text Container--->
+        </div>
+        <div class="col-sm-3 p-3">
+            <!--  <img src="../images/py.png"  class="img-fluid" alt="Cinque Terre">-->
+            <span id="postLinks">
+
+            </span>
+            <script>
+                document.getElementById("postLinks").innerHTML = bloglinks
+            </script>
+        </div>
+    </div>
+</div>
+<!--SCRIPT-->
+
+<script>
+    let navbarContainer = document.getElementById("navbarContainer");
+    let textContainer = document.getElementById("textContainer");
+    let dropdown = document.getElementById("sidebarDropdown");
+    let sidebar = document.getElementById("sidebarList");
+    let menuItems = document.getElementById("menuItems");
+    //*** Navbar
+
+    function loadNavbar(){
+        fetch("../navbar.html")
+            .then(res => res.text())
+            .then(data => navbarContainer.innerHTML = data);
+    }
+
+    loadNavbar()
+    //*********
+
+    //****** Handling responsive view
+    function isMobile(){
+        if (window.innerWidth <= 576) {
+            console.log("Mobile device detected");
+            return true;
+        } else {
+            console.log("Desktop device detected");
+            return false;
+        }
+
+    }
+    function setMobileView(){
+        dropdown.style.display = "block";
+        sidebar.style.display = "none";
+    }
+    function setDesktopView(){
+        dropdown.style.display = "none";
+        sidebar.style.display = "block";
+    }
+    if(isMobile()){
+        setMobileView();
+    }else{
+        setDesktopView();
+    }
+    window.addEventListener('resize',function(){
+        if(isMobile()){
+            setMobileView();
+        }else{
+            setDesktopView();
+        }
+    })
+    //******** fill list & dropdown ********
+
+
+</script>
+<!----        CEO optimization script          -->
+
+</body>
+</html>

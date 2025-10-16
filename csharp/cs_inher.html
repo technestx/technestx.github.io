@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7CHHV9Y3P4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag()
+        {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-7CHHV9Y3P4');
+    </script>
+    <!-- --------End google tag script -------->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!------------------------- Title and meta tags------------------------>
+    <title>Inheritance in C# OOP: Concepts, Types, and Benefits with Examples</title>
+    <meta name="description" content="Explore inheritance in C# Object-Oriented Programming (OOP). Learn about base and derived classes, single, multilevel, and multipath inheritance, and its benefits for code reusability, extensibility, and organization with a practical example.">
+    <meta name="keywords" content="inheritance, C#, OOP, object-oriented programming, base class, derived class, code reusability, extensibility, code organization, single inheritance, multilevel inheritance, multipath inheritance, programming concepts, C# inheritance example">
+
+    <!--------------------------------------------------------------------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!--    <script src="cs-home.js"></script>-->
+    <link rel="stylesheet" href="../main.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <script src="../utils.js"></script>
+
+    <!-- Adsense's auto ad script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7562795281583843"
+            crossorigin="anonymous">
+    </script>
+    <!-- Adsense's auto ad script -->
+</head>
+<body>
+<span id="navbarContainer"></span>
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-sm-3 p-3">
+            <h3>Learn C#</h3>
+            <div class="list-group list-group-flush" id="sidebarList">
+                <a href="cs_intro.html" class="list-group-item list-group-item-action" >Introduction</a>
+                <a href="cs_getting.html" class="list-group-item list-group-item-action" >Getting Started</a>
+                <a href="cs_syntax.html" class="list-group-item list-group-item-action" >Syntax</a>
+                <a href="cs_output.html" class="list-group-item list-group-item-action" >Output</a>
+                <a href="cs_comments.html" class="list-group-item list-group-item-action" >Comments</a>
+                <a href="cs_variables.html" class="list-group-item list-group-item-action" >Variables</a>
+                <a href="cs_datatypes.html" class="list-group-item list-group-item-action" >Data Types</a>
+                <a href="cs_casting.html" class="list-group-item list-group-item-action" >Type Casting</a>
+                <a href="cs_user_input.html" class="list-group-item list-group-item-action" >User Input</a>
+                <a href="cs_operators.html" class="list-group-item list-group-item-action" >Operator</a>
+                <a href="cs_math.html" class="list-group-item list-group-item-action" >Math</a>
+                <a href="cs_string.html" class="list-group-item list-group-item-action" >String</a>
+                <a href="cs_booleans.html" class="list-group-item list-group-item-action" >Boolean</a>
+                <a href="cs_conditions.html" class="list-group-item list-group-item-action" >Conditions</a>
+                <a href="cs_switch.html" class="list-group-item list-group-item-action" >Switch</a>
+                <a href="cs_while.html" class="list-group-item list-group-item-action" >While Loop</a>
+                <a href="cs_for.html" class="list-group-item list-group-item-action" >For Loop</a>
+                <a href="cs_break.html" class="list-group-item list-group-item-action" >Break/Continue</a>
+                <a href="cs_arrays.html" class="list-group-item list-group-item-action" >Arrays</a>
+                <a href="cs_methods.html" class="list-group-item list-group-item-action" >Methods</a>
+                <a href="cs_para.html" class="list-group-item list-group-item-action" >Method Parameters</a>
+                <a href="cs_over.html" class="list-group-item list-group-item-action" >Method Overloading</a>
+                <a href="cs_oop.html" class="list-group-item list-group-item-action" >OOP</a>
+                <a href="cs_classes.html" class="list-group-item list-group-item-action" >Classes/Objects</a>
+                <a href="cs_member.html" class="list-group-item list-group-item-action" >Class Member</a>
+                <a href="cs_constructors.html" class="list-group-item list-group-item-action" >Constructor</a>
+                <a href="cs_access.html" class="list-group-item list-group-item-action" >Access Modifiers</a>
+                <a href="cs_properties.html" class="list-group-item list-group-item-action" >Properties</a>
+                <a href="cs_inher.html" class="list-group-item list-group-item-action" >Inheritance</a>
+                <a href="cs_poly.html" class="list-group-item list-group-item-action" >Polymorphism</a>
+                <a href="cs_abstract.html" class="list-group-item list-group-item-action" >Abstraction</a>
+                <a href="cs_interfaces.html" class="list-group-item list-group-item-action" >Interfaces</a>
+                <a href="cs_enum.html" class="list-group-item list-group-item-action" >Enum</a>
+                <a href="cs_files.html" class="list-group-item list-group-item-action" >Files</a>
+                <a href="cs_exception.html" class="list-group-item list-group-item-action" >Exception</a>
+
+            </div>
+            <div class="dropdown" id="sidebarDropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                    Topics
+                </button>
+                <ul class="dropdown-menu" id="menuItems">
+                    <li><a class="dropdown-item" href="cs_intro.html">Introduction</a></li>
+                    <li><a class="dropdown-item" href="cs_getting.html">Getting started</a></li>
+                    <li><a class="dropdown-item" href="cs_syntax.html">Syntax</a></li>
+                    <li><a class="dropdown-item" href="cs_output.html">Output</a></li>
+                    <li><a class="dropdown-item" href="cs_comments.html">Comments</a></li>
+                    <li><a class="dropdown-item" href="cs_variables.html">Variables</a></li>
+                    <li><a class="dropdown-item" href="cs_datatypes.html">Data Types</a></li>
+                    <li><a class="dropdown-item" href="cs_casting.html">Type Casting</a></li>
+                    <li><a class="dropdown-item" href="cs_user_input.html">User Input</a></li>
+                    <li><a class="dropdown-item" href="cs_operators.html">Operators</a></li>
+                    <li><a class="dropdown-item" href="cs_math.html">Math</a></li>
+                    <li><a class="dropdown-item" href="cs_string.html">String</a></li>
+                    <li><a class="dropdown-item" href="cs_booleans.html">Booleans</a></li>
+                    <li><a class="dropdown-item" href="cs_conditions.html">Conditions</a></li>
+                    <li><a class="dropdown-item" href="cs_switch.html">Switch</a></li>
+                    <li><a class="dropdown-item" href="cs_while.html">While Loop</a></li>
+                    <li><a class="dropdown-item" href="cs_for.html">For Loop</a></li>
+                    <li><a class="dropdown-item" href="cs_break.html">Break/Continue</a></li>
+                    <li><a class="dropdown-item" href="cs_arrays.html">Arrays</a></li>
+                    <li><a class="dropdown-item" href="cs_methods.html">Methods</a></li>
+                    <li><a class="dropdown-item" href="cs_para.html">Method Parameters</a></li>
+                    <li><a class="dropdown-item" href="cs_over.html">Method Overloading</a></li>
+                    <li><a class="dropdown-item" href="cs_oop.html">OOP</a></li>
+                    <li><a class="dropdown-item" href="cs_classes.html">Classes/Objects</a></li>
+                    <li><a class="dropdown-item" href="cs_member.html">Class Member</a></li>
+                    <li><a class="dropdown-item" href="cs_constructors.html">Constructor</a></li>
+                    <li><a class="dropdown-item" href="cs_access.html">Access Modifiers</a></li>
+                    <li><a class="dropdown-item" href="cs_properties.html">Properties</a></li>
+                    <li><a class="dropdown-item" href="cs_inher.html">Inheritance</a></li>
+                    <li><a class="dropdown-item" href="cs_poly.html">Polymorphism</a></li>
+                    <li><a class="dropdown-item" href="cs_abstract.html">Abstraction</a></li>
+                    <li><a class="dropdown-item" href="cs_interfaces.html">Interface</a></li>
+                    <li><a class="dropdown-item" href="cs_enum.html">Enum</a></li>
+                    <li><a class="dropdown-item" href="cs_files.html">Files</a></li>
+                    <li><a class="dropdown-item" href="cs_exception.html">Exceptions</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="col p-6">
+            <div id="textContainer">
+                <div style="overflow-block: auto">
+                    <img style="float: left" src="img/cs-logo.png" alt="c sharp Logo" width="80">
+                    <h1 style="padding: 10px">C# Inheritance</h1>
+                </div>
+                <hr>
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Inheritance</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Inheritance is a fundamental concept in object-oriented programming (OOP) that allows a class to inherit the properties and methods of another class. This enables the creation of new classes that are specialized versions of existing classes, promoting code reusability and extensibility.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Inheritance Terminology</strong></span></span></span></p>
+
+                <ul style="list-style-type:disc">
+                    <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Base Class:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> The class from which another class inherits.</span></span></span></li>
+                    <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Derived Class:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> The class that inherits from the base class.</span></span></span></li>
+                    <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Inheritance Hierarchy:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> A hierarchical relationship between classes, where a derived class inherits from a base class, and the derived class can serve as a base class for further derived classes.</span></span></span></li>
+                </ul>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Types of Inheritance</strong></span></span></span></p>
+
+                <ul style="list-style-type:disc">
+                    <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Single Inheritance:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> A derived class inherits from a single base class.</span></span></span></li>
+                    <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Multilevel Inheritance:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> A derived class inherits from another derived class, creating a chain of inheritance.</span></span></span></li>
+                    <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Multipath Inheritance:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> A derived class inherits from multiple base classes, creating a more complex inheritance hierarchy.</span></span></span></li>
+                </ul>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Example: Animal Class Hierarchy</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Consider an Animal class representing common animal characteristics:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">class </span><span style="color:#996900">Animal</span><span style="color:#1f1f1f"> {</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Fields</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">private </span><span style="color:#1967d2">string</span><span style="color:#1f1f1f"> name;</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">private </span><span style="color:#1967d2">int</span><span style="color:#1f1f1f"> age;</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">private </span><span style="color:#1967d2">string</span><span style="color:#1f1f1f"> species;</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Methods</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">public void </span><span style="color:#996900">Eat</span><span style="color:#444746">()</span><span style="color:#1f1f1f"> {</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; Console.WriteLine(</span><span style="color:#188038">&quot;Animal is eating.&quot;</span><span style="color:#1f1f1f">);</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; }</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">public void </span><span style="color:#996900">Sleep</span><span style="color:#444746">()</span><span style="color:#1f1f1f"> {</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; Console.WriteLine(</span><span style="color:#188038">&quot;Animal is sleeping.&quot;</span><span style="color:#1f1f1f">);</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; }</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Derived Classes: Dog and Cat</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Create a Dog class that inherits from the Animal class:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">class </span><span style="color:#996900">Dog</span><span style="color:#1f1f1f"> : </span><span style="color:#996900">Animal</span><span style="color:#1f1f1f"> {</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Methods</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">public void </span><span style="color:#996900">Bark</span><span style="color:#444746">()</span><span style="color:#1f1f1f"> {</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; Console.WriteLine(</span><span style="color:#188038">&quot;Dog is barking.&quot;</span><span style="color:#1f1f1f">);</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; }</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Create a Cat class that also inherits from the Animal class:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">class </span><span style="color:#996900">Cat</span><span style="color:#1f1f1f"> : </span><span style="color:#996900">Animal</span><span style="color:#1f1f1f"> {</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Methods</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">public void </span><span style="color:#996900">Purr</span><span style="color:#444746">()</span><span style="color:#1f1f1f"> {</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; Console.WriteLine(</span><span style="color:#188038">&quot;Cat is purring.&quot;</span><span style="color:#1f1f1f">);</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; }</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Inheritance Benefits</strong></span></span></span></p>
+
+                <ul style="list-style-type:disc">
+                    <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Code Reusability:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Inheritance allows programmers to reuse existing code by creating new classes that inherit from existing classes, reducing code duplication and improving development efficiency.</span></span></span></li>
+                    <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Extensibility:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Inheritance enables the creation of specialized classes that extend the functionality of existing classes, promoting code flexibility and adaptability.</span></span></span></li>
+                    <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Code Organization:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Inheritance promotes code organization by creating a hierarchical structure of classes, making it easier to understand and maintain complex codebases.</span></span></span></li>
+                </ul>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Conclusion</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Inheritance is a powerful and versatile tool in C# programming that allows programmers to create specialized classes that inherit properties and methods from existing classes. It plays a crucial role in OOP principles, enabling code reusability, extensibility, and code organization. Understanding inheritance is essential for developing effective and maintainable C# applications.</span></span></span></p>
+
+                <p>&nbsp;</p>
+            </div><!-- End Text Container--->
+        </div>
+        <div class="col-sm-3 p-3">
+            <!--  <img src="../images/py.png"  class="img-fluid" alt="Cinque Terre">-->
+            <span id="postLinks">
+
+            </span>
+            <script>
+                document.getElementById("postLinks").innerHTML = bloglinks
+            </script>
+        </div>
+    </div>
+</div>
+<!--SCRIPT-->
+
+<script>
+    let navbarContainer = document.getElementById("navbarContainer");
+    let textContainer = document.getElementById("textContainer");
+    let dropdown = document.getElementById("sidebarDropdown");
+    let sidebar = document.getElementById("sidebarList");
+    let menuItems = document.getElementById("menuItems");
+    //*** Navbar
+
+    function loadNavbar(){
+        fetch("../navbar.html")
+            .then(res => res.text())
+            .then(data => navbarContainer.innerHTML = data);
+    }
+
+    loadNavbar()
+    //*********
+
+    //****** Handling responsive view
+    function isMobile(){
+        if (window.innerWidth <= 576) {
+            console.log("Mobile device detected");
+            return true;
+        } else {
+            console.log("Desktop device detected");
+            return false;
+        }
+
+    }
+    function setMobileView(){
+        dropdown.style.display = "block";
+        sidebar.style.display = "none";
+    }
+    function setDesktopView(){
+        dropdown.style.display = "none";
+        sidebar.style.display = "block";
+    }
+    if(isMobile()){
+        setMobileView();
+    }else{
+        setDesktopView();
+    }
+    window.addEventListener('resize',function(){
+        if(isMobile()){
+            setMobileView();
+        }else{
+            setDesktopView();
+        }
+    })
+    //******** fill list & dropdown ********
+
+
+</script>
+<!----        CEO optimization script          -->
+
+</body>
+</html>

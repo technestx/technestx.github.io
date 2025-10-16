@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7CHHV9Y3P4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag()
+        {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-7CHHV9Y3P4');
+    </script>
+    <!-- --------End google tag script -------->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!------------------------- Title and meta tags------------------------>
+    <title>C# Exception Handling: A Comprehensive Guide to Robust Error Management</title>
+    <meta name="description" content="Master C# exception handling with this guide covering try-catch-finally blocks, exception types, throwing exceptions, and building robust, reliable C# applications.">
+    <meta name="keywords" content="C#, C Sharp, exception handling, exceptions, error handling, try-catch, finally block, System.Exception, DivideByZeroException, FormatException, OverflowException, programming, software development, robust applications, error recovery, .NET">
+
+    <!--------------------------------------------------------------------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!--    <script src="cs-home.js"></script>-->
+    <link rel="stylesheet" href="../main.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <script src="../utils.js"></script>
+
+    <!-- Adsense's auto ad script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7562795281583843"
+            crossorigin="anonymous">
+    </script>
+    <!-- Adsense's auto ad script -->
+</head>
+<body>
+<span id="navbarContainer"></span>
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-sm-3 p-3">
+            <h3>Learn C#</h3>
+            <div class="list-group list-group-flush" id="sidebarList">
+                <a href="cs_intro.html" class="list-group-item list-group-item-action" >Introduction</a>
+                <a href="cs_getting.html" class="list-group-item list-group-item-action" >Getting Started</a>
+                <a href="cs_syntax.html" class="list-group-item list-group-item-action" >Syntax</a>
+                <a href="cs_output.html" class="list-group-item list-group-item-action" >Output</a>
+                <a href="cs_comments.html" class="list-group-item list-group-item-action" >Comments</a>
+                <a href="cs_variables.html" class="list-group-item list-group-item-action" >Variables</a>
+                <a href="cs_datatypes.html" class="list-group-item list-group-item-action" >Data Types</a>
+                <a href="cs_casting.html" class="list-group-item list-group-item-action" >Type Casting</a>
+                <a href="cs_user_input.html" class="list-group-item list-group-item-action" >User Input</a>
+                <a href="cs_operators.html" class="list-group-item list-group-item-action" >Operator</a>
+                <a href="cs_math.html" class="list-group-item list-group-item-action" >Math</a>
+                <a href="cs_string.html" class="list-group-item list-group-item-action" >String</a>
+                <a href="cs_booleans.html" class="list-group-item list-group-item-action" >Boolean</a>
+                <a href="cs_conditions.html" class="list-group-item list-group-item-action" >Conditions</a>
+                <a href="cs_switch.html" class="list-group-item list-group-item-action" >Switch</a>
+                <a href="cs_while.html" class="list-group-item list-group-item-action" >While Loop</a>
+                <a href="cs_for.html" class="list-group-item list-group-item-action" >For Loop</a>
+                <a href="cs_break.html" class="list-group-item list-group-item-action" >Break/Continue</a>
+                <a href="cs_arrays.html" class="list-group-item list-group-item-action" >Arrays</a>
+                <a href="cs_methods.html" class="list-group-item list-group-item-action" >Methods</a>
+                <a href="cs_para.html" class="list-group-item list-group-item-action" >Method Parameters</a>
+                <a href="cs_over.html" class="list-group-item list-group-item-action" >Method Overloading</a>
+                <a href="cs_oop.html" class="list-group-item list-group-item-action" >OOP</a>
+                <a href="cs_classes.html" class="list-group-item list-group-item-action" >Classes/Objects</a>
+                <a href="cs_member.html" class="list-group-item list-group-item-action" >Class Member</a>
+                <a href="cs_constructors.html" class="list-group-item list-group-item-action" >Constructor</a>
+                <a href="cs_access.html" class="list-group-item list-group-item-action" >Access Modifiers</a>
+                <a href="cs_properties.html" class="list-group-item list-group-item-action" >Properties</a>
+                <a href="cs_inher.html" class="list-group-item list-group-item-action" >Inheritance</a>
+                <a href="cs_poly.html" class="list-group-item list-group-item-action" >Polymorphism</a>
+                <a href="cs_abstract.html" class="list-group-item list-group-item-action" >Abstraction</a>
+                <a href="cs_interfaces.html" class="list-group-item list-group-item-action" >Interfaces</a>
+                <a href="cs_enum.html" class="list-group-item list-group-item-action" >Enum</a>
+                <a href="cs_files.html" class="list-group-item list-group-item-action" >Files</a>
+                <a href="cs_exception.html" class="list-group-item list-group-item-action" >Exception</a>
+
+            </div>
+            <div class="dropdown" id="sidebarDropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                    Topics
+                </button>
+                <ul class="dropdown-menu" id="menuItems">
+                    <li><a class="dropdown-item" href="cs_intro.html">Introduction</a></li>
+                    <li><a class="dropdown-item" href="cs_getting.html">Getting started</a></li>
+                    <li><a class="dropdown-item" href="cs_syntax.html">Syntax</a></li>
+                    <li><a class="dropdown-item" href="cs_output.html">Output</a></li>
+                    <li><a class="dropdown-item" href="cs_comments.html">Comments</a></li>
+                    <li><a class="dropdown-item" href="cs_variables.html">Variables</a></li>
+                    <li><a class="dropdown-item" href="cs_datatypes.html">Data Types</a></li>
+                    <li><a class="dropdown-item" href="cs_casting.html">Type Casting</a></li>
+                    <li><a class="dropdown-item" href="cs_user_input.html">User Input</a></li>
+                    <li><a class="dropdown-item" href="cs_operators.html">Operators</a></li>
+                    <li><a class="dropdown-item" href="cs_math.html">Math</a></li>
+                    <li><a class="dropdown-item" href="cs_string.html">String</a></li>
+                    <li><a class="dropdown-item" href="cs_booleans.html">Booleans</a></li>
+                    <li><a class="dropdown-item" href="cs_conditions.html">Conditions</a></li>
+                    <li><a class="dropdown-item" href="cs_switch.html">Switch</a></li>
+                    <li><a class="dropdown-item" href="cs_while.html">While Loop</a></li>
+                    <li><a class="dropdown-item" href="cs_for.html">For Loop</a></li>
+                    <li><a class="dropdown-item" href="cs_break.html">Break/Continue</a></li>
+                    <li><a class="dropdown-item" href="cs_arrays.html">Arrays</a></li>
+                    <li><a class="dropdown-item" href="cs_methods.html">Methods</a></li>
+                    <li><a class="dropdown-item" href="cs_para.html">Method Parameters</a></li>
+                    <li><a class="dropdown-item" href="cs_over.html">Method Overloading</a></li>
+                    <li><a class="dropdown-item" href="cs_oop.html">OOP</a></li>
+                    <li><a class="dropdown-item" href="cs_classes.html">Classes/Objects</a></li>
+                    <li><a class="dropdown-item" href="cs_member.html">Class Member</a></li>
+                    <li><a class="dropdown-item" href="cs_constructors.html">Constructor</a></li>
+                    <li><a class="dropdown-item" href="cs_access.html">Access Modifiers</a></li>
+                    <li><a class="dropdown-item" href="cs_properties.html">Properties</a></li>
+                    <li><a class="dropdown-item" href="cs_inher.html">Inheritance</a></li>
+                    <li><a class="dropdown-item" href="cs_poly.html">Polymorphism</a></li>
+                    <li><a class="dropdown-item" href="cs_abstract.html">Abstraction</a></li>
+                    <li><a class="dropdown-item" href="cs_interfaces.html">Interface</a></li>
+                    <li><a class="dropdown-item" href="cs_enum.html">Enum</a></li>
+                    <li><a class="dropdown-item" href="cs_files.html">Files</a></li>
+                    <li><a class="dropdown-item" href="cs_exception.html">Exceptions</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="col p-6">
+            <div id="textContainer">
+                <div style="overflow-block: auto">
+                    <img style="float: left" src="img/cs-logo.png" alt="c sharp Logo" width="80">
+                    <h1 style="padding: 10px">C# Exceptions</h1>
+                </div>
+                <hr>
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>C# Exceptions: Handling Unforeseen Events</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Exceptions are a fundamental concept in programming that represent unexpected events or errors that occur during program execution. In C#, exceptions provide a structured way to handle these errors, preventing program crashes and ensuring graceful error recovery. Understanding exceptions is crucial for developing robust and reliable C# applications.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Exception Types and Hierarchies</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">The System.Exception class serves as the base class for all exceptions in C#. Exceptions are organized into a hierarchical structure, allowing for specific and general exception handling.</span></span></span></p>
+
+                <ul style="list-style-type:disc">
+                    <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Specific Exceptions:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Subclasses of System.Exception represent specific error conditions, such as FileNotFoundException, ArgumentNullException, or ArithmeticException.</span></span></span></li>
+                    <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">General Exceptions:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> The Exception class itself represents any type of exception, allowing you to catch all exceptions without specifying their exact type.</span></span></span></li>
+                </ul>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Throwing Exceptions</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">To signal an exception, use the throw keyword followed by the exception object:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">try</span><span style="color:#1f1f1f"> {</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#1967d2">int</span><span style="color:#1f1f1f"> numerator = </span><span style="color:#b55908">10</span><span style="color:#1f1f1f">;</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#1967d2">int</span><span style="color:#1f1f1f"> denominator = </span><span style="color:#b55908">0</span><span style="color:#1f1f1f">;</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#1967d2">int</span><span style="color:#1f1f1f"> result = numerator / denominator;</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; Console.WriteLine(</span><span style="color:#188038">&quot;Result: &quot;</span><span style="color:#1f1f1f"> + result);</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">} catch (DivideByZeroException e) {</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; Console.WriteLine(</span><span style="color:#188038">&quot;Error: Cannot divide by zero.&quot;</span><span style="color:#1f1f1f">);</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">This code attempts to divide numerator by denominator. However, if denominator is zero, it throws a DivideByZeroException, which is caught by the catch block.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Exception Handling Blocks</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Exception handling involves try-catch blocks, which identify code that may throw exceptions and specify how to handle those exceptions.</span></span></span></p>
+
+                <ul style="list-style-type:disc">
+                    <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">try Block:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Encloses the code that may throw an exception.</span></span></span></li>
+                    <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">catch Block:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Indicates what to do when an exception of a specific type is thrown.</span></span></span></li>
+                    <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">finally Block:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Contains code that always executes, regardless of whether an exception is thrown or not.</span></span></span></li>
+                </ul>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Example: Handling Multiple Exceptions</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">try</span><span style="color:#1f1f1f"> {</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#1967d2">int </span><span style="color:#8430ce">value</span><span style="color:#1f1f1f"> = Convert.ToInt32(userInput);</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; Console.WriteLine(</span><span style="color:#188038">&quot;Converted value: &quot;</span><span style="color:#1f1f1f"> + </span><span style="color:#8430ce">value</span><span style="color:#1f1f1f">);</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">} catch (FormatException e) {</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; Console.WriteLine(</span><span style="color:#188038">&quot;Error: Invalid input format.&quot;</span><span style="color:#1f1f1f">);</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">} catch (OverflowException e) {</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; Console.WriteLine(</span><span style="color:#188038">&quot;Error: Input value too large or too small.&quot;</span><span style="color:#1f1f1f">);</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">This code attempts to convert the user input to an integer. If the input is not a valid integer, it throws either a FormatException or an OverflowException, which are caught by the respective catch blocks.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Benefits of Exception Handling</strong></span></span></span></p>
+
+                <ul style="list-style-type:disc">
+                    <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Graceful Error Recovery:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Exceptions allow programs to recover from errors without crashing, providing meaningful error messages and maintaining program stability.</span></span></span></li>
+                    <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Code Organization:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Exception handling promotes code organization by separating error handling logic from the main program flow.</span></span></span></li>
+                    <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Code Maintainability:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Exception handling makes code more maintainable by isolating error handling code and making it easier to debug and modify.</span></span></span></li>
+                </ul>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Conclusion</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Exception handling is an essential aspect of C# programming, enabling developers to write robust and reliable applications that can gracefully handle unexpected events and errors. Understanding exception types, exception handling blocks, and the benefits of exception handling is crucial for building high-quality C# applications.</span></span></span></p>
+
+                <p>&nbsp;</p>
+
+            </div><!-- End Text Container--->
+        </div>
+        <div class="col-sm-3 p-3">
+            <!--  <img src="../images/py.png"  class="img-fluid" alt="Cinque Terre">-->
+            <span id="postLinks">
+
+            </span>
+            <script>
+                document.getElementById("postLinks").innerHTML = bloglinks
+            </script>
+        </div>
+    </div>
+</div>
+<!--SCRIPT-->
+
+<script>
+    let navbarContainer = document.getElementById("navbarContainer");
+    let textContainer = document.getElementById("textContainer");
+    let dropdown = document.getElementById("sidebarDropdown");
+    let sidebar = document.getElementById("sidebarList");
+    let menuItems = document.getElementById("menuItems");
+    //*** Navbar
+
+    function loadNavbar(){
+        fetch("../navbar.html")
+            .then(res => res.text())
+            .then(data => navbarContainer.innerHTML = data);
+    }
+
+    loadNavbar()
+    //*********
+
+    //****** Handling responsive view
+    function isMobile(){
+        if (window.innerWidth <= 576) {
+            console.log("Mobile device detected");
+            return true;
+        } else {
+            console.log("Desktop device detected");
+            return false;
+        }
+
+    }
+    function setMobileView(){
+        dropdown.style.display = "block";
+        sidebar.style.display = "none";
+    }
+    function setDesktopView(){
+        dropdown.style.display = "none";
+        sidebar.style.display = "block";
+    }
+    if(isMobile()){
+        setMobileView();
+    }else{
+        setDesktopView();
+    }
+    window.addEventListener('resize',function(){
+        if(isMobile()){
+            setMobileView();
+        }else{
+            setDesktopView();
+        }
+    })
+    //******** fill list & dropdown ********
+
+
+</script>
+<!----        CEO optimization script          -->
+
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7CHHV9Y3P4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag()
+        {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-7CHHV9Y3P4');
+    </script>
+    <!-- --------End google tag script -------->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!------------------------- Title and meta tags------------------------>
+    <title>C++ Mathematical Functions: cmath Header, Examples & Usage</title>
+    <meta name="description" content="Explore C++ mathematical functions from the <cmath> header. Learn how to use pow(), sqrt(), sin(), cos(), tan(), log(), exp() with practical code examples for various operations.">
+    <meta name="keywords" content="C++ mathematical functions, cmath, C++ math, pow, sqrt, sin, cos, tan, log, exp, C++ programming, math operations, square root, natural logarithm, exponent, trigonometry, C++ examples">
+
+    <!--------------------------------------------------------------------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!--    <script src="cs-home.js"></script>-->
+    <link rel="stylesheet" href="../main.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <script src="../utils.js"></script>
+
+    <!-- Adsense's auto ad script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7562795281583843"
+            crossorigin="anonymous">
+    </script>
+    <!-- Adsense's auto ad script -->
+</head>
+<body>
+<span id="navbarContainer"></span>
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-sm-3 p-3">
+            <h3>Learn C++</h3>
+            <div class="list-group list-group-flush" id="sidebarList">
+                <a href="cpp_intro.html" class="list-group-item list-group-item-action" >Introduction to C++</a>
+                <a href="cpp_dev.html" class="list-group-item list-group-item-action" >Development Environment</a>
+                <a href="cpp_basics.html" class="list-group-item list-group-item-action" >Basic</a>
+                <a href="cpp_syntax.html" class="list-group-item list-group-item-action" >Syntax</a>
+                <a href="cpp_output.html" class="list-group-item list-group-item-action" >Output</a>
+                <a href="cpp_comments.html" class="list-group-item list-group-item-action" >Comments</a>
+                <a href="cpp_variables.html" class="list-group-item list-group-item-action" >Variables</a>
+                <a href="cpp_user_input.html" class="list-group-item list-group-item-action" >User Input</a>
+                <a href="cpp_data_types.html" class="list-group-item list-group-item-action" >Data Types</a>
+                <a href="cpp_operators.html" class="list-group-item list-group-item-action" >Operators</a>
+                <a href="cpp_string.html" class="list-group-item list-group-item-action" >String</a>
+                <a href="cpp_math.html" class="list-group-item list-group-item-action" >Math</a>
+                <a href="cpp_booleans.html" class="list-group-item list-group-item-action" >Boolean</a>
+                <a href="cpp_conditions.html" class="list-group-item list-group-item-action" >Conditions</a>
+                <a href="cpp_while.html" class="list-group-item list-group-item-action" >While/Do-While Loop</a>
+                <a href="cpp_for.html" class="list-group-item list-group-item-action" >For Loop</a>
+                <a href="cpp_break.html" class="list-group-item list-group-item-action" >Break/Continue</a>
+                <a href="cpp_array.html" class="list-group-item list-group-item-action" >Arrays</a>
+                <a href="cpp_struct.html" class="list-group-item list-group-item-action" >Structures</a>
+                <a href="cpp_ref.html" class="list-group-item list-group-item-action" >References</a>
+                <a href="cpp_pointers.html" class="list-group-item list-group-item-action" >Pointers</a>
+                <a href="cpp_functions.html" class="list-group-item list-group-item-action" >Functions</a>
+                <a href="cpp_fun_para.html" class="list-group-item list-group-item-action" >Function Parameters</a>
+                <a href="cpp_fun_over.html" class="list-group-item list-group-item-action" >Function Overloading</a>
+                <a href="cpp_recursion.html" class="list-group-item list-group-item-action" >Recursion</a>
+                <a href="cpp_oop.html" class="list-group-item list-group-item-action" >OOP</a>
+                <a href="cpp_classes.html" class="list-group-item list-group-item-action" >Classes and Objects</a>
+                <a href="cpp_methods.html" class="list-group-item list-group-item-action" >Class Methods</a>
+                <a href="cpp_const.html" class="list-group-item list-group-item-action" >Constructors</a>
+                <a href="cpp_access.html" class="list-group-item list-group-item-action" >Access Specifiers</a>
+                <a href="cpp_encap.html" class="list-group-item list-group-item-action" >Encapsulations</a>
+                <a href="cpp_inher.html" class="list-group-item list-group-item-action" >Inheritance</a>
+                <a href="cpp_poly.html" class="list-group-item list-group-item-action" >Polymorphism</a>
+                <a href="cpp_files.html" class="list-group-item list-group-item-action" >Files</a>
+                <a href="cpp_excep.html" class="list-group-item list-group-item-action" >Exceptions</a>
+
+            </div>
+            <div class="dropdown" id="sidebarDropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                    Topics
+                </button>
+                <ul class="dropdown-menu" id="menuItems">
+                    <li><a class="dropdown-item" href="cpp_intro.html">Introduction to C++</a></li>
+                    <li><a class="dropdown-item" href="cpp_dev.html">Development Environment</a></li>
+                    <li><a class="dropdown-item" href="cpp_basics.html">Basic</a></li>
+                    <li><a class="dropdown-item" href="cpp_syntax.html">Syntax</a></li>
+                    <li><a class="dropdown-item" href="cpp_output.html">Output</a></li>
+                    <li><a class="dropdown-item" href="cpp_comments.html">Comments</a></li>
+                    <li><a class="dropdown-item" href="cpp_variables.html">Variables</a></li>
+                    <li><a class="dropdown-item" href="cpp_user_input.html">User Input</a></li>
+                    <li><a class="dropdown-item" href="cpp_data_types.html">Data Types</a></li>
+                    <li><a class="dropdown-item" href="cpp_operators.html">Operators</a></li>
+                    <li><a class="dropdown-item" href="cpp_string.html">String</a></li>
+                    <li><a class="dropdown-item" href="cpp_math.html">Math</a></li>
+                    <li><a class="dropdown-item" href="cpp_booleans.html">Booleans</a></li>
+                    <li><a class="dropdown-item" href="cpp_conditions.html">Conditions</a></li>
+                    <li><a class="dropdown-item" href="cpp_while.html">While/Do-While Loop</a></li>
+                    <li><a class="dropdown-item" href="cpp_for.html">For Loop</a></li>
+                    <li><a class="dropdown-item" href="cpp_break.html">Break/Continue</a></li>
+                    <li><a class="dropdown-item" href="cpp_array.html">Arrays</a></li>
+                    <li><a class="dropdown-item" href="cpp_struct.html">Structures</a></li>
+                    <li><a class="dropdown-item" href="cpp_ref.html">References</a></li>
+                    <li><a class="dropdown-item" href="cpp_pointers.html">Pointers</a></li>
+                    <li><a class="dropdown-item" href="cpp_functions.html">Functions</a></li>
+                    <li><a class="dropdown-item" href="cpp_fun_para.html">Function Parameters</a></li>
+                    <li><a class="dropdown-item" href="cpp_fun_over.html">Function Overloading</a></li>
+                    <li><a class="dropdown-item" href="cpp_recursion.html">Recursion</a></li>
+                    <li><a class="dropdown-item" href="cpp_oop.html">OOP</a></li>
+                    <li><a class="dropdown-item" href="cpp_classes.html">Classes adn Objects</a></li>
+                    <li><a class="dropdown-item" href="cpp_methods.html">Class Methods</a></li>
+                    <li><a class="dropdown-item" href="cpp_const.html">Constructor</a></li>
+                    <li><a class="dropdown-item" href="cpp_access.html">Access Specifiers</a></li>
+                    <li><a class="dropdown-item" href="cpp_encap.html">Encapsulation</a></li>
+                    <li><a class="dropdown-item" href="cpp_inher.html">Inheritance</a></li>
+                    <li><a class="dropdown-item" href="cpp_poly.html">Polymorphism</a></li>
+                    <li><a class="dropdown-item" href="cpp_files.html">Files</a></li>
+                    <li><a class="dropdown-item" href="cpp_excep.html">Exceptions</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="col p-6">
+            <div id="textContainer">
+                <div style="overflow-block: auto">
+                    <img style="float: left" src="img/cpp-logo.png" alt="c sharp Logo" width="80">
+                    <h1 style="padding: 10px">Math</h1>
+                </div>
+                <hr>
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">C++ provides a variety of mathematical functions that you can use to perform mathematical operations on numbers. These functions are available in the &lt;cmath&gt; header file.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Some of the most common mathematical functions in C++ include:</span></span></span></p>
+
+                <ul style="list-style-type:disc">
+                    <li><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">pow(): Raises a number to a power.</span></span></span></li>
+                    <li><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">sqrt(): Calculates the square root of a number.</span></span></span></li>
+                    <li><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">sin(): Calculates the sine of an angle.</span></span></span></li>
+                    <li><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">cos(): Calculates the cosine of an angle.</span></span></span></li>
+                    <li><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">tan(): Calculates the tangent of an angle.</span></span></span></li>
+                    <li><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">log(): Calculates the natural logarithm of a number.</span></span></span></li>
+                    <li><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">exp(): Calculates the exponential of a number.</span></span></span></li>
+                </ul>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Examples</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">The following code shows how to use some of the most common mathematical functions in C++:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">#include &lt;iostream&gt;</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">#include &lt;cmath&gt;</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">int </span><span style="color:#996900">main</span><span style="color:#444746">()</span><span style="color:#1f1f1f"> {</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Raise a number to a power.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">double</span><span style="color:#1f1f1f"> result = </span><span style="color:#1967d2">pow</span><span style="color:#1f1f1f">(</span><span style="color:#b55908">2</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">3</span><span style="color:#1f1f1f">);</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Calculate the square root of a number.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; result = </span><span style="color:#1967d2">sqrt</span><span style="color:#1f1f1f">(</span><span style="color:#b55908">16</span><span style="color:#1f1f1f">);</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Calculate the sine of an angle.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; result = </span><span style="color:#1967d2">sin</span><span style="color:#1f1f1f">(</span><span style="color:#b55908">45</span><span style="color:#1f1f1f"> * M_PI / </span><span style="color:#b55908">180</span><span style="color:#1f1f1f">);</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Calculate the cosine of an angle.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; result = </span><span style="color:#1967d2">cos</span><span style="color:#1f1f1f">(</span><span style="color:#b55908">45</span><span style="color:#1f1f1f"> * M_PI / </span><span style="color:#b55908">180</span><span style="color:#1f1f1f">);</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Calculate the tangent of an angle.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; result = </span><span style="color:#1967d2">tan</span><span style="color:#1f1f1f">(</span><span style="color:#b55908">45</span><span style="color:#1f1f1f"> * M_PI / </span><span style="color:#b55908">180</span><span style="color:#1f1f1f">);</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Calculate the natural logarithm of a number.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; result = </span><span style="color:#1967d2">log</span><span style="color:#1f1f1f">(</span><span style="color:#b55908">10</span><span style="color:#1f1f1f">);</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Calculate the exponential of a number.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; result = </span><span style="color:#1967d2">exp</span><span style="color:#1f1f1f">(</span><span style="color:#b55908">1</span><span style="color:#1f1f1f">);</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Print the results to the console.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#1967d2">std</span><span style="color:#1f1f1f">::</span><span style="color:#1967d2">cout</span><span style="color:#1f1f1f"> &lt;&lt; result &lt;&lt; </span><span style="color:#1967d2">std</span><span style="color:#1f1f1f">::</span><span style="color:#1967d2">endl</span><span style="color:#1f1f1f">;</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">return </span><span style="color:#b55908">0</span><span style="color:#1f1f1f">;</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Output:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">8</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">4</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">0.707107</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">0.707107</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">1</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">2.30259</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">You can also use the mathematical functions in C++ to perform more complex mathematical operations, such as calculating the area of a triangle or the volume of a sphere.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">For example, the following code calculates the area of a triangle:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">#include &lt;iostream&gt;</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">#include &lt;cmath&gt;</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">int </span><span style="color:#996900">main</span><span style="color:#444746">()</span><span style="color:#1f1f1f"> {</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Declare the variables.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">double</span><span style="color:#1f1f1f"> base = </span><span style="color:#b55908">10</span><span style="color:#1f1f1f">;</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">double</span><span style="color:#1f1f1f"> height = </span><span style="color:#b55908">5</span><span style="color:#1f1f1f">;</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Calculate the area of the triangle.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">double</span><span style="color:#1f1f1f"> area = </span><span style="color:#b55908">0.5</span><span style="color:#1f1f1f"> * base * height;</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Print the result to the console.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#1967d2">std</span><span style="color:#1f1f1f">::</span><span style="color:#1967d2">cout</span><span style="color:#1f1f1f"> &lt;&lt; area &lt;&lt; </span><span style="color:#1967d2">std</span><span style="color:#1f1f1f">::</span><span style="color:#1967d2">endl</span><span style="color:#1f1f1f">;</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">return </span><span style="color:#b55908">0</span><span style="color:#1f1f1f">;</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Output:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">25</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">The mathematical functions in C++ are a powerful tool that you can use to perform a wide variety of mathematical operations. I hope this explanation is helpful. Please let me know if you have any other questions.</span></span></span></p>
+
+                <p>&nbsp;</p>
+            </div><!-- End Text Container--->
+        </div>
+        <div class="col-sm-3 p-3">
+            <!--  <img src="../images/py.png"  class="img-fluid" alt="Cinque Terre">-->
+            <span id="postLinks">
+
+            </span>
+            <script>
+                document.getElementById("postLinks").innerHTML = bloglinks
+            </script>
+        </div>
+    </div>
+</div>
+<!--SCRIPT-->
+
+<script>
+    let navbarContainer = document.getElementById("navbarContainer");
+    let textContainer = document.getElementById("textContainer");
+    let dropdown = document.getElementById("sidebarDropdown");
+    let sidebar = document.getElementById("sidebarList");
+    let menuItems = document.getElementById("menuItems");
+    //*** Navbar
+
+    function loadNavbar(){
+        fetch("../navbar.html")
+            .then(res => res.text())
+            .then(data => navbarContainer.innerHTML = data);
+    }
+
+    loadNavbar()
+    //*********
+
+    //****** Handling responsive view
+    function isMobile(){
+        if (window.innerWidth <= 576) {
+            console.log("Mobile device detected");
+            return true;
+        } else {
+            console.log("Desktop device detected");
+            return false;
+        }
+
+    }
+    function setMobileView(){
+        dropdown.style.display = "block";
+        sidebar.style.display = "none";
+    }
+    function setDesktopView(){
+        dropdown.style.display = "none";
+        sidebar.style.display = "block";
+    }
+    if(isMobile()){
+        setMobileView();
+    }else{
+        setDesktopView();
+    }
+    window.addEventListener('resize',function(){
+        if(isMobile()){
+            setMobileView();
+        }else{
+            setDesktopView();
+        }
+    })
+    //******** fill list & dropdown ********
+
+
+</script>
+<!----        CEO optimization script          -->
+
+</body>
+</html>

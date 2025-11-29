@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
+<url>
+  <loc>http://technestx.github.io/python/py_intro.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/csharp/cs_intro.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/kotlin/kt_intro.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp/cpp_intro.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/books/book-home.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/blog/blog-home.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_intro.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_getting_started.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_syntex.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_comments.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_variables.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_datatypes.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_numbers.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_casting.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_string.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_boolean.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_operators.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_lists.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_tuples.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_set.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_dict.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_if_else.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_while.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_for.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_function.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_lambda.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_arrays.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_classes.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_inheritance.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_iterator.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_polymorphism.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_scope.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_module.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_date.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_math.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_json.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_regex.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_pip.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_try.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_input.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_formatting.html.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_file_handling.html.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_read_file.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_write_file.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_delete_file.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_formatting.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/py_file_handling.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_intro.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_getting.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_syntax.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_output.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_comments.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_variables.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_datatypes.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_casting.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_user_input.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_operators.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_math.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_string.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_booleans.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_conditions.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_switch.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_while.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_for.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_break.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_arrays.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_methods.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_para.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_over.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_oop.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_classes.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_member.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_constructors.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_access.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_properties.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_inher.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_poly.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_abstract.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_interfaces.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_enum.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_files.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cs_exception.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/kt_intro.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/kt_get_startd.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/kt_basic.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/kt_syntax.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/kt_output.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/kt_comments.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/kt_var.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/kt_datatypes.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/kt_operators.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/kt_string.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/kt_boolean.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/kt_if.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/kt_when.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/kt_while.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/kt_break.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/kt_arrays.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/kt_for.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/kt_ranges.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/kt_functions.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/kt_loop.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/kt_classes.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/kt_const.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/kt_class_fun.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/kt_inher.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/kt_get_started.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/kt_oop.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_intro.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_dev.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_basics.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_syntax.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_output.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_comments.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_variables.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_user_input.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_data_types.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_operators.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_string.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_math.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_booleans.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_conditions.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_while.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_for.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_break.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_array.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_struct.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_ref.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_pointers.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_functions.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_fun_para.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_fun_over.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_recursion.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_oop.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_classes.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_methods.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_const.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_access.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_encap.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_inher.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_poly.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_files.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/cpp_excep.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/book-ai-prompt.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/book-ajax.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/book-bitcoin.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/book-blockchain.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/book-cyber.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/book-dll.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/book-free-website.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/book-gradle.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/book-interview.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/book-java-python.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/book-job.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/book-jquery.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/book-kotlin.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/book-motivation.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/book-python.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/book-regex.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/book-rss.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/book-seo.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/book-tag.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/duration-object-in-wpf.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/how-to-ceo-website.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/stream-in-nodejs.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/google-tag-manager-guide.html</loc>
+</url>
+<url>
+  <loc>http://technestx.github.io/</loc>
+</url>
+</urlset>

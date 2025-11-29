@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stream in NodeJS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../main.css">
+    <script src="blog-home.js"></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+<span id="navbarContainer">
+
+</span>
+<div class="offcanvas offcanvas-start" id="blogList">
+    <div class="offcanvas-header">
+        <!--        <h1 class="offcanvas-title">Heading</h1>-->
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="list-group  list-group-flush"" id="postList">
+            <a href="#" class="list-group-item list-group-item-action">First item</a>
+            <a href="#" class="list-group-item list-group-item-action">Second item</a>
+            <a href="#" class="list-group-item list-group-item-action">Third item</a>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-sm-2">
+<!--            <h4><span class="badge rounded-pill xbtn-primary"  data-bs-toggle="offcanvas" data-bs-target="#blogList" style="cursor: pointer"><< Topics</span></h4>-->
+        </div>
+        <div class="col-sm-7">
+            <!-- -------------------------------------------- -->
+            <div class="wp-block-group is-vertical is-layout-flex wp-container-core-group-is-layout-90752e8f wp-block-group-is-layout-flex" style="-webkit-text-stroke-width:0px;align-items:flex-start;background-color:rgb(255, 255, 255);box-sizing:border-box;color:rgb(51, 51, 51);display:flex;flex-flow:column wrap;font-family:Figtree, sans-serif;font-size:16px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:300;gap:8px;letter-spacing:normal;margin-block:0px;margin-left:auto !important;margin-right:auto !important;max-width:720px;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">
+                <h2 class="wp-block-post-title" style="box-sizing:border-box;font-family:Figtree, sans-serif;font-size:36px;font-style:normal;line-height:1.2;margin:0px;word-break:break-word;">
+                    <a target="_blank" rel="noopener noreferrer" href="https://codesphere2.wordpress.com/2025/08/21/stream-in-nodejs/"><a style="color:currentcolor;display:inline-block;font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;text-decoration:none;" target="_self"><strong>Stream in NodeJS</strong></a></a>
+                </h2>
+                <div class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" style="box-sizing:border-box;margin:0px;padding-left:0px;padding-right:0px;position:relative;">
+                    <div class="wp-block-template-part" style="margin-block:0px;margin-left:auto !important;margin-right:auto !important;max-width:720px;">
+                        <div class="wp-block-group is-style-default has-theme-3-color has-text-color has-link-color has-x-small-font-size wp-elements-844914e68d7674a8bd0f2dc07bd00e07 is-nowrap is-layout-flex wp-container-core-group-is-layout-3b7ea385 wp-block-group-is-layout-flex" style="align-items:center;box-sizing:border-box;color:rgb(123, 123, 123) !important;display:flex;flex-wrap:nowrap;font-size:14px !important;gap:6px;">
+                            <div class="has-link-color wp-elements-532170ccadab5d7c1d9ee16e79fa7ee6 wp-block-post-date has-text-color has-theme-3-color has-x-small-font-size" style="box-sizing:border-box;color:rgb(123, 123, 123);font-size:14px;margin:0px;">
+                                <a style="color:rgb(123, 123, 123);text-decoration:none;" target="_blank" rel="noopener noreferrer" href="https://codesphere2.wordpress.com/2025/08/21/stream-in-nodejs/"><time datetime="2025-08-21T14:16:35+05:30">August 21, 2025</time></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--   in-feed ad-->
+            <div class="text-center">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7562795281583843"
+                        crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-format="fluid"
+                     data-ad-layout-key="-gw-3+1f-3d+2z"
+                     data-ad-client="ca-pub-7562795281583843"
+                     data-ad-slot="6633895957"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <!-- in-feed ad-->
+            <div class="entry-content wp-block-post-content has-normal-font-size has-global-padding is-layout-constrained wp-block-post-content-is-layout-constrained" style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);color:rgb(51, 51, 51);display:flow-root;font-family:Figtree, sans-serif;font-size:16px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:300;letter-spacing:normal;margin-block:22px 0px;margin-bottom:22px;margin-left:auto !important;margin-right:auto !important;max-width:720px;orphans:2;padding:0px;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">
+                <p style="margin-block:0px;margin-left:auto !important;margin-right:auto !important;max-width:720px;">
+                    In Node.js, streams are a powerful way to handle data in a continuous, chunk-by-chunk manner. Instead of loading an entire file or data source into memory, streams process data as it becomes available, making them highly efficient for large files, network requests, and other I/O operations.
+                </p>
+                <p style="margin-block:22px 0px;margin-left:auto !important;margin-right:auto !important;max-width:720px;">
+                    There are four main types of streams:
+                </p>
+                <ul class="wp-block-list" style="box-sizing:border-box;margin-block:22px 0px;margin-right:auto !important;max-width:720px;">
+                    <li data-list-item-id="edce7e9e699d535f1bcfc51409f6600c8">
+                        <p style="margin-left:auto !important;">
+                            <strong>Readable:</strong> A stream from which you can read data. Examples include <code>fs.createReadStream()</code> for files and the <code>http.IncomingMessage</code> object on a server.
+                        </p>
+                    </li>
+                    <li data-list-item-id="e9e8df2b2e8987536531b7c3485c59b22">
+                        <p style="margin-left:auto !important;">
+                            <strong>Writable:</strong> A stream to which you can write data. Examples include <code>fs.createWriteStream()</code> for files and the <code>http.ServerResponse</code> object for a server’s response.
+                        </p>
+                    </li>
+                    <li data-list-item-id="ed3e7159b96eb26320c8ae4e0e7e65cff">
+                        <p style="margin-left:auto !important;">
+                            <strong>Duplex:</strong> A stream that is both Readable and Writable. An example is a <code>net.Socket</code>.
+                        </p>
+                    </li>
+                    <li data-list-item-id="e3881e463d5bd4503aadb2621a3e4e1fe">
+                        <p style="margin-left:auto !important;">
+                            <strong>Transform:</strong> A Duplex stream that can modify or transform data as it is written and read. A good example is the <code>zlib</code> module for compression and decompression.
+                        </p>
+                    </li>
+                </ul>
+                <h3 class="wp-block-heading" style="font-family:Figtree, sans-serif;font-size:26px;font-style:normal;line-height:1.2;margin-block:22px 0px;margin-left:auto !important;margin-right:auto !important;max-width:720px;">
+                    <strong>How to Use Streams</strong>
+                </h3>
+                <p style="margin-block:22px 0px;margin-left:auto !important;margin-right:auto !important;max-width:720px;">
+                    The most common and recommended way to work with streams is using the <code>pipe()</code> method. Piping connects a readable stream to a writable stream, so data flows from one to the other automatically.
+                </p>
+                <h4 class="wp-block-heading" style="font-family:Figtree, sans-serif;font-size:clamp(22px, 1.608px + 1.625rem - 0.536vw, 18px);font-style:normal;line-height:1.3;margin-block:22px 0px;margin-left:auto !important;margin-right:auto !important;max-width:720px;">
+                    <strong>Example 1: Reading and Writing Files</strong>
+                </h4>
+                <p style="margin-block:22px 0px;margin-left:auto !important;margin-right:auto !important;max-width:720px;">
+                    This is a classic example of using streams to copy a large file without consuming excessive memory.
+                </p>
+                <pre class="wp-block-code has-theme-2-background-color has-background" style="background-color:rgb(221, 221, 221) !important;box-sizing:border-box;margin-block:22px 0px;margin-left:auto !important;margin-right:auto !important;max-width:720px;"><code class="language-plaintext" style="direction:ltr;display:block;font-family:inherit;overflow-wrap:break-word;text-align:initial;white-space:pre-wrap;">const fs = require('fs');
+
+// Create a readable stream from the source file
+const readableStream = fs.createReadStream('source.txt');
+
+// Create a writable stream to the destination file
+const writableStream = fs.createWriteStream('destination.txt');
+
+// Pipe the readable stream to the writable stream
+// This will read data from source.txt and write it to destination.txt
+readableStream.pipe(writableStream);
+
+// You can also listen for events to know when the operation is complete
+writableStream.on('finish', () =&gt; {
+  console.log('File copy complete.');
+});</code></pre>
+                <h4 class="wp-block-heading" style="font-family:Figtree, sans-serif;font-size:clamp(22px, 1.608px + 1.625rem - 0.536vw, 18px);font-style:normal;line-height:1.3;margin-block:22px 0px;margin-left:auto !important;margin-right:auto !important;max-width:720px;">
+                    <strong>Example 2: Using Events (Low-Level Approach)</strong>
+                </h4>
+                <p style="margin-block:22px 0px;margin-left:auto !important;margin-right:auto !important;max-width:720px;">
+                    While <code>pipe()</code> is the easiest method, you can also use events to handle streams. This gives you more fine-grained control over the data flow.
+                </p>
+                <p style="margin-block:22px 0px;margin-left:auto !important;margin-right:auto !important;max-width:720px;">
+                    <strong>Readable Stream Events:</strong>
+                </p>
+                <ul class="wp-block-list" style="box-sizing:border-box;margin-block:22px 0px;margin-right:auto !important;max-width:720px;">
+                    <li data-list-item-id="e92a0a19e4b6bb5f711a08d42018fbbc2">
+                        <p style="margin-left:auto !important;">
+                            <code>data</code>: Fired when a chunk of data is ready to be read.
+                        </p>
+                    </li>
+                    <li data-list-item-id="e777a7c6699b00272ca6e6f103d78828f">
+                        <p style="margin-left:auto !important;">
+                            <code>end</code>: Fired when there is no more data to be read.
+                        </p>
+                    </li>
+                    <li data-list-item-id="ec683c2618adb0ef5483373321149f36c">
+                        <p style="margin-left:auto !important;">
+                            <code>error</code>: Fired if an error occurs.
+                        </p>
+                    </li>
+                </ul>
+                <p style="margin-block:22px 0px;margin-left:auto !important;margin-right:auto !important;max-width:720px;">
+                    <strong>Writable Stream Events:</strong>
+                </p>
+                <ul class="wp-block-list" style="box-sizing:border-box;margin-block:22px 0px;margin-right:auto !important;max-width:720px;">
+                    <li data-list-item-id="eb444507be9bd8b0415f3b25b3d30b362">
+                        <p style="margin-left:auto !important;">
+                            <code>finish</code>: Fired when the <code>end()</code> method has been called, and all data has been written.
+                        </p>
+                    </li>
+                    <li data-list-item-id="e3aae216c3367e0c2e2dfc23d903bac93">
+                        <p style="margin-left:auto !important;">
+                            <code>error</code>: Fired if an error occurs.
+                        </p>
+                    </li>
+                </ul>
+                <p style="margin-block:22px 0px;margin-left:auto !important;margin-right:auto !important;max-width:720px;">
+                    Here’s how you would manually handle a readable stream and pipe it to a writable stream using events:
+                </p>
+                <pre class="wp-block-code has-theme-2-background-color has-background" style="background-color:rgb(221, 221, 221) !important;box-sizing:border-box;margin-block:22px 0px;margin-left:auto !important;margin-right:auto !important;max-width:720px;"><code class="language-plaintext" style="direction:ltr;display:block;font-family:inherit;overflow-wrap:break-word;text-align:initial;white-space:pre-wrap;">const fs = require('fs');
+
+const readableStream = fs.createReadStream('source.txt');
+const writableStream = fs.createWriteStream('destination.txt');
+
+// Read data chunk by chunk
+readableStream.on('data', (chunk) =&gt; {
+  // Write the chunk to the writable stream
+  writableStream.write(chunk);
+});
+
+// When the readable stream ends, close the writable stream
+readableStream.on('end', () =&gt; {
+  writableStream.end();
+});
+
+// Handle errors
+readableStream.on('error', (err) =&gt; {
+  console.error('Error reading from file:', err);
+});
+writableStream.on('error', (err) =&gt; {
+  console.error('Error writing to file:', err);
+});</code></pre>
+                <h3 class="wp-block-heading" style="font-family:Figtree, sans-serif;font-size:26px;font-style:normal;line-height:1.2;margin-block:22px 0px;margin-left:auto !important;margin-right:auto !important;max-width:720px;">
+                    <strong>When to Use Streams</strong>
+                </h3>
+                <p style="margin-block:22px 0px;margin-left:auto !important;margin-right:auto !important;max-width:720px;">
+                    Use streams in Node.js whenever you are dealing with large amounts of data or when the data is not immediately available, such as:
+                </p>
+                <ul class="wp-block-list" style="box-sizing:border-box;margin-block:22px 0px;margin-right:auto !important;max-width:720px;">
+                    <li data-list-item-id="e3b2aef9193a8f6b590772650f2ff4549">
+                        <p style="margin-left:auto !important;">
+                            Reading or writing large files.
+                        </p>
+                    </li>
+                    <li data-list-item-id="eb7ec0cd986e595dc924fe10cabb3f227">
+                        <p style="margin-left:auto !important;">
+                            Handling data from network requests (HTTP, TCP sockets).
+                        </p>
+                    </li>
+                    <li data-list-item-id="ee7f08d86712ab729c07e1a8ff3d7ee0c">
+                        <p style="margin-left:auto !important;">
+                            Processing compressed data using <code>zlib</code>.
+                        </p>
+                    </li>
+                    <li data-list-item-id="e83e965ba4da68cfe131119cad47d0230">
+                        <p style="margin-left:auto !important;">
+                            Working with data from other processes.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- ---------------------------------------------- -->
+        </div>
+        <div class="col-sm-3">
+            Ads
+        </div>
+    </div>
+
+
+</div>
+<!-- footer -->
+<script>
+    //*** Navbar
+    let navbarContainer = document.getElementById("navbarContainer");
+    function loadNavbar(){
+        fetch("../navbar.html")
+            .then(res => res.text())
+            .then(data => navbarContainer.innerHTML = data);
+    }
+
+    loadNavbar()
+    //********* post list
+    const postList = document.getElementById("postList");
+    let listContents = "";
+    function fillList(){
+        for(let i=0; i<postContent.length; i++){
+            //<a href="#" class="list-group-item list-group-item-action">First item</a>
+            let title = postContent[i].title;
+            let url = postContent[i].url;
+            listContents += "<a href="+url+" class=\"list-group-item list-group-item-action\">"+title+"</a>";
+        }
+        postList.innerHTML = listContents;
+    }
+    fillList();
+
+</script>
+<!----        CEO optimization script          -->
+<script src = "../dynamic_seo.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // const path = window.location.pathname.split("/")[1] || "home";
+        // updateMetaTags(path.toLowerCase());
+        updateMetaTags("blog");
+    });
+</script>
+
+<!-- Display ad responsive-->
+<div class="text-center">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-7562795281583843"
+         data-ad-slot="6126093757"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+<!-- End ad responsive-->
+</body>
+</html>

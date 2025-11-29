@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7CHHV9Y3P4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag()
+        {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-7CHHV9Y3P4');
+    </script>
+    <!-- --------End google tag script -------->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!------------------------- Title and meta tags------------------------>
+    <title>Python String Formatting: Comprehensive Guide & Examples</title>
+    <meta name="description" content="Master Python string formatting with the % operator, f-strings, named placeholders, data type specifiers, alignment, and precision. Learn through examples for readable code.">
+    <meta name="keywords" content="Python, string formatting, format strings, f-strings, % operator, format specifier, named formatting, Python tutorial, data types, alignment, precision, Python examples">
+
+    <!--------------------------------------------------------------------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="py.js"></script>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <script src="../utils.js"></script>
+
+    <!-- Adsense's auto ad script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7562795281583843"
+            crossorigin="anonymous">
+    </script>
+    <!-- Adsense's auto ad script -->
+</head>
+<body>
+<span id="navbarContainer"></span>
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-sm-3 p-3">
+            <h3>Learn Kotlin</h3>
+            <div class="list-group list-group-flush" id="sidebarList">
+                <a href="py_intro.html" class="list-group-item list-group-item-action" >Introduction</a>
+                <a href="py_getting_started.html" class="list-group-item list-group-item-action" >Getting Started</a>
+                <a href="py_syntex.html" class="list-group-item list-group-item-action" >Python Syntax</a>
+                <a href="py_comments.html" class="list-group-item list-group-item-action" >Python Comments</a>
+                <a href="py_variables.html" class="list-group-item list-group-item-action" >Python Variables</a>
+                <a href="py_datatypes.html" class="list-group-item list-group-item-action" >Python Data Types</a>
+                <a href="py_numbers.html" class="list-group-item list-group-item-action" >Python Numbers</a>
+                <a href="py_casting.html" class="list-group-item list-group-item-action" >Python Casting</a>
+                <a href="py_string.html" class="list-group-item list-group-item-action" >Python String</a>
+                <a href="py_boolean.html" class="list-group-item list-group-item-action" >Python Boolean</a>
+                <a href="py_operators.html" class="list-group-item list-group-item-action" >Python Operators</a>
+                <a href="py_lists.html" class="list-group-item list-group-item-action" >Python List</a>
+                <a href="py_tuples.html" class="list-group-item list-group-item-action" >Python Tuples</a>
+                <a href="py_set.html" class="list-group-item list-group-item-action" >Python Set</a>
+                <a href="py_dict.html" class="list-group-item list-group-item-action" >Python directory</a>
+                <a href="py_if_else.html" class="list-group-item list-group-item-action" >Python If...Else</a>
+                <a href="py_while.html" class="list-group-item list-group-item-action" >Python While Loop</a>
+                <a href="py_for.html" class="list-group-item list-group-item-action" >Python For Loop</a>
+                <a href="py_function.html" class="list-group-item list-group-item-action" >Python Function</a>
+                <a href="py_lambda.html" class="list-group-item list-group-item-action" >Python Lambda</a>
+                <a href="py_arrays.html" class="list-group-item list-group-item-action" >Python Arrays</a>
+                <a href="py_classes.html" class="list-group-item list-group-item-action" >Python Classes and Objects</a>
+                <a href="py_inheritance.html" class="list-group-item list-group-item-action" >Python Inheritance</a>
+                <a href="py_iterator.html" class="list-group-item list-group-item-action" >Python Iterator</a>
+                <a href="py_polymorphism.html" class="list-group-item list-group-item-action" >Python Polymorphism</a>
+                <a href="py_scope.html" class="list-group-item list-group-item-action" >Python Scope</a>
+                <a href="py_module.html" class="list-group-item list-group-item-action" >Python Module</a>
+                <a href="py_date.html" class="list-group-item list-group-item-action" >Python Date</a>
+                <a href="py_math.html" class="list-group-item list-group-item-action" >Python Math</a>
+                <a href="py_json.html" class="list-group-item list-group-item-action" >Python Json</a>
+                <a href="py_regex.html" class="list-group-item list-group-item-action" >Python Regex</a>
+                <a href="py_pip.html" class="list-group-item list-group-item-action" >Python PIP</a>
+                <a href="py_try.html" class="list-group-item list-group-item-action" >Python Try Except</a>
+                <a href="py_input.html" class="list-group-item list-group-item-action" >Python User Input</a>
+                <a href="py_formatting.html.html" class="list-group-item list-group-item-action" >Python String Formatting</a>
+                <a href="py_file_handling.html.html" class="list-group-item list-group-item-action" >Python File Handling</a>
+                <a href="py_read_file.html" class="list-group-item list-group-item-action" >Python Read File</a>
+                <a href="py_write_file.html" class="list-group-item list-group-item-action" >Python Write File</a>
+                <a href="py_delete_file.html" class="list-group-item list-group-item-action" >Python Delete File</a>
+
+            </div>
+            <div class="dropdown" id="sidebarDropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                    Topics
+                </button>
+                <ul class="dropdown-menu" id="menuItems">
+                    <li><a class="dropdown-item" href="py_intro.html">Introduction</a></li>
+                    <li><a class="dropdown-item" href="py_getting_started.html">Getting started</a></li>
+                    <li><a class="dropdown-item" href="py_syntex.html">Python Syntax</a></li>
+                    <li><a class="dropdown-item" href="py_comments.html">Python Comments</a></li>
+                    <li><a class="dropdown-item" href="py_variables.html">Python Variables</a></li>
+                    <li><a class="dropdown-item" href="py_datatypes.html">Python Data Types</a></li>
+                    <li><a class="dropdown-item" href="py_numbers.html">Python Numbers</a></li>
+                    <li><a class="dropdown-item" href="py_casting.html">Python Casting</a></li>
+                    <li><a class="dropdown-item" href="py_string.html">Python String</a></li>
+                    <li><a class="dropdown-item" href="py_boolean.html">Python Boolean</a></li>
+                    <li><a class="dropdown-item" href="py_operators.html">Python Operators</a></li>
+                    <li><a class="dropdown-item" href="py_lists.html">Python List</a></li>
+                    <li><a class="dropdown-item" href="py_tuples.html">Python Tuple</a></li>
+                    <li><a class="dropdown-item" href="py_set.html">Python Set</a></li>
+                    <li><a class="dropdown-item" href="py_dict.html">Python Dictionary</a></li>
+                    <li><a class="dropdown-item" href="py_if_else.html">Python If...Else</a></li>
+                    <li><a class="dropdown-item" href="py_while.html">Python While Loop</a></li>
+                    <li><a class="dropdown-item" href="py_for.html">Python For Loop</a></li>
+                    <li><a class="dropdown-item" href="py_function.html">Python Function</a></li>
+                    <li><a class="dropdown-item" href="py_lambda.html">Python Lambda</a></li>
+                    <li><a class="dropdown-item" href="py_arrays.html">Python Array</a></li>
+                    <li><a class="dropdown-item" href="py_classes.html">Python Classes and Objects</a></li>
+                    <li><a class="dropdown-item" href="py_inheritance.html">Python Inheritance</a></li>
+                    <li><a class="dropdown-item" href="py_iterator.html">Python Iterator</a></li>
+                    <li><a class="dropdown-item" href="py_polymorphism.html">Python Polymorphism</a></li>
+                    <li><a class="dropdown-item" href="py_scope.html">Python Scope</a></li>
+                    <li><a class="dropdown-item" href="py_module.html">Python Module</a></li>
+                    <li><a class="dropdown-item" href="py_date.html">Python Date</a></li>
+                    <li><a class="dropdown-item" href="py_math.html">Python Math</a></li>
+                    <li><a class="dropdown-item" href="py_json.html">Python Json</a></li>
+                    <li><a class="dropdown-item" href="py_regex.html">Python Regex</a></li>
+                    <li><a class="dropdown-item" href="py_pip.html">Python PIP</a></li>
+                    <li><a class="dropdown-item" href="py_try.html">Python Try Except</a></li>
+                    <li><a class="dropdown-item" href="py_input.html">Python User Input</a></li>
+                    <li><a class="dropdown-item" href="py_formatting.html">Python String Formatting</a></li>
+                    <li><a class="dropdown-item" href="py_file_handling.html">Python File Handling</a></li>
+                    <li><a class="dropdown-item" href="py_read_file.html">Python Read File</a></li>
+                    <li><a class="dropdown-item" href="py_write_file.html">Python Write File</a></li>
+                    <li><a class="dropdown-item" href="py_delete_file.html">Python Delete File</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="col p-6">
+            <div id="textContainer">
+                <div style="overflow-block: auto">
+                    <img style="float: left" src="img/py-logo.png" alt="Python Logo" width="80">
+                    <h1 style="padding: 10px">String Formatting</h1>
+                </div>
+                <hr>
+                <!--   in-feed ad-->
+                <div class="text-center">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7562795281583843"
+                            crossorigin="anonymous"></script>
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-format="fluid"
+                         data-ad-layout-key="-gw-3+1f-3d+2z"
+                         data-ad-client="ca-pub-7562795281583843"
+                         data-ad-slot="6633895957"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                <!-- in-feed ad-->
+                <div class="w3-container w3-animate-right" style="background-color: white;">
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Python string formatting is a powerful way to format strings in Python. It allows you to insert values into strings and format the strings in a variety of ways.</span></span></span></p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Basic string formatting</strong></span></span></span></p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">To format a string in Python, you use the % operator. The % operator is followed by a format specifier, which tells Python how to format the value.</span></span></span></p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Example:</strong></span></span></span></p>
+
+                    <p>&nbsp;</p>
+
+                    <p style="margin-left:16px; margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#444746"><span style="background-color:#e3e3e3">Python</span></span></span></span></p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">name = </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">&quot;Alice&quot;</span></span></span><br />
+                        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">age = </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#b55908">25</span></span></span><br />
+                        <br />
+                        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Format the string using the %s format specifier</span></span></span><br />
+                        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">formatted_string = </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">&quot;Hello, %s! You are %s years old.&quot;</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f"> % (name, age)</span></span></span><br />
+                        <br />
+                        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">print(formatted_string)</span></span></span><br />
+                        &nbsp;</p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Output:</span></span></span></p>
+
+                    <p>&nbsp;</p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">Hello, Alice! You are 25 years old.</span></span></span><br />
+                        &nbsp;</p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Named string formatting</strong></span></span></span></p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Python also supports named string formatting. Named string formatting allows you to insert values into strings using named placeholders.</span></span></span></p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Example:</strong></span></span></span></p>
+
+                    <p>&nbsp;</p>
+
+                    <p style="margin-left:16px; margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#444746"><span style="background-color:#e3e3e3">Python</span></span></span></span></p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">name = </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">&quot;Alice&quot;</span></span></span><br />
+                        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">age = </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#b55908">25</span></span></span><br />
+                        <br />
+                        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Format the string using named placeholders</span></span></span><br />
+                        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">formatted_string = </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">f&quot;Hello, </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">{name}</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">! You are </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">{age}</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038"> years old.&quot;</span></span></span><br />
+                        <br />
+                        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">print(formatted_string)</span></span></span><br />
+                        &nbsp;</p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Output:</span></span></span></p>
+
+                    <p>&nbsp;</p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">Hello, Alice! You are 25 years old.</span></span></span><br />
+                        &nbsp;</p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Formatting strings with different data types</strong></span></span></span></p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Python supports a variety of format specifiers for formatting different data types. For example, the %d format specifier is used to format integers, the %f format specifier is used to format floating-point numbers, and the %s format specifier is used to format strings.</span></span></span></p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Here is a table of some common format specifiers:</span></span></span></p>
+
+                    <p><br />
+                        <br />
+                        <br />
+                        &nbsp;</p>
+
+                    <table cellspacing="0" style="border-collapse:collapse; border:none; width:100%">
+                        <thead>
+                        <tr>
+                            <th scope="col" style="background-color:#f2f2f2; vertical-align:top">
+                                <p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Format specifier</span></span></span></p>
+                            </th>
+                            <th scope="col" style="background-color:#f2f2f2; vertical-align:top">
+                                <p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Data type</span></span></span></p>
+                            </th>
+                            <th scope="col" style="background-color:#f2f2f2; vertical-align:top">
+                                <p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Example</span></span></span></p>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td style="vertical-align:top; width:200px">
+                                <p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">%d</span></span></span></p>
+                            </td>
+                            <td style="vertical-align:top; width:200px">
+                                <p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Integer</span></span></span></p>
+                            </td>
+                            <td style="vertical-align:top; width:200px">
+                                <p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">10</span></span></span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align:top; width:200px">
+                                <p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">%f</span></span></span></p>
+                            </td>
+                            <td style="vertical-align:top; width:200px">
+                                <p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Floating-point number</span></span></span></p>
+                            </td>
+                            <td style="vertical-align:top; width:200px">
+                                <p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">3.14</span></span></span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align:top; width:200px">
+                                <p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">%s</span></span></span></p>
+                            </td>
+                            <td style="vertical-align:top; width:200px">
+                                <p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">String</span></span></span></p>
+                            </td>
+                            <td style="vertical-align:top; width:200px">
+                                <p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">&quot;Hello, world!&quot;</span></span></span></p>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Formatting strings with alignment and precision</strong></span></span></span></p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Python also allows you to specify the alignment and precision of formatted strings. For example, the : character can be used to specify the minimum field width of a formatted value. The . character can be used to specify the precision of a formatted floating-point number.</span></span></span></p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Example:</strong></span></span></span></p>
+
+                    <p>&nbsp;</p>
+
+                    <p style="margin-left:16px; margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#444746"><span style="background-color:#e3e3e3">Python</span></span></span></span></p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#5f6368"># Format the string with a minimum field width of 10 and a precision of 2 decimal places</span></span></span><br />
+                        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">formatted_string = </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">f&quot;The value of pi is: </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">{</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#b55908">3.14159</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">:</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#b55908">10.2</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">f}</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">&quot;</span></span></span><br />
+                        <br />
+                        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">print(formatted_string)</span></span></span><br />
+                        &nbsp;</p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Output:</span></span></span></p>
+
+                    <p>&nbsp;</p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">The value of pi is: &nbsp; &nbsp; 3.14</span></span></span><br />
+                        &nbsp;</p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Conclusion</strong></span></span></span></p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Python string formatting is a powerful tool for formatting strings in Python. By understanding how to use string formatting, you can write more readable and maintainable code.</span></span></span></p>
+
+                    <p>&nbsp;</p>
+
+                </div>
+            </div><!-- End Text Container--->
+        </div>
+        <div class="col-sm-3 p-3">
+            <!--  <img src="../images/py.png"  class="img-fluid" alt="Cinque Terre">-->
+            <span id="postLinks">
+
+            </span>
+            <script>
+                document.getElementById("postLinks").innerHTML = bloglinks
+            </script>
+        </div>
+    </div>
+</div>
+<!--SCRIPT-->
+
+<script>
+    let navbarContainer = document.getElementById("navbarContainer");
+    let textContainer = document.getElementById("textContainer");
+    let dropdown = document.getElementById("sidebarDropdown");
+    let sidebar = document.getElementById("sidebarList");
+    let menuItems = document.getElementById("menuItems");
+    //*** Navbar
+
+    function loadNavbar(){
+        fetch("../navbar.html")
+            .then(res => res.text())
+            .then(data => navbarContainer.innerHTML = data);
+    }
+
+    loadNavbar()
+    //*********
+
+    //****** Handling responsive view
+    function isMobile(){
+        if (window.innerWidth <= 576) {
+            console.log("Mobile device detected");
+            return true;
+        } else {
+            console.log("Desktop device detected");
+            return false;
+        }
+
+    }
+    function setMobileView(){
+        dropdown.style.display = "block";
+        sidebar.style.display = "none";
+    }
+    function setDesktopView(){
+        dropdown.style.display = "none";
+        sidebar.style.display = "block";
+    }
+    if(isMobile()){
+        setMobileView();
+    }else{
+        setDesktopView();
+    }
+    window.addEventListener('resize',function(){
+        if(isMobile()){
+            setMobileView();
+        }else{
+            setDesktopView();
+        }
+    })
+    //******** fill list & dropdown ********
+
+    //*************** update contents
+
+
+</script>
+<!----        CEO optimization script          -->
+<!-- Display ad responsive-->
+<div class="text-center">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-7562795281583843"
+         data-ad-slot="6126093757"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+<!-- End ad responsive-->
+</body>
+</html>

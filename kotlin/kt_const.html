@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7CHHV9Y3P4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag()
+        {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-7CHHV9Y3P4');
+    </script>
+    <!-- --------End google tag script -------->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!------------------------- Title and meta tags------------------------>
+    <title>Kotlin Constructors Explained: Primary, Secondary, Delegation & Best Practices</title>
+    <meta name="description" content="Master Kotlin constructors: understand primary, secondary, and default types, constructor parameters, delegation, and accessing constructors. Learn how they ensure proper object initialization, enhance encapsulation, and improve code maintainability."/>
+    <meta name="keywords" content="Kotlin constructors, primary constructor, secondary constructors, constructor delegation, default constructors, object initialization, Kotlin programming, this keyword, object-oriented, software development, encapsulation, Kotlin guide"/>
+
+    <!--------------------------------------------------------------------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="kt-home.js"></script>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <script src="../utils.js"></script>
+
+    <!-- Adsense's auto ad script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7562795281583843"
+            crossorigin="anonymous">
+    </script>
+    <!-- Adsense's auto ad script -->
+</head>
+<body>
+<span id="navbarContainer"></span>
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-sm-3 p-3">
+            <h3>Learn Kotlin</h3>
+            <div class="list-group list-group-flush" id="sidebarList">
+                <a href="kt_intro.html" class="list-group-item list-group-item-action" >Introduction</a>
+                <a href="kt_get_startd.html" class="list-group-item list-group-item-action" >Getting Started</a>
+                <a href="kt_basic.html" class="list-group-item list-group-item-action" >Basic Example</a>
+                <a href="kt_syntax.html" class="list-group-item list-group-item-action" >Syntax</a>
+                <a href="kt_output.html" class="list-group-item list-group-item-action" >Output</a>
+                <a href="kt_comments.html" class="list-group-item list-group-item-action" >Comments</a>
+                <a href="kt_var.html" class="list-group-item list-group-item-action" >Variables</a>
+                <a href="kt_datatypes.html" class="list-group-item list-group-item-action" >Data Types</a>
+                <a href="kt_operators.html" class="list-group-item list-group-item-action" >Operators</a>
+                <a href="kt_string.html" class="list-group-item list-group-item-action" >String</a>
+                <a href="kt_boolean.html" class="list-group-item list-group-item-action" >Boolean</a>
+                <a href="kt_if.html" class="list-group-item list-group-item-action" >If...Else</a>
+                <a href="kt_when.html" class="list-group-item list-group-item-action" >When</a>
+                <a href="kt_while.html" class="list-group-item list-group-item-action" >While Loop</a>
+                <a href="kt_break.html" class="list-group-item list-group-item-action" >Break/Continue</a>
+                <a href="kt_arrays.html" class="list-group-item list-group-item-action" >Arrays</a>
+                <a href="kt_for.html" class="list-group-item list-group-item-action" >For Loop</a>
+                <a href="kt_ranges.html" class="list-group-item list-group-item-action" >Ranges</a>
+                <a href="kt_functions.html" class="list-group-item list-group-item-action" >Functions</a>
+                <a href="kt_loop.html" class="list-group-item list-group-item-action" >OOP</a>
+                <a href="kt_classes.html" class="list-group-item list-group-item-action" >Classes/Objects</a>
+                <a href="kt_const.html" class="list-group-item list-group-item-action" >Constructor</a>
+                <a href="kt_class_fun.html" class="list-group-item list-group-item-action" >Class Function</a>
+                <a href="kt_inher.html" class="list-group-item list-group-item-action" >Inheritance</a>
+
+            </div>
+            <div class="dropdown" id="sidebarDropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                    Topics
+                </button>
+                <ul class="dropdown-menu" id="menuItems">
+                    <li><a class="dropdown-item" href="kt_intro.html">Introduction</a></li>
+                    <li><a class="dropdown-item" href="kt_get_started.html">Getting started</a></li>
+                    <li><a class="dropdown-item" href="kt_basic.html">Basic Example</a></li>
+                    <li><a class="dropdown-item" href="kt_syntax.html">Syntax</a></li>
+                    <li><a class="dropdown-item" href="kt_output.html">Output</a></li>
+                    <li><a class="dropdown-item" href="kt_output.html">Comments</a></li>
+                    <li><a class="dropdown-item" href="kt_var.html">Variables</a></li>
+                    <li><a class="dropdown-item" href="kt_datatypes.html">Data Types</a></li>
+                    <li><a class="dropdown-item" href="kt_operators.html">Operators</a></li>
+                    <li><a class="dropdown-item" href="kt_string.html">String</a></li>
+                    <li><a class="dropdown-item" href="kt_boolean.html">Boolean</a></li>
+                    <li><a class="dropdown-item" href="kt_if.html">If...Else</a></li>
+                    <li><a class="dropdown-item" href="kt_when.html">When</a></li>
+                    <li><a class="dropdown-item" href="kt_while.html">while Loop</a></li>
+                    <li><a class="dropdown-item" href="kt_break.html">Break/Continue</a></li>
+                    <li><a class="dropdown-item" href="kt_arrays.html">Arrays</a></li>
+                    <li><a class="dropdown-item" href="kt_for.html">For Loop</a></li>
+                    <li><a class="dropdown-item" href="kt_ranges.html">Ranges</a></li>
+                    <li><a class="dropdown-item" href="kt_functions.html">Functions</a></li>
+                    <li><a class="dropdown-item" href="kt_oop.html">OOP</a></li>
+                    <li><a class="dropdown-item" href="kt_classes.html">Classes/Objects</a></li>
+                    <li><a class="dropdown-item" href="kt_const.html">Constructor</a></li>
+                    <li><a class="dropdown-item" href="kt_class_fun.html">Class Function</a></li>
+                    <li><a class="dropdown-item" href="kt_inher.html">Inheritance</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="col p-6">
+            <div id="textContainer">
+                <div style="overflow-block: auto">
+                    <img style="float: left" src="img/kt-logo.png" alt="Python Logo" width="80">
+                    <h1 style="padding: 10px">Kotlin Constructor</h1>
+                </div>
+                <hr>
+                <!--   in-feed ad-->
+                <div class="text-center">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7562795281583843"
+                            crossorigin="anonymous"></script>
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-format="fluid"
+                         data-ad-layout-key="-gw-3+1f-3d+2z"
+                         data-ad-client="ca-pub-7562795281583843"
+                         data-ad-slot="6633895957"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                <!-- in-feed ad-->
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Constructors in Kotlin: Initializing Objects with Purpose</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Constructors serve as crucial building blocks in Kotlin, playing a vital role in initializing objects and ensuring their proper configuration upon creation. They provide a mechanism to set up an object&#39;s state and establish its initial values, ensuring that objects are ready for use when they are instantiated.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Types of Constructors:</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Kotlin supports two primary types of constructors:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Primary Constructor:</strong> The primary constructor is responsible for the initial setup of an object, defining the essential parameters and their corresponding initialization logic. It is declared directly within the class header, following the class name and optional type parameters.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">class </span><span style="color:#996900">Person</span><span style="color:#1f1f1f">(</span><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> name: String, </span><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> age: </span><span style="color:#1967d2">Int</span><span style="color:#1f1f1f">) {</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Class body with properties and methods</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Secondary Constructors:</strong> Secondary constructors provide additional initialization options for objects, allowing for more complex setup scenarios or delegating to the primary constructor. They are declared using the constructor keyword followed by parentheses for parameters and curly braces for the initialization code.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">class </span><span style="color:#996900">Person</span><span style="color:#1f1f1f">(</span><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> name: String, </span><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> age: </span><span style="color:#1967d2">Int</span><span style="color:#1f1f1f">) {</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">constructor</span><span style="color:#1f1f1f">(name: String) : </span><span style="color:#8430ce">this</span><span style="color:#1f1f1f">(name, </span><span style="color:#b55908">0</span><span style="color:#1f1f1f">) {</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#5f6368">// Additional initialization code using &#39;this&#39; to call the primary constructor</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; }</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Constructor Parameters:</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Constructor parameters provide a means to pass initial values to an object&#39;s properties upon creation. These parameters are specified within the parentheses of the constructor declaration, followed by the parameter name and data type.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">class </span><span style="color:#996900">Product</span><span style="color:#1f1f1f">(</span><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> name: String, </span><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> price: </span><span style="color:#1967d2">Double</span><span style="color:#1f1f1f">, </span><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> quantity: </span><span style="color:#1967d2">Int</span><span style="color:#1f1f1f">) {</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Class body with properties and methods</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Constructor Delegation:</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Constructor delegation allows a secondary constructor to delegate the initialization of an object to its primary constructor. This is achieved using the this keyword followed by the primary constructor call, passing the required parameters.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">class </span><span style="color:#996900">Employee</span><span style="color:#1f1f1f">(name: String, age: </span><span style="color:#1967d2">Int</span><span style="color:#1f1f1f">, department: String) : Person(name, age) {</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Additional initialization code using &#39;this&#39; to call the primary constructor</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// and assigning the department property</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Default Constructors:</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">If no constructor is explicitly defined in a class, Kotlin automatically generates a default constructor with no parameters. This default constructor can be used to create objects with default values for their properties.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">class </span><span style="color:#996900">Book</span><span style="color:#1f1f1f"> {</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#5f6368">// Class body with properties and methods</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Accessing the Constructor from Inside the Class:</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">The this keyword can be used to access the constructor from within the class body. This is particularly useful in secondary constructors when delegating to the primary constructor or accessing the constructor parameters.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">class </span><span style="color:#996900">Student</span><span style="color:#1f1f1f">(name: String, </span><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> major: String) {</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; <span style="color:#8430ce">constructor</span><span style="color:#1f1f1f">(name: String, major: String, enrollmentYear: </span><span style="color:#1967d2">Int</span><span style="color:#1f1f1f">) : </span><span style="color:#8430ce">this</span><span style="color:#1f1f1f">(name, major) {</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#5f6368">// Additional initialization code using &#39;this&#39; to access the constructor parameters</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; }</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Benefits of Using Constructors:</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Controlled Initialization:</strong> Constructors ensure that objects are properly initialized with appropriate values, preventing potential errors and unexpected behavior.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Encapsulation:</strong> Constructors encapsulate the initialization logic, hiding implementation details and providing a controlled entry point for creating objects.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Flexibility:</strong> Constructors offer flexibility in initializing objects, allowing for different initialization scenarios and delegating to other constructors for complex setups.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Maintainability:</strong> Constructors enhance code maintainability by providing a centralized location for object initialization, making it easier to understand and modify object creation logic.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Conclusion:</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Constructors play a vital role in Kotlin, ensuring that objects are properly initialized and ready for use upon creation. By effectively utilizing constructors, programmers can maintain control over object creation, promote encapsulation, and enhance the maintainability and flexibility of their code.</span></span></span></p>
+
+                <p>&nbsp;</p>
+
+            </div><!-- End Text Container--->
+        </div>
+        <div class="col-sm-3 p-3">
+            <!--  <img src="../images/py.png"  class="img-fluid" alt="Cinque Terre">-->
+            <span id="postLinks">
+
+            </span>
+            <script>
+                document.getElementById("postLinks").innerHTML = bloglinks
+            </script>
+        </div>
+    </div>
+</div>
+<!--SCRIPT-->
+
+<script>
+    let navbarContainer = document.getElementById("navbarContainer");
+    let textContainer = document.getElementById("textContainer");
+    let dropdown = document.getElementById("sidebarDropdown");
+    let sidebar = document.getElementById("sidebarList");
+    let menuItems = document.getElementById("menuItems");
+    //*** Navbar
+
+    function loadNavbar(){
+        fetch("../navbar.html")
+            .then(res => res.text())
+            .then(data => navbarContainer.innerHTML = data);
+    }
+
+    loadNavbar()
+    //*********
+
+    //****** Handling responsive view
+    function isMobile(){
+        if (window.innerWidth <= 576) {
+            console.log("Mobile device detected");
+            return true;
+        } else {
+            console.log("Desktop device detected");
+            return false;
+        }
+
+    }
+    function setMobileView(){
+        dropdown.style.display = "block";
+        sidebar.style.display = "none";
+    }
+    function setDesktopView(){
+        dropdown.style.display = "none";
+        sidebar.style.display = "block";
+    }
+    if(isMobile()){
+        setMobileView();
+    }else{
+        setDesktopView();
+    }
+    window.addEventListener('resize',function(){
+        if(isMobile()){
+            setMobileView();
+        }else{
+            setDesktopView();
+        }
+    })
+    //******** fill list & dropdown ********
+
+
+</script>
+<!----        CEO optimization script          -->
+<!-- Display ad responsive-->
+<div class="text-center">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-7562795281583843"
+         data-ad-slot="6126093757"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+<!-- End ad responsive-->
+
+</body>
+</html>

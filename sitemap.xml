@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://technestx.github.io/</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_intro.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_intro.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/kotlin/kt_intro.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_intro.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/books/book-home.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/blog/blog-home.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_getting_started.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_syntex.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_comments.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_variables.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_datatypes.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_numbers.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_casting.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_string.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_boolean.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_operators.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_lists.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_tuples.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_set.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_dict.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_if_else.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_while.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_for.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_function.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_lambda.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_arrays.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_classes.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_inheritance.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_iterator.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_polymorphism.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_scope.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_module.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_date.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_math.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_json.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_regex.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_pip.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_try.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_input.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_read_file.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_write_file.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_delete_file.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_formatting.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/python/py_file_handling.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_getting.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_syntax.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_output.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_comments.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_variables.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_datatypes.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_casting.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_user_input.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_operators.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_math.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_string.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_booleans.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_conditions.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_switch.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_while.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_for.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_break.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_arrays.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_methods.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_para.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_over.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_oop.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_classes.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_member.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_constructors.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_access.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_properties.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_inher.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_poly.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_abstract.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_interfaces.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_enum.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_files.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/csharp/cs_exception.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/kotlin/kt_basic.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/kotlin/kt_syntax.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/kotlin/kt_output.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/kotlin/kt_comments.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/kotlin/kt_var.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/kotlin/kt_datatypes.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/kotlin/kt_operators.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/kotlin/kt_string.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/kotlin/kt_boolean.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/kotlin/kt_if.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/kotlin/kt_when.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/kotlin/kt_while.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/kotlin/kt_break.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/kotlin/kt_arrays.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/kotlin/kt_for.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/kotlin/kt_ranges.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/kotlin/kt_functions.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/kotlin/kt_classes.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/kotlin/kt_const.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/kotlin/kt_class_fun.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/kotlin/kt_inher.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/kotlin/kt_get_started.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/kotlin/kt_oop.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_dev.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_basics.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_syntax.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_output.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_comments.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_variables.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_user_input.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_data_types.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_operators.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_string.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_math.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_booleans.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_conditions.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_while.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_for.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_break.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_array.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_struct.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_ref.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_pointers.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_functions.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_fun_para.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_fun_over.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_recursion.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_oop.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_classes.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_methods.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_const.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_access.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_encap.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_inher.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_poly.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_files.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/cpp/cpp_excep.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/books/book-ai-prompt.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/books/book-ajax.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/books/book-bitcoin.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/books/book-blockchain.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/books/book-cyber.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/books/book-dll.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/books/book-free-website.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/books/book-gradle.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/books/book-interview.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/books/book-java-python.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/books/book-job.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/books/book-jquery.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/books/book-kotlin.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/books/book-motivation.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/books/book-python.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/books/book-regex.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/books/book-rss.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/books/book-seo.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/books/book-tag.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/books/book-git.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/books/book-data-mining.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/books/book-phone-addiction.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/books/book-happiness.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/books/book-java.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/books/book-java-net.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/books/book-java-dsa.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/books/book-ai-roadmap.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/books/book-webapi.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/blog/duration-object-in-wpf.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/blog/how-to-ceo-website.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/blog/stream-in-nodejs.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/blog/google-tag-manager-guide.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/blog/ai-careers-in-2025.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://technestx.github.io/blog/cnap.html</loc>
+  <lastmod>2025-12-26T17:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>

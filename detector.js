@@ -1,5 +1,4 @@
 
-<script>
 document.addEventListener("DOMContentLoaded", function () {
 
     // Create bait element
@@ -53,4 +52,5 @@ function showAdblockMessage() {
     document.body.appendChild(banner);
 }
 
-</script>
+
+

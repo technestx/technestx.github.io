@@ -160,11 +160,75 @@
 	</div>
 
 	
+    <!-- Adblocker detector script bellow  data-bs-dismiss="toast" -->
+	<!-- Requred bootstra, adblock-checker.min.js -->
+	<!-- add befor closing </body> tag -->
+	
+    <div id="adblocker_msg" style="
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    height: 180px;
+    
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(230, 229, 229, 0.4);
+    visibility: hidden;
+  ">
+        <div class="toast show">
+            <div class="toast-header">
+                <strong class="me-auto">Adblocker detected</strong>
+                <button type="button" class="btn-close" id="ad-btn-close"></button>
+            </div>
+            <div class="toast-body">
+                <h2 style="margin:0 0 18px;font-size:1.9rem;">Ad blocker detected 😔</h2>
+                <p style="margin:0 0 24px; font-size:1.15rem; line-height:1.45; opacity:0.92;">
+                    Please support us by disabling your ad blocker for this website.<br>
+                    We rely on advertising revenue to keep the lights on and content free.
+                </p>
+                <p style="margin:28px 0 0; font-size:0.95rem; opacity:0.7;">
+                    Thank you for understanding ❤️
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="adblock-checker.min.js"></script>
+    <script>
+        let checkIsRunning = false;
+        let messagebox = document.getElementById("adblocker_msg");
+        const runCheck = async () => {
+            if (checkIsRunning) {
+                return;
+            }
+            checkIsRunning = true;
+            const hasAdBlock = await AdBlockChecker.checkAdBlock();
+            if (hasAdBlock) {
+                messagebox.style.visibility = "visible";
+            } else {
+                messagebox.style.visibility = "hidden";
+            }
+            checkIsRunning = false;
+        };
+        //runCheck();
+        setTimeout(runCheck, 1000);
+        document.getElementById("ad-btn-close").onclick = function () {
+            messagebox.style.visibility = "hidden";
+        };
+    </script>
+    <!-- End adblocker script-->
+
 
 </script>
 </body>
 
 </html>
+
 
 
 

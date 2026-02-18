@@ -161,10 +161,8 @@
 
 	
     
-<!-- Adblocker detector script bellow  data-bs-dismiss="toast" -->
-	<!-- Requred bootstra, adblock-checker.min.js -->
-	<!-- add befor closing </body> tag -->
-	
+ <!-- Adblocker detector script bellow     data-bs-dismiss="toast" -->
+
     <div id="adblocker_msg" style="
     position: absolute;
     top: 50%;
@@ -172,7 +170,6 @@
     transform: translate(-50%, -50%);
     width: 320px;
     height: 180px;
-    
     font-family: Arial, sans-serif;
     font-size: 24px;
     display: flex;
@@ -182,7 +179,8 @@
     box-shadow: 0 10px 30px rgba(230, 229, 229, 0.4);
     visibility: hidden;
   ">
-        <div class="toast show">
+
+        <div class="toast show" style="background-color: beige;">
             <div class="toast-header">
                 <strong class="me-auto">Adblocker detected</strong>
                 <button type="button" class="btn-close" id="ad-btn-close"></button>
@@ -193,14 +191,18 @@
                     Please support us by disabling your ad blocker for this website.<br>
                     We rely on advertising revenue to keep the lights on and content free.
                 </p>
+
                 <p style="margin:28px 0 0; font-size:0.95rem; opacity:0.7;">
                     Thank you for understanding ❤️
                 </p>
             </div>
         </div>
+
     </div>
     <script src="adblock-checker.min.js"></script>
+
     <script>
+
         let checkIsRunning = false;
         let messagebox = document.getElementById("adblocker_msg");
         const runCheck = async () => {
@@ -228,6 +230,7 @@
 </body>
 
 </html>
+
 
 
 

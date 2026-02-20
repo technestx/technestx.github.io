@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7CHHV9Y3P4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag()
+        {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-7CHHV9Y3P4');
+    </script>
+    <!-- --------End google tag script -------->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!------------------------- Title and meta tags------------------------>
+    <title>Kotlin For Loops: Syntax, Examples, and Iterating Through Data & Ranges</title>
+    <meta name="description" content="Learn Kotlin for loops: understand syntax, iterate arrays, ranges, and collections. Customize iteration with step and downTo keywords for efficient data processing in Kotlin.">
+    <meta name="keywords" content="Kotlin, for loop, iteration, arrays, ranges, collections, data processing, control flow, programming, syntax, examples, step, downTo, Kotlin tutorial">
+
+    <!--------------------------------------------------------------------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="kt-home.js"></script>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <script src="../utils.js"></script>
+
+    <!-- Adsense's auto ad script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7562795281583843"
+            crossorigin="anonymous">
+    </script>
+    <!-- Adsense's auto ad script -->
+</head>
+<body>
+<span id="navbarContainer"></span>
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-sm-3 p-3">
+            <h3>Learn Kotlin</h3>
+            <div class="list-group list-group-flush" id="sidebarList">
+                <a href="kt_intro.html" class="list-group-item list-group-item-action" >Introduction</a>
+                <a href="kt_get_startd.html" class="list-group-item list-group-item-action" >Getting Started</a>
+                <a href="kt_basic.html" class="list-group-item list-group-item-action" >Basic Example</a>
+                <a href="kt_syntax.html" class="list-group-item list-group-item-action" >Syntax</a>
+                <a href="kt_output.html" class="list-group-item list-group-item-action" >Output</a>
+                <a href="kt_comments.html" class="list-group-item list-group-item-action" >Comments</a>
+                <a href="kt_var.html" class="list-group-item list-group-item-action" >Variables</a>
+                <a href="kt_datatypes.html" class="list-group-item list-group-item-action" >Data Types</a>
+                <a href="kt_operators.html" class="list-group-item list-group-item-action" >Operators</a>
+                <a href="kt_string.html" class="list-group-item list-group-item-action" >String</a>
+                <a href="kt_boolean.html" class="list-group-item list-group-item-action" >Boolean</a>
+                <a href="kt_if.html" class="list-group-item list-group-item-action" >If...Else</a>
+                <a href="kt_when.html" class="list-group-item list-group-item-action" >When</a>
+                <a href="kt_while.html" class="list-group-item list-group-item-action" >While Loop</a>
+                <a href="kt_break.html" class="list-group-item list-group-item-action" >Break/Continue</a>
+                <a href="kt_arrays.html" class="list-group-item list-group-item-action" >Arrays</a>
+                <a href="kt_for.html" class="list-group-item list-group-item-action" >For Loop</a>
+                <a href="kt_ranges.html" class="list-group-item list-group-item-action" >Ranges</a>
+                <a href="kt_functions.html" class="list-group-item list-group-item-action" >Functions</a>
+                <a href="kt_loop.html" class="list-group-item list-group-item-action" >OOP</a>
+                <a href="kt_classes.html" class="list-group-item list-group-item-action" >Classes/Objects</a>
+                <a href="kt_const.html" class="list-group-item list-group-item-action" >Constructor</a>
+                <a href="kt_class_fun.html" class="list-group-item list-group-item-action" >Class Function</a>
+                <a href="kt_inher.html" class="list-group-item list-group-item-action" >Inheritance</a>
+
+            </div>
+            <div class="dropdown" id="sidebarDropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                    Topics
+                </button>
+                <ul class="dropdown-menu" id="menuItems">
+                    <li><a class="dropdown-item" href="kt_intro.html">Introduction</a></li>
+                    <li><a class="dropdown-item" href="kt_get_started.html">Getting started</a></li>
+                    <li><a class="dropdown-item" href="kt_basic.html">Basic Example</a></li>
+                    <li><a class="dropdown-item" href="kt_syntax.html">Syntax</a></li>
+                    <li><a class="dropdown-item" href="kt_output.html">Output</a></li>
+                    <li><a class="dropdown-item" href="kt_output.html">Comments</a></li>
+                    <li><a class="dropdown-item" href="kt_var.html">Variables</a></li>
+                    <li><a class="dropdown-item" href="kt_datatypes.html">Data Types</a></li>
+                    <li><a class="dropdown-item" href="kt_operators.html">Operators</a></li>
+                    <li><a class="dropdown-item" href="kt_string.html">String</a></li>
+                    <li><a class="dropdown-item" href="kt_boolean.html">Boolean</a></li>
+                    <li><a class="dropdown-item" href="kt_if.html">If...Else</a></li>
+                    <li><a class="dropdown-item" href="kt_when.html">When</a></li>
+                    <li><a class="dropdown-item" href="kt_while.html">while Loop</a></li>
+                    <li><a class="dropdown-item" href="kt_break.html">Break/Continue</a></li>
+                    <li><a class="dropdown-item" href="kt_arrays.html">Arrays</a></li>
+                    <li><a class="dropdown-item" href="kt_for.html">For Loop</a></li>
+                    <li><a class="dropdown-item" href="kt_ranges.html">Ranges</a></li>
+                    <li><a class="dropdown-item" href="kt_functions.html">Functions</a></li>
+                    <li><a class="dropdown-item" href="kt_oop.html">OOP</a></li>
+                    <li><a class="dropdown-item" href="kt_classes.html">Classes/Objects</a></li>
+                    <li><a class="dropdown-item" href="kt_const.html">Constructor</a></li>
+                    <li><a class="dropdown-item" href="kt_class_fun.html">Class Function</a></li>
+                    <li><a class="dropdown-item" href="kt_inher.html">Inheritance</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="col p-6">
+            <div id="textContainer">
+                <div style="overflow-block: auto">
+                    <img style="float: left" src="img/kt-logo.png" alt="Python Logo" width="80">
+                    <h1 style="padding: 10px">Kotlin For Loop</h1>
+                </div>
+                <hr>
+                <!--   in-feed ad-->
+                <div class="text-center">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7562795281583843"
+                            crossorigin="anonymous"></script>
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-format="fluid"
+                         data-ad-layout-key="-gw-3+1f-3d+2z"
+                         data-ad-client="ca-pub-7562795281583843"
+                         data-ad-slot="6633895957"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                <!-- in-feed ad-->
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Kotlin For Loops: Iterating Through Data</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">The for loop is a fundamental control flow structure in Kotlin, enabling programmers to iterate through collections of data, such as arrays, ranges, and lists, in a concise and expressive manner. It allows for repetitive execution of code blocks, facilitating data processing, manipulation, and control over program flow.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Syntax of the For Loop:</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">for</span><span style="color:#1f1f1f"> (item </span><span style="color:#8430ce">in</span><span style="color:#1f1f1f"> collection) {</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#5f6368">// Code to execute for each item in the collection</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Where:</span></span></span></p>
+
+                <ul style="list-style-type:disc">
+                    <li><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">item represents the variable that holds each item from the collection during iteration.</span></span></span></li>
+                    <li><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">collection represents the data collection to be iterated through.</span></span></span></li>
+                </ul>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Example of a For Loop:</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Consider iterating through an array of numbers and printing each element:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">val</span><span style="color:#1f1f1f"> numbers = arrayOf(</span><span style="color:#b55908">1</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">2</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">3</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">4</span><span style="color:#1f1f1f">, </span><span style="color:#b55908">5</span><span style="color:#1f1f1f">)</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">for</span><span style="color:#1f1f1f"> (number </span><span style="color:#8430ce">in</span><span style="color:#1f1f1f"> numbers) {</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; println(number)</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">In this example, the for loop iterates through the numbers array, assigning each element to the number variable. For each iteration, the println() statement prints the current value of number. The loop continues until all elements of the array have been processed.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Iterating Through Ranges</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">The for loop can also be used to iterate through ranges of numbers, generating a sequence of values within a specified interval. For instance, to print numbers from 1 to 10:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">for</span><span style="color:#1f1f1f"> (i </span><span style="color:#8430ce">in </span><span style="color:#b55908">1..10</span><span style="color:#1f1f1f">) {</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; println(i)</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">In this example, the for loop iterates through the range of integers from 1 to 10, assigning each value to the i variable. For each iteration, the println() statement prints the current value of i. The loop continues until all values in the range have been processed.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Customizing For Loop Behavior</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">The for loop provides flexibility in controlling its behavior through additional parameters:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Step:</strong> The step parameter specifies the increment or decrement value for iterating through a range. For example, to print even numbers from 2 to 10:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">for</span><span style="color:#1f1f1f"> (i </span><span style="color:#8430ce">in </span><span style="color:#b55908">2..10</span><span style="color:#1f1f1f"> step </span><span style="color:#b55908">2</span><span style="color:#1f1f1f">) {</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; println(i)</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>DownTo:</strong> The downTo keyword allows for iterating through a range in descending order. For instance, to print numbers from 10 to 1:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">for</span><span style="color:#1f1f1f"> (i </span><span style="color:#8430ce">in </span><span style="color:#b55908">10</span><span style="color:#1f1f1f"> downTo </span><span style="color:#b55908">1</span><span style="color:#1f1f1f">) {</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; println(i)</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Conclusion</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">The for loop is an indispensable tool for iterating through collections of data and ranges of numbers in Kotlin. It provides a concise and expressive way to process, manipulate, and control the flow of data within loops. By effectively utilizing the for loop, programmers can enhance the efficiency and readability of their Kotlin code, making it more structured and maintainable.</span></span></span></p>
+
+                <p>&nbsp;</p>
+
+            </div><!-- End Text Container--->
+        </div>
+        <div class="col-sm-3 p-3">
+            <!--  <img src="../images/py.png"  class="img-fluid" alt="Cinque Terre">-->
+            <span id="postLinks">
+
+            </span>
+            <script>
+                document.getElementById("postLinks").innerHTML = bloglinks
+            </script>
+        </div>
+    </div>
+</div>
+<!--SCRIPT-->
+
+<script>
+    let navbarContainer = document.getElementById("navbarContainer");
+    let textContainer = document.getElementById("textContainer");
+    let dropdown = document.getElementById("sidebarDropdown");
+    let sidebar = document.getElementById("sidebarList");
+    let menuItems = document.getElementById("menuItems");
+    //*** Navbar
+
+    function loadNavbar(){
+        fetch("../navbar.html")
+            .then(res => res.text())
+            .then(data => navbarContainer.innerHTML = data);
+    }
+
+    loadNavbar()
+    //*********
+
+    //****** Handling responsive view
+    function isMobile(){
+        if (window.innerWidth <= 576) {
+            console.log("Mobile device detected");
+            return true;
+        } else {
+            console.log("Desktop device detected");
+            return false;
+        }
+
+    }
+    function setMobileView(){
+        dropdown.style.display = "block";
+        sidebar.style.display = "none";
+    }
+    function setDesktopView(){
+        dropdown.style.display = "none";
+        sidebar.style.display = "block";
+    }
+    if(isMobile()){
+        setMobileView();
+    }else{
+        setDesktopView();
+    }
+    window.addEventListener('resize',function(){
+        if(isMobile()){
+            setMobileView();
+        }else{
+            setDesktopView();
+        }
+    })
+    //******** fill list & dropdown ********
+
+
+</script>
+<!----        CEO optimization script          -->
+<!-- Display ad responsive-->
+<div class="text-center">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-7562795281583843"
+         data-ad-slot="6126093757"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+<!-- End ad responsive-->
+
+<!--  todo  Adblocker detector script   -->
+<div id="adblocker_msg" style="
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    height: 180px;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(230, 229, 229, 0.4);
+    visibility: hidden;
+  ">
+
+    <div class="toast show" style="background-color: beige;">
+        <div class="toast-header">
+            <strong class="me-auto">Adblocker detected</strong>
+            <button type="button" class="btn-close" id="ad-btn-close"></button>
+        </div>
+        <div class="toast-body">
+            <h2 style="margin:0 0 18px;font-size:1.9rem;">Ad blocker detected 😔</h2>
+            <p style="margin:0 0 24px; font-size:1.15rem; line-height:1.45; opacity:0.92;">
+                Please support us by disabling your ad blocker for this website.<br>
+                We rely on advertising revenue to keep the lights on and content free.
+            </p>
+
+            <p style="margin:28px 0 0; font-size:0.95rem; opacity:0.7;">
+                Thank you for understanding ❤️
+            </p>
+        </div>
+    </div>
+
+</div>
+<script src="../adblock-checker.min.js"></script>
+
+<script>
+
+    let checkIsRunning = false;
+    let messagebox = document.getElementById("adblocker_msg");
+    const runCheck = async () => {
+        if (checkIsRunning) {
+            return;
+        }
+        checkIsRunning = true;
+        const hasAdBlock = await AdBlockChecker.checkAdBlock();
+        if (hasAdBlock) {
+            messagebox.style.visibility = "visible";
+        } else {
+            messagebox.style.visibility = "hidden";
+        }
+        checkIsRunning = false;
+    };
+    //runCheck();
+    setTimeout(runCheck, 1000);
+    document.getElementById("ad-btn-close").onclick = function () {
+        messagebox.style.visibility = "hidden";
+    };
+</script>
+<!-- todo End Adblocker detector script -->
+</body>
+</html>

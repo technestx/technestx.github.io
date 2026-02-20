@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7CHHV9Y3P4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag()
+        {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-7CHHV9Y3P4');
+    </script>
+    <!-- --------End google tag script -------->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!------------------------- Title and meta tags------------------------>
+    <title>JSON with Python: Serialize and Deserialize Data | A Comprehensive Guide</title>
+    <meta name="description" content="Learn what JSON (JavaScript Object Notation) is and how to effectively use it with Python. Discover how to serialize Python objects to JSON using json.dumps() and deserialize JSON to Python objects with json.loads(), including practical examples with libraries like requests." />
+    <meta name="keywords" content="JSON, Python, JavaScript Object Notation, serialize, deserialize, json.dumps, json.loads, data interchange, web development, key-value pairs, requests library, Python objects, data serialization, data deserialization" />
+
+    <!--------------------------------------------------------------------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="py.js"></script>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <script src="../utils.js"></script>
+
+    <!-- Adsense's auto ad script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7562795281583843"
+            crossorigin="anonymous">
+    </script>
+    <!-- Adsense's auto ad script -->
+</head>
+<body>
+<span id="navbarContainer"></span>
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-sm-3 p-3">
+            <h3>Learn Kotlin</h3>
+            <div class="list-group list-group-flush" id="sidebarList">
+                <a href="py_intro.html" class="list-group-item list-group-item-action" >Introduction</a>
+                <a href="py_getting_started.html" class="list-group-item list-group-item-action" >Getting Started</a>
+                <a href="py_syntex.html" class="list-group-item list-group-item-action" >Python Syntax</a>
+                <a href="py_comments.html" class="list-group-item list-group-item-action" >Python Comments</a>
+                <a href="py_variables.html" class="list-group-item list-group-item-action" >Python Variables</a>
+                <a href="py_datatypes.html" class="list-group-item list-group-item-action" >Python Data Types</a>
+                <a href="py_numbers.html" class="list-group-item list-group-item-action" >Python Numbers</a>
+                <a href="py_casting.html" class="list-group-item list-group-item-action" >Python Casting</a>
+                <a href="py_string.html" class="list-group-item list-group-item-action" >Python String</a>
+                <a href="py_boolean.html" class="list-group-item list-group-item-action" >Python Boolean</a>
+                <a href="py_operators.html" class="list-group-item list-group-item-action" >Python Operators</a>
+                <a href="py_lists.html" class="list-group-item list-group-item-action" >Python List</a>
+                <a href="py_tuples.html" class="list-group-item list-group-item-action" >Python Tuples</a>
+                <a href="py_set.html" class="list-group-item list-group-item-action" >Python Set</a>
+                <a href="py_dict.html" class="list-group-item list-group-item-action" >Python directory</a>
+                <a href="py_if_else.html" class="list-group-item list-group-item-action" >Python If...Else</a>
+                <a href="py_while.html" class="list-group-item list-group-item-action" >Python While Loop</a>
+                <a href="py_for.html" class="list-group-item list-group-item-action" >Python For Loop</a>
+                <a href="py_function.html" class="list-group-item list-group-item-action" >Python Function</a>
+                <a href="py_lambda.html" class="list-group-item list-group-item-action" >Python Lambda</a>
+                <a href="py_arrays.html" class="list-group-item list-group-item-action" >Python Arrays</a>
+                <a href="py_classes.html" class="list-group-item list-group-item-action" >Python Classes and Objects</a>
+                <a href="py_inheritance.html" class="list-group-item list-group-item-action" >Python Inheritance</a>
+                <a href="py_iterator.html" class="list-group-item list-group-item-action" >Python Iterator</a>
+                <a href="py_polymorphism.html" class="list-group-item list-group-item-action" >Python Polymorphism</a>
+                <a href="py_scope.html" class="list-group-item list-group-item-action" >Python Scope</a>
+                <a href="py_module.html" class="list-group-item list-group-item-action" >Python Module</a>
+                <a href="py_date.html" class="list-group-item list-group-item-action" >Python Date</a>
+                <a href="py_math.html" class="list-group-item list-group-item-action" >Python Math</a>
+                <a href="py_json.html" class="list-group-item list-group-item-action" >Python Json</a>
+                <a href="py_regex.html" class="list-group-item list-group-item-action" >Python Regex</a>
+                <a href="py_pip.html" class="list-group-item list-group-item-action" >Python PIP</a>
+                <a href="py_try.html" class="list-group-item list-group-item-action" >Python Try Except</a>
+                <a href="py_input.html" class="list-group-item list-group-item-action" >Python User Input</a>
+                <a href="py_formatting.html.html" class="list-group-item list-group-item-action" >Python String Formatting</a>
+                <a href="py_file_handling.html.html" class="list-group-item list-group-item-action" >Python File Handling</a>
+                <a href="py_read_file.html" class="list-group-item list-group-item-action" >Python Read File</a>
+                <a href="py_write_file.html" class="list-group-item list-group-item-action" >Python Write File</a>
+                <a href="py_delete_file.html" class="list-group-item list-group-item-action" >Python Delete File</a>
+
+            </div>
+            <div class="dropdown" id="sidebarDropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                    Topics
+                </button>
+                <ul class="dropdown-menu" id="menuItems">
+                    <li><a class="dropdown-item" href="py_intro.html">Introduction</a></li>
+                    <li><a class="dropdown-item" href="py_getting_started.html">Getting started</a></li>
+                    <li><a class="dropdown-item" href="py_syntex.html">Python Syntax</a></li>
+                    <li><a class="dropdown-item" href="py_comments.html">Python Comments</a></li>
+                    <li><a class="dropdown-item" href="py_variables.html">Python Variables</a></li>
+                    <li><a class="dropdown-item" href="py_datatypes.html">Python Data Types</a></li>
+                    <li><a class="dropdown-item" href="py_numbers.html">Python Numbers</a></li>
+                    <li><a class="dropdown-item" href="py_casting.html">Python Casting</a></li>
+                    <li><a class="dropdown-item" href="py_string.html">Python String</a></li>
+                    <li><a class="dropdown-item" href="py_boolean.html">Python Boolean</a></li>
+                    <li><a class="dropdown-item" href="py_operators.html">Python Operators</a></li>
+                    <li><a class="dropdown-item" href="py_lists.html">Python List</a></li>
+                    <li><a class="dropdown-item" href="py_tuples.html">Python Tuple</a></li>
+                    <li><a class="dropdown-item" href="py_set.html">Python Set</a></li>
+                    <li><a class="dropdown-item" href="py_dict.html">Python Dictionary</a></li>
+                    <li><a class="dropdown-item" href="py_if_else.html">Python If...Else</a></li>
+                    <li><a class="dropdown-item" href="py_while.html">Python While Loop</a></li>
+                    <li><a class="dropdown-item" href="py_for.html">Python For Loop</a></li>
+                    <li><a class="dropdown-item" href="py_function.html">Python Function</a></li>
+                    <li><a class="dropdown-item" href="py_lambda.html">Python Lambda</a></li>
+                    <li><a class="dropdown-item" href="py_arrays.html">Python Array</a></li>
+                    <li><a class="dropdown-item" href="py_classes.html">Python Classes and Objects</a></li>
+                    <li><a class="dropdown-item" href="py_inheritance.html">Python Inheritance</a></li>
+                    <li><a class="dropdown-item" href="py_iterator.html">Python Iterator</a></li>
+                    <li><a class="dropdown-item" href="py_polymorphism.html">Python Polymorphism</a></li>
+                    <li><a class="dropdown-item" href="py_scope.html">Python Scope</a></li>
+                    <li><a class="dropdown-item" href="py_module.html">Python Module</a></li>
+                    <li><a class="dropdown-item" href="py_date.html">Python Date</a></li>
+                    <li><a class="dropdown-item" href="py_math.html">Python Math</a></li>
+                    <li><a class="dropdown-item" href="py_json.html">Python Json</a></li>
+                    <li><a class="dropdown-item" href="py_regex.html">Python Regex</a></li>
+                    <li><a class="dropdown-item" href="py_pip.html">Python PIP</a></li>
+                    <li><a class="dropdown-item" href="py_try.html">Python Try Except</a></li>
+                    <li><a class="dropdown-item" href="py_input.html">Python User Input</a></li>
+                    <li><a class="dropdown-item" href="py_formatting.html">Python String Formatting</a></li>
+                    <li><a class="dropdown-item" href="py_file_handling.html">Python File Handling</a></li>
+                    <li><a class="dropdown-item" href="py_read_file.html">Python Read File</a></li>
+                    <li><a class="dropdown-item" href="py_write_file.html">Python Write File</a></li>
+                    <li><a class="dropdown-item" href="py_delete_file.html">Python Delete File</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="col p-6">
+            <div id="textContainer">
+                <div style="overflow-block: auto">
+                    <img style="float: left" src="img/py-logo.png" alt="Python Logo" width="80">
+                    <h1 style="padding: 10px">Json</h1>
+                </div>
+                <hr>
+                <!--   in-feed ad-->
+                <div class="text-center">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7562795281583843"
+                            crossorigin="anonymous"></script>
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-format="fluid"
+                         data-ad-layout-key="-gw-3+1f-3d+2z"
+                         data-ad-client="ca-pub-7562795281583843"
+                         data-ad-slot="6633895957"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                <!-- in-feed ad-->
+                <div class="w3-container w3-animate-right" style="background-color: white;">
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>What is JSON?</strong></span></span></span></p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">JSON (JavaScript Object Notation) is a lightweight data-interchange format. It is easy to read and write, and it is widely used in web development.</span></span></span></p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">JSON data is represented as a collection of key-value pairs. The keys are strings, and the values can be strings, numbers, booleans, objects, or arrays.</span></span></span></p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Serializing Python objects to JSON</strong></span></span></span></p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">To serialize a Python object to JSON, you can use the json.dumps() function. The json.dumps() function takes a Python object as an argument and returns a JSON string representation of the object.</span></span></span></p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Example:</strong></span></span></span></p>
+
+                    <p>&nbsp;</p>
+
+                    <p style="margin-left:16px; margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#444746"><span style="background-color:#e3e3e3">Python</span></span></span></span></p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">import</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f"> json</span></span></span><br />
+                        <br />
+                        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">person = {</span></span></span><br />
+                        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">&nbsp; </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">&quot;name&quot;</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">: </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">&quot;John Doe&quot;</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">,</span></span></span><br />
+                        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">&nbsp; </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">&quot;age&quot;</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">: </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#b55908">30</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">,</span></span></span><br />
+                        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">&nbsp; </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">&quot;occupation&quot;</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">: </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">&quot;Software Engineer&quot;</span></span></span><br />
+                        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">}</span></span></span><br />
+                        <br />
+                        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">json_string = json.dumps(person)</span></span></span><br />
+                        <br />
+                        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">print(json_string)</span></span></span><br />
+                        &nbsp;</p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Output:</span></span></span></p>
+
+                    <p>&nbsp;</p>
+
+                    <p style="margin-left:16px; margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#444746"><span style="background-color:#e3e3e3">JSON</span></span></span></span></p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">{</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#b55908">&quot;name&quot;</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">: </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">&quot;John Doe&quot;</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">, </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#b55908">&quot;age&quot;</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">: </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#b55908">30</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">, </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#b55908">&quot;occupation&quot;</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">: </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">&quot;Software Engineer&quot;</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">}</span></span></span><br />
+                        &nbsp;</p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Deserializing JSON to Python objects</strong></span></span></span></p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">To deserialize JSON to Python objects, you can use the json.loads() function. The json.loads() function takes a JSON string as an argument and returns a Python object representation of the string.</span></span></span></p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Example:</strong></span></span></span></p>
+
+                    <p>&nbsp;</p>
+
+                    <p style="margin-left:16px; margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#444746"><span style="background-color:#e3e3e3">Python</span></span></span></span></p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">import</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f"> json</span></span></span><br />
+                        <br />
+                        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">json_string = </span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">&#39;{&quot;name&quot;: &quot;John Doe&quot;, &quot;age&quot;: 30, &quot;occupation&quot;: &quot;Software Engineer&quot;}&#39;</span></span></span><br />
+                        <br />
+                        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">person = json.loads(json_string)</span></span></span><br />
+                        <br />
+                        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">print(person)</span></span></span><br />
+                        &nbsp;</p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Output:</span></span></span></p>
+
+                    <p>&nbsp;</p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">{&#39;age&#39;: 30, &#39;name&#39;: &#39;John Doe&#39;, &#39;occupation&#39;: &#39;Software Engineer&#39;}</span></span></span><br />
+                        &nbsp;</p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Using JSON with Python libraries</strong></span></span></span></p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">Many Python libraries support JSON serialization and deserialization. For example, the requests library can be used to make HTTP requests and automatically deserialize the JSON responses.</span></span></span></p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Example:</strong></span></span></span></p>
+
+                    <p>&nbsp;</p>
+
+                    <p style="margin-left:16px; margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#444746"><span style="background-color:#e3e3e3">Python</span></span></span></span></p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#8430ce">import</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f"> requests</span></span></span><br />
+                        <br />
+                        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">response = requests.get(</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#188038">&quot;https://example.com/api/users&quot;</span></span></span><span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">)</span></span></span><br />
+                        <br />
+                        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">users = response.json()</span></span></span><br />
+                        <br />
+                        <span style="font-size:11pt"><span style="font-family:Courier,monospace"><span style="color:#1f1f1f">print(users)</span></span></span><br />
+                        &nbsp;</p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">This code will make a GET request to the /api/users endpoint on the example.com domain. The response from the endpoint will be a JSON string. The requests.json() function will deserialize the JSON string into a Python list of users.</span></span></span></p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f"><strong>Conclusion</strong></span></span></span></p>
+
+                    <p style="margin-right:24px"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#1f1f1f">JSON is a powerful data-interchange format that can be used with Python to easily serialize and deserialize data. By understanding how to use JSON with Python, you can write more efficient and portable code.</span></span></span></p>
+
+                    <p>&nbsp;</p>
+
+                    <p>&nbsp;</p>
+
+                </div>
+
+            </div><!-- End Text Container--->
+        </div>
+        <div class="col-sm-3 p-3">
+            <!--  <img src="../images/py.png"  class="img-fluid" alt="Cinque Terre">-->
+            <span id="postLinks">
+
+            </span>
+            <script>
+                document.getElementById("postLinks").innerHTML = bloglinks
+            </script>
+        </div>
+    </div>
+</div>
+<!--SCRIPT-->
+
+<script>
+    let navbarContainer = document.getElementById("navbarContainer");
+    let textContainer = document.getElementById("textContainer");
+    let dropdown = document.getElementById("sidebarDropdown");
+    let sidebar = document.getElementById("sidebarList");
+    let menuItems = document.getElementById("menuItems");
+    //*** Navbar
+
+    function loadNavbar(){
+        fetch("../navbar.html")
+            .then(res => res.text())
+            .then(data => navbarContainer.innerHTML = data);
+    }
+
+    loadNavbar()
+    //*********
+
+    //****** Handling responsive view
+    function isMobile(){
+        if (window.innerWidth <= 576) {
+            console.log("Mobile device detected");
+            return true;
+        } else {
+            console.log("Desktop device detected");
+            return false;
+        }
+
+    }
+    function setMobileView(){
+        dropdown.style.display = "block";
+        sidebar.style.display = "none";
+    }
+    function setDesktopView(){
+        dropdown.style.display = "none";
+        sidebar.style.display = "block";
+    }
+    if(isMobile()){
+        setMobileView();
+    }else{
+        setDesktopView();
+    }
+    window.addEventListener('resize',function(){
+        if(isMobile()){
+            setMobileView();
+        }else{
+            setDesktopView();
+        }
+    })
+    //******** fill list & dropdown ********
+
+    //*************** update contents
+
+
+</script>
+<!----        CEO optimization script          -->
+<!-- Display ad responsive-->
+<div class="text-center">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-7562795281583843"
+         data-ad-slot="6126093757"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+<!-- End ad responsive-->
+
+<!--  todo  Adblocker detector script   -->
+<div id="adblocker_msg" style="
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    height: 180px;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(230, 229, 229, 0.4);
+    visibility: hidden;
+  ">
+
+    <div class="toast show" style="background-color: beige;">
+        <div class="toast-header">
+            <strong class="me-auto">Adblocker detected</strong>
+            <button type="button" class="btn-close" id="ad-btn-close"></button>
+        </div>
+        <div class="toast-body">
+            <h2 style="margin:0 0 18px;font-size:1.9rem;">Ad blocker detected 😔</h2>
+            <p style="margin:0 0 24px; font-size:1.15rem; line-height:1.45; opacity:0.92;">
+                Please support us by disabling your ad blocker for this website.<br>
+                We rely on advertising revenue to keep the lights on and content free.
+            </p>
+
+            <p style="margin:28px 0 0; font-size:0.95rem; opacity:0.7;">
+                Thank you for understanding ❤️
+            </p>
+        </div>
+    </div>
+
+</div>
+<script src="../adblock-checker.min.js"></script>
+
+<script>
+
+    let checkIsRunning = false;
+    let messagebox = document.getElementById("adblocker_msg");
+    const runCheck = async () => {
+        if (checkIsRunning) {
+            return;
+        }
+        checkIsRunning = true;
+        const hasAdBlock = await AdBlockChecker.checkAdBlock();
+        if (hasAdBlock) {
+            messagebox.style.visibility = "visible";
+        } else {
+            messagebox.style.visibility = "hidden";
+        }
+        checkIsRunning = false;
+    };
+    //runCheck();
+    setTimeout(runCheck, 1000);
+    document.getElementById("ad-btn-close").onclick = function () {
+        messagebox.style.visibility = "hidden";
+    };
+</script>
+<!-- todo End Adblocker detector script -->
+</body>
+</html>

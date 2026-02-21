@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Learn C++</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="cpp-home.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <script src="../utils.js"></script>
+</head>
+<body>
+<span id="navbarContainer"></span>
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-sm-3 p-3">
+            <h3>Learn C++</h3>
+            <div class="list-group list-group-flush" id="sidebarList">
+
+            </div>
+            <div class="dropdown" id="sidebarDropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                    Topics
+                </button>
+                <ul class="dropdown-menu" id="menuItems">
+                    <li><a class="dropdown-item" href="#">Link 1</a></li>
+                    <li><a class="dropdown-item" href="#">Link 2</a></li>
+                    <li><a class="dropdown-item" href="#">Link 3</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="col p-6">
+            <div id="textContainer">
+
+            </div>
+
+        </div>
+        <div class="col-sm-3 p-3">
+            <!--  <img src="../images/py.png"  class="img-fluid" alt="Cinque Terre">-->
+            <span id="postLinks">
+
+            </span>
+            <script>
+                document.getElementById("postLinks").innerHTML = bloglinks
+            </script>
+        </div>
+    </div>
+</div>
+<!--SCRIPT-->
+
+
+<script>
+    let navbarContainer = document.getElementById("navbarContainer");
+    let textContainer = document.getElementById("textContainer");
+    let dropdown = document.getElementById("sidebarDropdown");
+    let sidebar = document.getElementById("sidebarList");
+    let menuItems = document.getElementById("menuItems");
+    //*** Navbar
+
+    function loadNavbar(){
+        fetch("../navbar.html")
+            .then(res => res.text())
+            .then(data => navbarContainer.innerHTML = data);
+    }
+
+    loadNavbar()
+    //*********
+
+    //****** Handling responsive view
+    function isMobile(){
+        if (window.innerWidth <= 576) {
+            console.log("Mobile device detected");
+            return true;
+        } else {
+            console.log("Desktop device detected");
+            return false;
+        }
+
+    }
+    function setMobileView(){
+        dropdown.style.display = "block";
+        sidebar.style.display = "none";
+    }
+    function setDesktopView(){
+        dropdown.style.display = "none";
+        sidebar.style.display = "block";
+    }
+    if(isMobile()){
+        setMobileView();
+    }else{
+        setDesktopView();
+    }
+    window.addEventListener('resize',function(){
+        if(isMobile()){
+            setMobileView();
+        }else{
+            setDesktopView();
+        }
+    })
+    //******** fill list & dropdown ********
+    let str = "";
+    let items = "";
+    for(let i = 0; i < dataModel.length; i++) {
+        let title = dataModel[i].title;
+        let url = dataModel[i].url;
+        //<a href="#" className="list-group-item list-group-item-action">First item</a>
+        str += "<a href=\"#\" class=\"list-group-item list-group-item-action\" onclick='fetchData("+i+")'>"+title+"</a>"
+        items += "<li><a class=\"dropdown-item\" href=\"#\" onclick='fetchData("+i+")'>"+title+"</a></li>";
+    }
+    sidebar.innerHTML = str;
+    menuItems.innerHTML = items;
+    //*************** update contents
+    let currentIndex = 0;
+    function setCurrent(index){
+        currentIndex = index;
+    }
+    function getCurrent(){
+        return currentIndex;
+    }
+    function fetchData(index){
+
+        setCurrent(index);
+        const data=dataModel[index];
+        fetch(data.url)
+            .then(res=>{
+                return res.text()
+            })
+            .then(data=>{
+                data = data.replace('<a href="#" onclick="history.back()" class="w3-button">Back</a>', "");
+                textContainer.innerHTML=data;
+            })
+    }
+    fetchData(0)
+</script>
+<!----        CEO optimization script          -->
+<script src = "../dynamic_seo.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // const path = window.location.pathname.split("/")[1] || "home";
+        // updateMetaTags(path.toLowerCase());
+        updateMetaTags("cpp");
+    });
+</script>
+
+<!--  todo  Adblocker detector script   -->
+<div id="adblocker_msg" style="
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    height: 180px;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(230, 229, 229, 0.4);
+    visibility: hidden;
+  ">
+
+    <div class="toast show" style="background-color: beige;">
+        <div class="toast-header">
+            <strong class="me-auto">Adblocker detected</strong>
+            <button type="button" class="btn-close" id="ad-btn-close"></button>
+        </div>
+        <div class="toast-body">
+            <h2 style="margin:0 0 18px;font-size:1.9rem;">Ad blocker detected 😔</h2>
+            <p style="margin:0 0 24px; font-size:1.15rem; line-height:1.45; opacity:0.92;">
+                Please support us by disabling your ad blocker for this website.<br>
+                We rely on advertising revenue to keep the lights on and content free.
+            </p>
+
+            <p style="margin:28px 0 0; font-size:0.95rem; opacity:0.7;">
+                Thank you for understanding ❤️
+            </p>
+        </div>
+    </div>
+
+</div>
+<script src="../adblock-checker.min.js"></script>
+
+<script>
+
+    let checkIsRunning = false;
+    let messagebox = document.getElementById("adblocker_msg");
+    const runCheck = async () => {
+        if (checkIsRunning) {
+            return;
+        }
+        checkIsRunning = true;
+        const hasAdBlock = await AdBlockChecker.checkAdBlock();
+        if (hasAdBlock) {
+            messagebox.style.visibility = "visible";
+        } else {
+            messagebox.style.visibility = "hidden";
+        }
+        checkIsRunning = false;
+    };
+    //runCheck();
+    setTimeout(runCheck, 1000);
+    document.getElementById("ad-btn-close").onclick = function () {
+        messagebox.style.visibility = "hidden";
+    };
+</script>
+<!-- todo End Adblocker detector script -->
+</body>
+</html>

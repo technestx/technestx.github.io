@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7CHHV9Y3P4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag()
+        {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-7CHHV9Y3P4');
+    </script>
+    <!-- --------End google tag script -------->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!------------------------- Title and meta tags------------------------>
+    <title>Data Types Explained: Value, Reference, Nullable, and User-Defined Types</title>
+    <meta name="description" content="Learn about various data types in programming, including value types (integer, float, char, bool), reference types (object, string, array), nullable types, and user-defined types (structs, enums) with detailed explanations and examples.">
+    <meta name="keywords" content="data types, value types, reference types, nullable types, user-defined types, integer, float, character, boolean, object, string, array, structures, enumerations, programming types, C# data types, programming concepts">
+
+    <!--------------------------------------------------------------------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!--    <script src="cs-home.js"></script>-->
+    <link rel="stylesheet" href="../main.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <script src="../utils.js"></script>
+
+    <!-- Adsense's auto ad script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7562795281583843"
+            crossorigin="anonymous">
+    </script>
+    <!-- Adsense's auto ad script -->
+</head>
+<body>
+<span id="navbarContainer"></span>
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-sm-3 p-3">
+            <h3>Learn C#</h3>
+            <div class="list-group list-group-flush" id="sidebarList">
+                <a href="cs_intro.html" class="list-group-item list-group-item-action" >Introduction</a>
+                <a href="cs_getting.html" class="list-group-item list-group-item-action" >Getting Started</a>
+                <a href="cs_syntax.html" class="list-group-item list-group-item-action" >Syntax</a>
+                <a href="cs_output.html" class="list-group-item list-group-item-action" >Output</a>
+                <a href="cs_comments.html" class="list-group-item list-group-item-action" >Comments</a>
+                <a href="cs_variables.html" class="list-group-item list-group-item-action" >Variables</a>
+                <a href="cs_datatypes.html" class="list-group-item list-group-item-action" >Data Types</a>
+                <a href="cs_casting.html" class="list-group-item list-group-item-action" >Type Casting</a>
+                <a href="cs_user_input.html" class="list-group-item list-group-item-action" >User Input</a>
+                <a href="cs_operators.html" class="list-group-item list-group-item-action" >Operator</a>
+                <a href="cs_math.html" class="list-group-item list-group-item-action" >Math</a>
+                <a href="cs_string.html" class="list-group-item list-group-item-action" >String</a>
+                <a href="cs_booleans.html" class="list-group-item list-group-item-action" >Boolean</a>
+                <a href="cs_conditions.html" class="list-group-item list-group-item-action" >Conditions</a>
+                <a href="cs_switch.html" class="list-group-item list-group-item-action" >Switch</a>
+                <a href="cs_while.html" class="list-group-item list-group-item-action" >While Loop</a>
+                <a href="cs_for.html" class="list-group-item list-group-item-action" >For Loop</a>
+                <a href="cs_break.html" class="list-group-item list-group-item-action" >Break/Continue</a>
+                <a href="cs_arrays.html" class="list-group-item list-group-item-action" >Arrays</a>
+                <a href="cs_methods.html" class="list-group-item list-group-item-action" >Methods</a>
+                <a href="cs_para.html" class="list-group-item list-group-item-action" >Method Parameters</a>
+                <a href="cs_over.html" class="list-group-item list-group-item-action" >Method Overloading</a>
+                <a href="cs_oop.html" class="list-group-item list-group-item-action" >OOP</a>
+                <a href="cs_classes.html" class="list-group-item list-group-item-action" >Classes/Objects</a>
+                <a href="cs_member.html" class="list-group-item list-group-item-action" >Class Member</a>
+                <a href="cs_constructors.html" class="list-group-item list-group-item-action" >Constructor</a>
+                <a href="cs_access.html" class="list-group-item list-group-item-action" >Access Modifiers</a>
+                <a href="cs_properties.html" class="list-group-item list-group-item-action" >Properties</a>
+                <a href="cs_inher.html" class="list-group-item list-group-item-action" >Inheritance</a>
+                <a href="cs_poly.html" class="list-group-item list-group-item-action" >Polymorphism</a>
+                <a href="cs_abstract.html" class="list-group-item list-group-item-action" >Abstraction</a>
+                <a href="cs_interfaces.html" class="list-group-item list-group-item-action" >Interfaces</a>
+                <a href="cs_enum.html" class="list-group-item list-group-item-action" >Enum</a>
+                <a href="cs_files.html" class="list-group-item list-group-item-action" >Files</a>
+                <a href="cs_exception.html" class="list-group-item list-group-item-action" >Exception</a>
+
+            </div>
+            <div class="dropdown" id="sidebarDropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                    Topics
+                </button>
+                <ul class="dropdown-menu" id="menuItems">
+                    <li><a class="dropdown-item" href="cs_intro.html">Introduction</a></li>
+                    <li><a class="dropdown-item" href="cs_getting.html">Getting started</a></li>
+                    <li><a class="dropdown-item" href="cs_syntax.html">Syntax</a></li>
+                    <li><a class="dropdown-item" href="cs_output.html">Output</a></li>
+                    <li><a class="dropdown-item" href="cs_comments.html">Comments</a></li>
+                    <li><a class="dropdown-item" href="cs_variables.html">Variables</a></li>
+                    <li><a class="dropdown-item" href="cs_datatypes.html">Data Types</a></li>
+                    <li><a class="dropdown-item" href="cs_casting.html">Type Casting</a></li>
+                    <li><a class="dropdown-item" href="cs_user_input.html">User Input</a></li>
+                    <li><a class="dropdown-item" href="cs_operators.html">Operators</a></li>
+                    <li><a class="dropdown-item" href="cs_math.html">Math</a></li>
+                    <li><a class="dropdown-item" href="cs_string.html">String</a></li>
+                    <li><a class="dropdown-item" href="cs_booleans.html">Booleans</a></li>
+                    <li><a class="dropdown-item" href="cs_conditions.html">Conditions</a></li>
+                    <li><a class="dropdown-item" href="cs_switch.html">Switch</a></li>
+                    <li><a class="dropdown-item" href="cs_while.html">While Loop</a></li>
+                    <li><a class="dropdown-item" href="cs_for.html">For Loop</a></li>
+                    <li><a class="dropdown-item" href="cs_break.html">Break/Continue</a></li>
+                    <li><a class="dropdown-item" href="cs_arrays.html">Arrays</a></li>
+                    <li><a class="dropdown-item" href="cs_methods.html">Methods</a></li>
+                    <li><a class="dropdown-item" href="cs_para.html">Method Parameters</a></li>
+                    <li><a class="dropdown-item" href="cs_over.html">Method Overloading</a></li>
+                    <li><a class="dropdown-item" href="cs_oop.html">OOP</a></li>
+                    <li><a class="dropdown-item" href="cs_classes.html">Classes/Objects</a></li>
+                    <li><a class="dropdown-item" href="cs_member.html">Class Member</a></li>
+                    <li><a class="dropdown-item" href="cs_constructors.html">Constructor</a></li>
+                    <li><a class="dropdown-item" href="cs_access.html">Access Modifiers</a></li>
+                    <li><a class="dropdown-item" href="cs_properties.html">Properties</a></li>
+                    <li><a class="dropdown-item" href="cs_inher.html">Inheritance</a></li>
+                    <li><a class="dropdown-item" href="cs_poly.html">Polymorphism</a></li>
+                    <li><a class="dropdown-item" href="cs_abstract.html">Abstraction</a></li>
+                    <li><a class="dropdown-item" href="cs_interfaces.html">Interface</a></li>
+                    <li><a class="dropdown-item" href="cs_enum.html">Enum</a></li>
+                    <li><a class="dropdown-item" href="cs_files.html">Files</a></li>
+                    <li><a class="dropdown-item" href="cs_exception.html">Exceptions</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="col p-6">
+            <div id="textContainer">
+                <div style="overflow-block: auto">
+                    <img style="float: left" src="img/cs-logo.png" alt="c sharp Logo" width="80">
+                    <h1 style="padding: 10px">C# Data Types</h1>
+                </div>
+                <hr>
+                <!--   in-feed ad-->
+                <div class="text-center">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7562795281583843"
+                            crossorigin="anonymous"></script>
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-format="fluid"
+                         data-ad-layout-key="-gw-3+1f-3d+2z"
+                         data-ad-client="ca-pub-7562795281583843"
+                         data-ad-slot="6633895957"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                <!-- in-feed ad-->
+                <p><span style="font-size:14.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Value Types</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Value types are built-in data types that store values directly in their memory locations. Value types include:</span></span></span></p>
+
+                <ul style="list-style-type:disc">
+                    <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Integer types:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> These types store whole numbers, such as 1, -2, or 1000. Examples of integer types are byte, sbyte, short, ushort, int, uint, long, and ulong.</span></span></span></li>
+                </ul>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Example:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">int</span><span style="color:#1f1f1f"> age = </span><span style="color:#b55908">30</span><span style="color:#1f1f1f">;</span></span></span></p>
+
+                <ul style="list-style-type:disc">
+                    <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Floating-point types:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> These types store numbers with fractional parts, such as 3.14159 or -0.5. Examples of floating-point types are float and double.</span></span></span></li>
+                </ul>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Example:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">double</span><span style="color:#1f1f1f"> pi = </span><span style="color:#b55908">3.14159</span><span style="color:#1f1f1f">;</span></span></span></p>
+
+                <ul style="list-style-type:disc">
+                    <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Character type:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> This type stores a single character, such as &#39;A&#39;, &#39;b&#39;, or &#39;$&#39;. The char data type is used to represent individual characters.</span></span></span></li>
+                </ul>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Example:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">char</span><span style="color:#1f1f1f"> letter = </span><span style="color:#188038">&#39;A&#39;</span><span style="color:#1f1f1f">;</span></span></span></p>
+
+                <ul style="list-style-type:disc">
+                    <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Boolean type:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> This type stores a logical value, either true or false. The bool data type is used to represent binary values.</span></span></span></li>
+                </ul>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Example:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">bool</span><span style="color:#1f1f1f"> isStudent = </span><span style="color:#b55908">true</span><span style="color:#1f1f1f">;</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:14.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Reference Types</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Reference types are built-in data types that store references to memory locations. Reference types include:</span></span></span></p>
+
+                <ul style="list-style-type:disc">
+                    <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Object type:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> This type represents an instance of a class. The object data type is the base type for all other reference types.</span></span></span></li>
+                </ul>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Example:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">Person person = </span><span style="color:#8430ce">new</span><span style="color:#1f1f1f"> Person();</span></span></span></p>
+
+                <ul style="list-style-type:disc">
+                    <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">String type:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> This type represents a sequence of characters. The string data type is used to represent text.</span></span></span></li>
+                </ul>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Example:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">string</span><span style="color:#1f1f1f"> name = </span><span style="color:#188038">&quot;John Doe&quot;</span><span style="color:#1f1f1f">;</span></span></span></p>
+
+                <ul style="list-style-type:disc">
+                    <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Array type:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> This type represents a collection of elements of the same type. Arrays store multiple values of the same data type.</span></span></span></li>
+                </ul>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Example:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">int</span><span style="color:#1f1f1f">[] numbers = </span><span style="color:#8430ce">new </span><span style="color:#1967d2">int</span><span style="color:#1f1f1f">[</span><span style="color:#b55908">5</span><span style="color:#1f1f1f">];</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:14.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>Nullable Types</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Nullable types are value types that can also have a null value. Nullable types are represented using the ? suffix after the data type. For example, int? represents a nullable integer, and bool? represents a nullable boolean.</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Example:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">int</span><span style="color:#1f1f1f">? age = </span><span style="color:#b55908">null</span><span style="color:#1f1f1f">;</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Calibri">&nbsp;</span></span></p>
+
+                <p><span style="font-size:14.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"><strong>User-Defined Types</strong></span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">User-defined types are types that are defined by the programmer. These include:</span></span></span></p>
+
+                <ul style="list-style-type:disc">
+                    <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Structures:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Structures are similar to classes, but they cannot inherit from other classes and they are used to group related data together.</span></span></span></li>
+                </ul>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Example:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#8430ce">struct</span><span style="color:#1f1f1f"> Point</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">{</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#8430ce">public </span><span style="color:#1967d2">int</span><span style="color:#1f1f1f"> x;</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier">&nbsp; &nbsp; <span style="color:#8430ce">public </span><span style="color:#1967d2">int</span><span style="color:#1f1f1f"> y;</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+
+                <ul style="list-style-type:disc">
+                    <li><span style="font-size:11.0pt"><strong><span style="font-family:Arial"><span style="color:#1f1f1f">Enumerations:</span></span></strong></span><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f"> Enumerations are user-defined types that consist of a set of named constants.</span></span></span></li>
+                </ul>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Arial"><span style="color:#1f1f1f">Example:</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1967d2">enum</span><span style="color:#1f1f1f"> DayOfWeek</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">{</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; Sunday,</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; Monday,</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; Tuesday,</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; Wednesday,</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; Thursday,</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; Friday,</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">&nbsp; &nbsp; Saturday</span></span></span></p>
+
+                <p><span style="font-size:11.0pt"><span style="font-family:Courier"><span style="color:#1f1f1f">}</span></span></span></p>
+
+                <p>&nbsp;</p>
+
+            </div><!-- End Text Container--->
+        </div>
+        <div class="col-sm-3 p-3">
+            <!--  <img src="../images/py.png"  class="img-fluid" alt="Cinque Terre">-->
+            <span id="postLinks">
+
+            </span>
+            <script>
+                document.getElementById("postLinks").innerHTML = bloglinks
+            </script>
+        </div>
+    </div>
+</div>
+<!--SCRIPT-->
+
+<script>
+    let navbarContainer = document.getElementById("navbarContainer");
+    let textContainer = document.getElementById("textContainer");
+    let dropdown = document.getElementById("sidebarDropdown");
+    let sidebar = document.getElementById("sidebarList");
+    let menuItems = document.getElementById("menuItems");
+    //*** Navbar
+
+    function loadNavbar(){
+        fetch("../navbar.html")
+            .then(res => res.text())
+            .then(data => navbarContainer.innerHTML = data);
+    }
+
+    loadNavbar()
+    //*********
+
+    //****** Handling responsive view
+    function isMobile(){
+        if (window.innerWidth <= 576) {
+            console.log("Mobile device detected");
+            return true;
+        } else {
+            console.log("Desktop device detected");
+            return false;
+        }
+
+    }
+    function setMobileView(){
+        dropdown.style.display = "block";
+        sidebar.style.display = "none";
+    }
+    function setDesktopView(){
+        dropdown.style.display = "none";
+        sidebar.style.display = "block";
+    }
+    if(isMobile()){
+        setMobileView();
+    }else{
+        setDesktopView();
+    }
+    window.addEventListener('resize',function(){
+        if(isMobile()){
+            setMobileView();
+        }else{
+            setDesktopView();
+        }
+    })
+    //******** fill list & dropdown ********
+
+
+</script>
+<!----        CEO optimization script          -->
+<!-- Display ad responsive-->
+<div class="text-center">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-7562795281583843"
+         data-ad-slot="6126093757"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+<!-- End ad responsive-->
+
+<!--  todo  Adblocker detector script   -->
+<div id="adblocker_msg" style="
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    height: 180px;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(230, 229, 229, 0.4);
+    visibility: hidden;
+  ">
+
+    <div class="toast show" style="background-color: beige;">
+        <div class="toast-header">
+            <strong class="me-auto">Adblocker detected</strong>
+            <button type="button" class="btn-close" id="ad-btn-close"></button>
+        </div>
+        <div class="toast-body">
+            <h2 style="margin:0 0 18px;font-size:1.9rem;">Ad blocker detected 😔</h2>
+            <p style="margin:0 0 24px; font-size:1.15rem; line-height:1.45; opacity:0.92;">
+                Please support us by disabling your ad blocker for this website.<br>
+                We rely on advertising revenue to keep the lights on and content free.
+            </p>
+
+            <p style="margin:28px 0 0; font-size:0.95rem; opacity:0.7;">
+                Thank you for understanding ❤️
+            </p>
+        </div>
+    </div>
+
+</div>
+<script src="../adblock-checker.min.js"></script>
+
+<script>
+
+    let checkIsRunning = false;
+    let messagebox = document.getElementById("adblocker_msg");
+    const runCheck = async () => {
+        if (checkIsRunning) {
+            return;
+        }
+        checkIsRunning = true;
+        const hasAdBlock = await AdBlockChecker.checkAdBlock();
+        if (hasAdBlock) {
+            messagebox.style.visibility = "visible";
+        } else {
+            messagebox.style.visibility = "hidden";
+        }
+        checkIsRunning = false;
+    };
+    //runCheck();
+    setTimeout(runCheck, 1000);
+    document.getElementById("ad-btn-close").onclick = function () {
+        messagebox.style.visibility = "hidden";
+    };
+</script>
+<!-- todo End Adblocker detector script -->
+</body>
+</html>
